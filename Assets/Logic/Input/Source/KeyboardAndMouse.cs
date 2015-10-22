@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class KeyboardAndMouse : InputSource
+public class KeyboardAndMouse : BaseInputSource
 {
     private const string PrefabName = "KeyboardAndMouseInputNames";
 

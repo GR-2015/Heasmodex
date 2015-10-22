@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class InputSource
+public abstract class BaseInputSource
 {
     protected InputValues InupValues;
     protected InputNames InputNames;

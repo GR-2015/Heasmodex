@@ -21,7 +21,20 @@ public class CharacterManager : MonoBehaviour
     public void RegisterPlayer(PlayerController instance)
     {
         _players.Add(instance.gameObject.GetInstanceID(), instance);
-        InputCollector.Instance.CreateInputSorces(instance);
+
+        var inputValues = new InputValues(instance);
+        InputCollector.Instance.AddInputValues(inputValues);
+
+        foreach (var InputSourc in instance.InputSource)
+        {
+            switch (InputSourc)
+            {
+                case InputSourceType.KeyboardAndMouse:
+                    InputCollector.Instance.AddInputSorces(new KeyboardAndMouse(inputValues));
+                    break;
+            }
+        }
+
     }
 
     public void UnRegisterPlayer(PlayerController instance)

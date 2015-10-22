@@ -9,3 +9,10 @@ UnityVS
 /Chasmodex.v12.suo
 /Chasmodex.CSharp.csproj
 /Chasmodex.sln
+/.vs/Chasmodex/v14/*.suo
+/*.csproj
+/Assets/Logic/Input/Values/*.meta
+/obj/Debug/*.txt
+/obj/Debug/*.cache
+/obj/Debug/*.dll
+/obj/Debug/*.pdb

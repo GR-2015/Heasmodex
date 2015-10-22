@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class InputCollector : MonoBehaviour
 {
     public static InputCollector Instance { get; private set; }
 
-    private List<InputSource> _inputSources = new List<InputSource>();
+    private List<BaseInputSource> _inputSources = new List<BaseInputSource>();
     private List<InputValues> _inputValues = new List<InputValues>();
 
     public List<InputValues> InputValues
@@ -18,33 +19,14 @@ public class InputCollector : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
+    public void AddInputValues(InputValues newInputValues)
     {
-        //List<PlayerController> playersList = CharacterManager.Instance.Players;
-
-        //foreach (var player in playersList)
-        //{
-        //    var newInputValues = new InputValues(player);
-        //    _inputValues.Add(newInputValues);
-
-        //    CreateInputSorces(player.InputSource, newInputValues);
-        //}
+        _inputValues.Add(newInputValues);
     }
 
-    public void CreateInputSorces(PlayerController player)
+    public void AddInputSorces(BaseInputSource newInputSorce)
     {
-        var inputValues = new InputValues(player);
-        _inputValues.Add(inputValues);
-
-        foreach (var InputSourc in player.InputSource)
-        {
-            switch (InputSourc)
-            {
-                case InputSourceType.KeyboardAndMouse:
-                    _inputSources.Add(new KeyboardAndMouse(inputValues));
-                    break;
-            }
-        }
+        _inputSources.Add(newInputSorce);
     }
 
     private void Update()
