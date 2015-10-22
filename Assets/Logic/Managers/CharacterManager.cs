@@ -6,11 +6,11 @@ public class CharacterManager : MonoBehaviour
 {
     public static CharacterManager Instance { get; private set; }
 
-    private readonly Dictionary<int, PlayerController> _players = new Dictionary<int, PlayerController>();
+    private readonly List<PlayerController> _players = new List<PlayerController>();
 
     public List<PlayerController> Players
     {
-        get { return _players.Values.ToList(); }
+        get { return _players; }
     }
 
     private void Awake()
@@ -20,7 +20,7 @@ public class CharacterManager : MonoBehaviour
 
     public void RegisterPlayer(PlayerController instance)
     {
-        _players.Add(instance.gameObject.GetInstanceID(), instance);
+        _players.Add(instance);
 
         var inputValues = new InputValues(instance);
         InputCollector.Instance.AddInputValues(inputValues);
@@ -39,7 +39,7 @@ public class CharacterManager : MonoBehaviour
 
     public void UnRegisterPlayer(PlayerController instance)
     {
-        _players.Remove(instance.gameObject.GetInstanceID());
+        _players.Remove(instance);
     }
 
 
