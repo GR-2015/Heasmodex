@@ -16,15 +16,16 @@ public class LocomotionState : BaseState
         {
             float x = inputValues.MovementVector.x;
             var player = inputValues.Owner;
+            Vector3 newMovementVector = Vector3.zero;
 
-            if (x < 0)
-            {
-                player.transform.rotation = Quaternion.Euler(0, 180, 0);
-            }
-            else
-            {
-                player.transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
+            newMovementVector.x = inputValues.MovementVector.x;
+
+            newMovementVector.y = inputValues.JumpButton == ButtonState.Down ? 1f : 0f;
+
+            newMovementVector.z = inputValues.MovementVector.y;
+
+            player.Move(newMovementVector, player.transform.forward);
+            player.Rotate(inputValues.MovementVector);
 
             x = Mathf.Abs(x);
 

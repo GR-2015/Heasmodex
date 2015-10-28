@@ -12,11 +12,11 @@ public class KeyboardAndMouse : BaseInputSource
 
     public override void GetInputValues()
     {
-        float x, y;
+        var x = GetAxis(InputNames.MovementXaxis, AxisType.Raw);
+        var y = GetAxis(InputNames.MovementYaxis, AxisType.Raw);
 
-        x = Input.GetAxis(InputNames.MovementXaxis);
-        y = 0;
+        InupValues.MovementVector = new Vector2(x, y);
 
-        SetMovementVectr(x, y);
+        InupValues.JumpButton = GetButtonState(InputNames.JumpButton);
     }
 }

@@ -1,19 +1,19 @@
 ﻿public abstract class BaseState
 {
     // Use this for initialization
-    public void EnterState()
+    public virtual void EnterState()
     {
     }
 
-    public void ExitState()
+    public virtual void ExitState()
     {
     }
 
-    public void Sleep()
+    public virtual void Sleep()
     {
     }
 
-    public void Return()
+    public virtual void Return()
     {
     }
 
@@ -21,9 +21,7 @@
     {
     }
 
-    public virtual void StateFixedUpdate()
-    {
-    }
+    public abstract void StateFixedUpdate();
 
     public virtual void StateLateUpdate()
     {

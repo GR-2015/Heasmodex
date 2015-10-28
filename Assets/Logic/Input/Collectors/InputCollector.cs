@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputCollector : MonoBehaviour
+ class InputCollector : MonoBehaviour
 {
     public static InputCollector Instance { get; private set; }
 

@@ -47,7 +47,9 @@ public class StateManager : MonoBehaviour
     public void EnterNewState(BaseState newState)
     {
         if (CurrentState != null)
+        {
             CurrentState.Sleep();
+        }
 
         _statesStack.Push(newState);
         CurrentState.EnterState();
