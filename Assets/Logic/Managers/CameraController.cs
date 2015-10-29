@@ -5,7 +5,9 @@ public class CameraController : MonoBehaviour
 {
     private Camera _controlledCamera;
     [SerializeField]
-    private Vector3 _cameraOffset;
+    private Vector3 _cameraOffset= Vector3.zero;
+    [SerializeField]
+    private float _cameraSnapingSpeed = 600f;
 
     public static CameraController Instance
     {
@@ -21,13 +23,6 @@ public class CameraController : MonoBehaviour
     private void LateUpdate()
     {
         Vector3 newPosition = CharacterManager.Instance.Players[0].transform.position + _cameraOffset;
-        newPosition.y = Mathf.RoundToInt(newPosition.y);
-
-        transform.position = Vector3.Lerp(transform.position,
-                                            newPosition,
-                                            10f * Time.deltaTime);
-        //newPosition.z = _cameraOffset;
-        transform.position = newPosition;
-
+        transform.position = Vector3.Lerp(transform.position, newPosition, _cameraSnapingSpeed * Time.deltaTime);
     }
 }

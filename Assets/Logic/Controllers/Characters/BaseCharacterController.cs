@@ -27,19 +27,33 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     [SerializeField]
     protected InputSourceType[] inputSource;
+    public InputSourceType[] InputSource { get { return inputSource; } }
 
-    public InputSourceType[] InputSource
-    {
-        get { return inputSource; }
-    }
+    #endregion
+
+    #region Control values
+
+    [HideInInspector]
+    public Vector3 Movement = Vector3.zero;
+    [HideInInspector]
+    public Vector3 NewRotation = Vector3.zero;
 
     #endregion
 
     #region Character settings
 
-    [SerializeField] protected float MovementSpeed = 5f;
-    [SerializeField] protected float JumpForce = 50f;
+    [Header("Movement parameters")]
+    [SerializeField]
+    protected float movementSpeed = 5f;
+    public float MovementSpeed { get { return movementSpeed; } }
 
+    [SerializeField]
+    protected float jumpForce = 50f;
+    public float JumpForce { get { return jumpForce; } }
+
+    [SerializeField]
+    protected float rotationSpeed = 60f;
+    public float RotationSpeed { get { return rotationSpeed; } }
 
     #endregion
 
@@ -51,24 +65,10 @@ public abstract class BaseCharacterController : MonoBehaviour
         this.CharacterController = this.GetComponent<CharacterController>();
     }
 
-    private void Start()
-    {
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
-    }
-
-    #region Control functions
-
-    public virtual void Move(Vector3 movementInput, Vector3 direction) {}
-    public virtual void Rotate(Vector3 rotationInput) {}
-
-    #endregion
 }
 
 public enum InputSourceType
 {
-    KeyboardAndMouse
+    KeyboardAndMouse,
+    GamePad
 }
