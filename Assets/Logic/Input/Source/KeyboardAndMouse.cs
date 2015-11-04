@@ -18,5 +18,6 @@ public class KeyboardAndMouse : BaseInputSource
         InupValues.MovementVector = new Vector2(x, y);
 
         InupValues.JumpButton = GetButtonState(InputNames.JumpButton);
+        InupValues.MeleeAttack = GetButtonState(InputNames.MeleeAttackButton);
     }
 }

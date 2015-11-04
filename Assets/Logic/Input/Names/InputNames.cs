@@ -11,6 +11,8 @@ public class InputNames : MonoBehaviour
     [SerializeField]
     private string _jumpButton = "Jump";
 
+    [SerializeField]
+    private string _meleeAttackButton = "MeleeAttack";
 
     public string MovementXaxis
     {
@@ -25,5 +27,10 @@ public class InputNames : MonoBehaviour
     public string JumpButton
     {
         get { return _jumpButton; }
+    }
+
+    public string MeleeAttackButton
+    {
+        get { return _meleeAttackButton; }
     }
 }

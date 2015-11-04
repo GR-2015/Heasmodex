@@ -26,6 +26,10 @@ public class LocomotionState : BaseState
             Rotate(player, inputValues.MovementVector);
 
             x = Mathf.Abs(x);
+            if (inputValues.MeleeAttack == ButtonState.Down)
+            {
+                    player.Animator.SetTrigger(AnimationHashID.Instance.MeleeAttackTriggerName);
+            }
 
             player.Animator.SetFloat(AnimationHashID.Instance.MovementXaxis, x);
             player.Animator.SetBool(AnimationHashID.Instance.IsGrounded, player.CharacterController.isGrounded);

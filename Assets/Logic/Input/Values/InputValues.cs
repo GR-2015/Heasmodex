@@ -13,6 +13,8 @@ public class InputValues
     #region Buttons
 
     public ButtonState JumpButton;
+    public ButtonState MeleeAttack;
+
 
     #endregion
 
