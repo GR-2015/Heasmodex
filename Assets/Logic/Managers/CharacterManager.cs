@@ -7,11 +7,11 @@ public class CharacterManager : MonoBehaviour
     public static CharacterManager Instance { get; private set; }
 
     private readonly List<PlayerController> _players = new List<PlayerController>();
+    private readonly List<EnemyController> _enemies = new List<EnemyController>();
 
-    public List<PlayerController> Players
-    {
-        get { return _players; }
-    }
+    public List<PlayerController> Players { get { return _players; } }
+
+    public List<EnemyController> Enemies { get { return _enemies; } }
 
     private void Awake()
     {
@@ -34,7 +34,6 @@ public class CharacterManager : MonoBehaviour
                     break;
             }
         }
-
     }
 
     public void UnRegisterPlayer(PlayerController instance)
@@ -42,6 +41,13 @@ public class CharacterManager : MonoBehaviour
         _players.Remove(instance);
     }
 
+    public void RegisterEnemy(EnemyController instance)
+    {
+        _enemies.Add(instance);
+    }
 
-
+    public void UnRegisterEnemy(EnemyController instance)
+    {
+        _enemies.Remove(instance);
+    }
 }

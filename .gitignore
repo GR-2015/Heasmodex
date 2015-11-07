@@ -16,3 +16,5 @@ UnityVS
 /obj/Debug/*.cache
 /obj/Debug/*.dll
 /obj/Debug/*.pdb
+/*.suo
+/*.sln
