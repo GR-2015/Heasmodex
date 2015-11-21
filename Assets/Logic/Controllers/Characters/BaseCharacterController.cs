@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.EventSystems;
 
 public abstract class BaseCharacterController : MonoBehaviour
 {
@@ -9,9 +8,10 @@ public abstract class BaseCharacterController : MonoBehaviour
     /// For use in 2.5 D games.
     /// </summary>
     public static readonly Vector3 RightRotation = new Vector3(0f, 90f, 0f);
+
     public static readonly Vector3 LeftRotation = new Vector3(0f, -90f, 0f);
 
-    #endregion
+    #endregion Consts
 
     #region Components
 
@@ -21,52 +21,79 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     public CharacterController CharacterController { get; protected set; }
 
-    #endregion
+    #endregion Components
 
     #region Input source
 
     [SerializeField]
     protected InputSourceType[] inputSource;
+
     public InputSourceType[] InputSource { get { return inputSource; } }
 
-    #endregion
+    #endregion Input source
 
     #region Control values
 
     [HideInInspector]
     public Vector3 Movement = Vector3.zero;
+
     [HideInInspector]
     public Vector3 NewRotation = Vector3.zero;
 
-    #endregion
+    #endregion Control values
 
     #region Character statistic
 
-    [SerializeField] protected float HP = 100f;
+    [SerializeField]
+    protected float HP = 100f;
 
-    #endregion
+    #endregion Character statistic
 
     #region Character settings
 
     [Header("Movement parameters")]
     [SerializeField]
     protected float movementSpeed = 5f;
+
     public float MovementSpeed { get { return movementSpeed; } }
 
     [SerializeField]
     protected float jumpForce = 50f;
+
     public float JumpForce { get { return jumpForce; } }
 
     [SerializeField]
     protected float rotationSpeed = 60f;
+
     public float RotationSpeed { get { return rotationSpeed; } }
 
-    [SerializeField] protected LayerMask EnemyLayerMask;
+    [SerializeField]
+    protected LayerMask EnemyLayerMask;
 
-    [Header("Atack parameters")] 
-    [SerializeField] protected Transform middleHitPoint;
+    [Header("Atack parameters")]
+    [SerializeField]
+    protected Transform middleHitPoint;
 
-    #endregion
+    [Header("Wield settings")]
+    [SerializeField]
+    protected Transform leftHendGrip;
+
+    [SerializeField]
+    protected Weapon offHandWeapon;
+
+    [SerializeField]
+    protected Vector3 leftHandWieldRotation = Vector3.zero;
+
+    [SerializeField]
+    protected Weapon mainHandWeapon;
+
+    [SerializeField]
+    protected Transform rightHendGrip;
+
+    [SerializeField]
+    protected Vector3 rightHandWieldRotation = Vector3.zero;
+
+    #endregion Character settings
 
     protected void Awake()
     {
@@ -74,6 +101,30 @@ public abstract class BaseCharacterController : MonoBehaviour
         Rigidbody = GetComponent<Rigidbody>();
 
         CharacterController = GetComponent<CharacterController>();
+
+        leftHendGrip = Animator.GetBoneTransform(HumanBodyBones.LeftHand);
+        rightHendGrip = Animator.GetBoneTransform(HumanBodyBones.RightHand);
+
+        EquipWeapons(rightHendGrip, Hand.Main);
+        EquipWeapons(leftHendGrip, Hand.Off);
+    }
+
+    public virtual void EquipWeapons(Transform hend, Hand type)
+    {
+        switch (type)
+        {
+            case Hand.Main:
+                mainHandWeapon = hend.GetComponentInChildren<Weapon>();
+                mainHandWeapon.transform.localPosition = mainHandWeapon.MainWieldPositionOffest;
+                mainHandWeapon.transform.localRotation = Quaternion.Euler(rightHandWieldRotation);
+                break;
+
+            case Hand.Off:
+                offHandWeapon = hend.GetComponentInChildren<Weapon>();
+                offHandWeapon.transform.localPosition = (mainHandWeapon as OneHandedMekeeWeapon).OffWieldPositionOffest;
+                offHandWeapon.transform.localRotation = Quaternion.Euler(leftHandWieldRotation);
+                break;
+        }
     }
 
     public virtual void Rotate(Vector3 rotationInput)
@@ -97,7 +148,7 @@ public abstract class BaseCharacterController : MonoBehaviour
 
         Movement.y += Physics.gravity.y * Time.deltaTime;
 
-        CharacterController.Move(Movement*Time.deltaTime);
+        CharacterController.Move(Movement * Time.deltaTime);
 
         if (Animator != null)
         {
@@ -117,19 +168,18 @@ public abstract class BaseCharacterController : MonoBehaviour
     public virtual void MeleeAttack()
     {
         Animator.SetTrigger(AnimationHashID.Instance.MeleeAttackTriggerName);
-        RaycastHit hit;
-        Debug.Log(transform.forward);
-        Debug.DrawRay(transform.position, transform.forward, Color.blue, 1f);
 
-        if (Physics.Raycast(middleHitPoint.position, middleHitPoint.forward, out hit, 3f))
+        RaycastHit hit;
+
+        if (Physics.Raycast(middleHitPoint.position, middleHitPoint.forward, out hit, 3f, EnemyLayerMask))
         {
             hit.collider.SendMessage("GetDamage", 10f);
         }
     }
 
-    public virtual void GetDamage(float damaga)
+    public virtual void GetDamage(float damage)
     {
-        Debug.Log(damaga);
+        HP -= damage;
     }
 }
 
@@ -137,4 +187,10 @@ public enum InputSourceType
 {
     KeyboardAndMouse,
     GamePad
+}
+
+public enum Hand
+{
+    Main,
+    Off
 }
