@@ -15,7 +15,7 @@ public class DefaultsBehavior : BaseBehavior
 
     public override void Behavior()
     {
-        Debug.Log(this.GetType().ToString());
+        //Debug.Log(this.GetType().ToString());
     }
 
     public override void OverloadConditions()

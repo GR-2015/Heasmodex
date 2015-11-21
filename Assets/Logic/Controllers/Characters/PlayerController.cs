@@ -10,6 +10,7 @@ public class PlayerController : BaseCharacterController
     {
         base.Awake();
         NewRotation = transform.rotation.eulerAngles;
+        //Application.LoadLevelAdditiveAsync("Test");
     }
 
     private void Start()

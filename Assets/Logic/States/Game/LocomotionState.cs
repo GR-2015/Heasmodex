@@ -11,7 +11,7 @@ public class LocomotionState : BaseState
         foreach (var inputValues in InputCollector.Instance.InputValues)
         {
             float x = inputValues.MovementVector.x;
-            var player = inputValues.Owner;
+            PlayerController player = inputValues.Owner;
 
             Vector3 newMovementVector = Vector3.zero;
 
@@ -28,7 +28,7 @@ public class LocomotionState : BaseState
             x = Mathf.Abs(x);
             if (inputValues.MeleeAttack == ButtonState.Down)
             {
-                    player.Animator.SetTrigger(AnimationHashID.Instance.MeleeAttackTriggerName);
+                player.Animator.SetTrigger(AnimationHashID.Instance.MeleeAttackTriggerName);
             }
 
             player.Animator.SetFloat(AnimationHashID.Instance.MovementXaxis, x);
