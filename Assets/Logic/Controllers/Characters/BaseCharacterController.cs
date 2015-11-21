@@ -40,6 +40,12 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     #endregion
 
+    #region Character statistic
+
+    [SerializeField] protected float HP = 100f;
+
+    #endregion
+
     #region Character settings
 
     [Header("Movement parameters")]
@@ -54,6 +60,11 @@ public abstract class BaseCharacterController : MonoBehaviour
     [SerializeField]
     protected float rotationSpeed = 60f;
     public float RotationSpeed { get { return rotationSpeed; } }
+
+    [SerializeField] protected LayerMask EnemyLayerMask;
+
+    [Header("Atack parameters")] 
+    [SerializeField] protected Transform middleHitPoint;
 
     #endregion
 
@@ -77,7 +88,7 @@ public abstract class BaseCharacterController : MonoBehaviour
             NewRotation = RightRotation;
         }
 
-        this.transform.rotation = Quaternion.Lerp(Quaternion.Euler(NewRotation), transform.rotation, RotationSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(Quaternion.Euler(NewRotation), transform.rotation, RotationSpeed * Time.deltaTime);
     }
 
     public virtual void Move(Vector3 movementInput, Vector3 direction)
@@ -103,7 +114,23 @@ public abstract class BaseCharacterController : MonoBehaviour
         }
     }
 
+    public virtual void MeleeAttack()
+    {
+        Animator.SetTrigger(AnimationHashID.Instance.MeleeAttackTriggerName);
+        RaycastHit hit;
+        Debug.Log(transform.forward);
+        Debug.DrawRay(transform.position, transform.forward, Color.blue, 1f);
 
+        if (Physics.Raycast(middleHitPoint.position, middleHitPoint.forward, out hit, 3f))
+        {
+            hit.collider.SendMessage("GetDamage", 10f);
+        }
+    }
+
+    public virtual void GetDamage(float damaga)
+    {
+        Debug.Log(damaga);
+    }
 }
 
 public enum InputSourceType

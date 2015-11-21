@@ -14,6 +14,8 @@ public class PlayerController : BaseCharacterController
 
     private void Start()
     {
-        CharacterManager.Instance.RegisterPlayer(this);
+        int index = CharacterManager.Instance.RegisterPlayer(this);
+
+        this.name = index.ToString();
     }
 }

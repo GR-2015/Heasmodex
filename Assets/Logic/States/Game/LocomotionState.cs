@@ -11,7 +11,6 @@ public class LocomotionState : BaseState
         foreach (var inputValues in InputCollector.Instance.InputValues)
         {
             float x = inputValues.MovementVector.x;
-            PlayerController player = inputValues.Owner;
 
             Vector3 newMovementVector = Vector3.zero;
 
@@ -19,15 +18,15 @@ public class LocomotionState : BaseState
 
             if (inputValues.JumpButton == ButtonState.Down)
             {
-                player.Jump();
+                inputValues.Owner.Jump();
             }
 
-            player.Move(newMovementVector, player.transform.forward);
-            player.Rotate(inputValues.MovementVector);
+            inputValues.Owner.Move(newMovementVector, inputValues.Owner.transform.forward);
+            inputValues.Owner.Rotate(inputValues.MovementVector);
 
             if (inputValues.MeleeAttack == ButtonState.Down)
             {
-                player.Animator.SetTrigger(AnimationHashID.Instance.MeleeAttackTriggerName);
+                inputValues.Owner.MeleeAttack();
             }
         }
     }

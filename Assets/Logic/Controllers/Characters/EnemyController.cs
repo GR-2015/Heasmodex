@@ -62,4 +62,9 @@ public class EnemyController : BaseCharacterController
             bechavior.OverloadConditions();
         }
     }
+
+    protected void OnCollisionEnter(Collision collision)
+    {
+        //Debug.Log(collision.gameObject.name);
+    }
 }

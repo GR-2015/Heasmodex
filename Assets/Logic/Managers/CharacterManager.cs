@@ -18,9 +18,11 @@ public class CharacterManager : MonoBehaviour
         Instance = this;
     }
 
-    public void RegisterPlayer(PlayerController instance)
+    public int RegisterPlayer(PlayerController instance)
     {
         _players.Add(instance);
+
+        int index = _players.Count - 1;
 
         var inputValues = new InputValues(instance);
         InputCollector.Instance.AddInputValues(inputValues);
@@ -34,6 +36,8 @@ public class CharacterManager : MonoBehaviour
                     break;
             }
         }
+
+        return index;
     }
 
     public void UnRegisterPlayer(PlayerController instance)
