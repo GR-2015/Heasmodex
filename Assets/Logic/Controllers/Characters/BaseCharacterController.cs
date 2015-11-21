@@ -59,11 +59,50 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     protected void Awake()
     {
-        this.Animator = this.GetComponent<Animator>();
-        this.Rigidbody = this.GetComponent<Rigidbody>();
+        Animator = GetComponent<Animator>();
+        Rigidbody = GetComponent<Rigidbody>();
 
-        this.CharacterController = this.GetComponent<CharacterController>();
+        CharacterController = GetComponent<CharacterController>();
     }
+
+    public virtual void Rotate(Vector3 rotationInput)
+    {
+        if (rotationInput.x < 0)
+        {
+            NewRotation = LeftRotation;
+        }
+
+        if (rotationInput.x > 0)
+        {
+            NewRotation = RightRotation;
+        }
+
+        this.transform.rotation = Quaternion.Lerp(Quaternion.Euler(NewRotation), transform.rotation, RotationSpeed * Time.deltaTime);
+    }
+
+    public virtual void Move(Vector3 movementInput, Vector3 direction)
+    {
+        Movement.x = MovementSpeed * movementInput.x;
+
+        Movement.y += Physics.gravity.y * Time.deltaTime;
+
+        CharacterController.Move(Movement*Time.deltaTime);
+
+        if (Animator != null)
+        {
+            Animator.SetFloat(AnimationHashID.Instance.MovementXaxis, Mathf.Abs(Movement.x));
+            Animator.SetBool(AnimationHashID.Instance.IsGrounded, CharacterController.isGrounded);
+        }
+    }
+
+    public virtual void Jump()
+    {
+        if (CharacterController.isGrounded)
+        {
+            Movement.y = JumpForce;
+        }
+    }
+
 
 }
 

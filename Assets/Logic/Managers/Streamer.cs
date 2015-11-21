@@ -3,8 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+[ExecuteInEditMode]
 class Streamer : MonoBehaviour
 {
+    #region GUI, Gizmos, Log
+
+    private const string GizmoName = "Hdd_Icon.png";
+
+    private const string startLoading = "Streaming started.";
+    private const string loadingDone = "Streaming is done.";
+    private const string unloading = "Unstreanibg object.";
+
+    #endregion
+
+    [SerializeField]
+    private bool streamInEditor = true;
+
     [SerializeField]
     private string mapSegmentName;
 
@@ -13,6 +27,7 @@ class Streamer : MonoBehaviour
     
     [SerializeField]
     private float distanceToPlayer;
+
     ResourceRequest resourceRequest;
 
     private void Awake()
@@ -27,15 +42,68 @@ class Streamer : MonoBehaviour
 
     private void Update()
     {
-        foreach (var player in CharacterManager.Instance.Players)
+        if (Application.isPlaying == false & streamInEditor == true)
         {
-            distanceToPlayer = Vector3.Distance(this.transform.position, player.transform.position);
+            Stream();
         }
 
+        if (Application.isPlaying == true)
+        {
+            CalculateDistanceToPlayer();
+            StreamOnPlay();
+        }
+    }
+
+    private void CalculateDistanceToPlayer()
+    {
+        foreach (var player in CharacterManager.Instance.Players)
+        {
+            distanceToPlayer =  Mathf.Round(Vector3.Distance(this.transform.position, player.transform.position));
+        }
+    }
+
+    private void StreamOnPlay()
+    {
         if (distanceToPlayer <= StreamingManager.Instance.StreamingDistance & resourceRequest == null)
         {
+            if (StreamingManager.Instance.StreamingLoging == true)
+            {
+                Debug.Log(startLoading + ": " + this.mapSegmentName);
+            }
+
             resourceRequest = Resources.LoadAsync(mapSegmentName, typeof(GameObject));
         }
+
+        if (resourceRequest != null)
+        {
+            if (resourceRequest.isDone && mapSegmentObject == null)
+            {
+                if (StreamingManager.Instance.StreamingLoging == true)
+                {
+                    Debug.Log(loadingDone + ": " + this.mapSegmentName);
+                }
+
+                mapSegmentObject = Instantiate(resourceRequest.asset) as GameObject;
+                mapSegmentObject.transform.SetParent(this.transform);
+            }
+        }
+
+        if (distanceToPlayer > StreamingManager.Instance.StreamingDistance & mapSegmentObject != null)
+        {
+            if (StreamingManager.Instance.StreamingLoging == true)
+            {
+                Debug.Log(unloading + ": " + this.mapSegmentName);
+            }
+
+            GameObject.Destroy(mapSegmentObject);
+            resourceRequest = null;
+        }
+    }
+
+    private void Stream()
+    {
+        resourceRequest = Resources.LoadAsync(mapSegmentName, typeof(GameObject));
+
         if (resourceRequest != null)
         {
             if (resourceRequest.isDone && mapSegmentObject == null)
@@ -44,16 +112,10 @@ class Streamer : MonoBehaviour
                 mapSegmentObject.transform.SetParent(this.transform);
             }
         }
-
-        if (distanceToPlayer > StreamingManager.Instance.StreamingDistance & mapSegmentObject != null)
-        {
-            GameObject.Destroy(mapSegmentObject);
-            resourceRequest = null; 
-        }
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawIcon(this.transform.position, "Hdd_Icon.png", true);
+        Gizmos.DrawIcon(this.transform.position, GizmoName, true);
     }
 }

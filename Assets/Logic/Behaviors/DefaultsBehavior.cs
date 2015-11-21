@@ -8,14 +8,28 @@ public class DefaultsBehavior : BaseBehavior
         {
             float distance = Mathf.Abs(Vector3.Distance(this._controlledEnemy.transform.position, item.transform.position));
             if (distance < 10)
+            {
                 return true;
+            }
         }
+
         return false;
     }
 
     public override void Behavior()
     {
-        //Debug.Log(this.GetType().ToString());
+        Vector3 playerPosition = this.ClosestPlayer();
+        Vector3 inputValue = Vector3.zero;
+
+        if (playerPosition.x < this.transform.position.x)
+        {
+            inputValue.x = -1;
+        }
+        else
+        {
+            inputValue.x = 1;
+        }
+        _controlledEnemy.Move(inputValue, Vector3.zero);
     }
 
     public override void OverloadConditions()

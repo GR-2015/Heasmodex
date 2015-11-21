@@ -7,9 +7,17 @@ internal class StreamingManager: MonoBehaviour
     [SerializeField]
     private readonly List<string> streamersNames = new List<string>();
 
+    [SerializeField]
+    private bool streamingLoging = false;
+
     public float StreamingDistance
     {
         get { return streamingDistance; }
+    }
+
+    public bool StreamingLoging
+    {
+        get { return streamingLoging; }
     }
 
     private readonly List<Streamer> streamersList = new List<Streamer>(); 

@@ -22,7 +22,6 @@ public class EnemyController : BaseCharacterController
     protected void Awake()
     {
         base.Awake();
-        CharacterManager.Instance.RegisterEnemy(this);
 
         _bechaviors = GetComponents<BaseBehavior>().ToList();
 
@@ -30,6 +29,11 @@ public class EnemyController : BaseCharacterController
         {
             CurrentBechavior = _bechaviors[0];
         }
+    }
+
+    protected void Start()
+    {
+        CharacterManager.Instance.RegisterEnemy(this);
     }
 
     protected void Update()

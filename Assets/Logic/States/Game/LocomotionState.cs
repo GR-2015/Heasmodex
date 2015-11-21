@@ -19,20 +19,16 @@ public class LocomotionState : BaseState
 
             if (inputValues.JumpButton == ButtonState.Down)
             {
-                Jump(player);
+                player.Jump();
             }
 
-            Move(player, newMovementVector, player.transform.forward);
-            Rotate(player, inputValues.MovementVector);
+            player.Move(newMovementVector, player.transform.forward);
+            player.Rotate(inputValues.MovementVector);
 
-            x = Mathf.Abs(x);
             if (inputValues.MeleeAttack == ButtonState.Down)
             {
                 player.Animator.SetTrigger(AnimationHashID.Instance.MeleeAttackTriggerName);
             }
-
-            player.Animator.SetFloat(AnimationHashID.Instance.MovementXaxis, x);
-            player.Animator.SetBool(AnimationHashID.Instance.IsGrounded, player.CharacterController.isGrounded);
         }
     }
 }

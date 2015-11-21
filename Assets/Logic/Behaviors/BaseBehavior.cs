@@ -26,4 +26,25 @@ public abstract class BaseBehavior : MonoBehaviour
 
     public abstract void OverloadConditions();
 
+    protected Vector3 ClosestPlayer()
+    {
+        Vector3 closestPlayerPosition = CharacterManager.Instance.Players[0].transform.position;
+        float distanceA = 0f;
+        float distanceB = 0f;
+
+        distanceA = Vector3.Distance(this.transform.position, closestPlayerPosition);
+        
+        for (int i = 1; i < CharacterManager.Instance.Players.Count; i++)
+        {
+            distanceB = Vector3.Distance(this.transform.position, CharacterManager.Instance.Players[i].transform.position);
+            
+            if (distanceA > distanceB)
+            {
+                distanceA = distanceB;
+                closestPlayerPosition = CharacterManager.Instance.Players[i].transform.position;
+            }
+        }
+
+        return closestPlayerPosition;
+    }
 }
