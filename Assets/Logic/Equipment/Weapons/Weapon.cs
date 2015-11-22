@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Weapon : MonoBehaviour
+public class Weapon : Item
 {
     [Header("Wield settings", order = 0)]
     [SerializeField]

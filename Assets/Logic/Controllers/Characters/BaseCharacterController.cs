@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public abstract class BaseCharacterController : MonoBehaviour
 {
@@ -47,7 +48,20 @@ public abstract class BaseCharacterController : MonoBehaviour
     [SerializeField]
     protected float HP = 100f;
 
+    [SerializeField]
+    protected float MP = 100f;
+
+    [SerializeField]
+    protected float Damage;
+
     #endregion Character statistic
+
+    #region Character equipment
+
+    [SerializeField]
+    protected List<Item> equipment = new List<Item>();
+
+    #endregion Character equipment
 
     #region Character settings
 
@@ -101,12 +115,17 @@ public abstract class BaseCharacterController : MonoBehaviour
         Rigidbody = GetComponent<Rigidbody>();
 
         CharacterController = GetComponent<CharacterController>();
+        if (Animator != null)
+        {
+            leftHendGrip = Animator.GetBoneTransform(HumanBodyBones.LeftHand);
+            rightHendGrip = Animator.GetBoneTransform(HumanBodyBones.RightHand);
 
-        leftHendGrip = Animator.GetBoneTransform(HumanBodyBones.LeftHand);
-        rightHendGrip = Animator.GetBoneTransform(HumanBodyBones.RightHand);
-
-        EquipWeapons(rightHendGrip, Hand.Main);
-        EquipWeapons(leftHendGrip, Hand.Off);
+            if (leftHendGrip != null & rightHendGrip != null)
+            {
+                EquipWeapons(rightHendGrip, Hand.Main);
+                EquipWeapons(leftHendGrip, Hand.Off);
+            }
+        }
     }
 
     public virtual void EquipWeapons(Transform hend, Hand type)
@@ -173,7 +192,19 @@ public abstract class BaseCharacterController : MonoBehaviour
 
         if (Physics.Raycast(middleHitPoint.position, middleHitPoint.forward, out hit, 3f, EnemyLayerMask))
         {
-            hit.collider.SendMessage("GetDamage", 10f);
+            float damage = this.Damage;
+
+            if (mainHandWeapon != null)
+            {
+                damage += mainHandWeapon.Damage;
+            }
+
+            if (offHandWeapon != null)
+            {
+                damage += offHandWeapon.Damage;
+            }
+
+            hit.collider.SendMessage("GetDamage", damage);
         }
     }
 

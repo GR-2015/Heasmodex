@@ -1,6 +1,3 @@
-﻿using UnityEngine;
-using System.Collections;
-
-public class MeleeWeapon : Weapon
+﻿public class MeleeWeapon : Weapon
 {
 }

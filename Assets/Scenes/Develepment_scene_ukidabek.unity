@@ -1995,10 +1995,6 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: -.110415146
       objectReference: {fileID: 0}
-    - target: {fileID: 11463548, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
-      propertyPath: rightHandWieldRotation.y
-      value: 230.617905
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
   m_IsPrefabParent: 0
@@ -2740,7 +2736,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1303620636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2769,6 +2765,8 @@ MonoBehaviour:
   Movement: {x: 0, y: 0, z: 0}
   NewRotation: {x: 0, y: 0, z: 0}
   HP: 100
+  MP: 100
+  Damage: 0
   movementSpeed: 5
   jumpForce: 50
   rotationSpeed: 60
@@ -4153,6 +4151,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1993823835}
   m_Mesh: {fileID: 4300002, guid: ef6178546f77bc546af127fb4c56da0c, type: 3}
+--- !u!1 &2033265021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2033265022}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2033265022
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2033265021}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.7888184, y: 1.49645996, z: -3.05371094}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
 --- !u!1 &2052941239
 GameObject:
   m_ObjectHideFlags: 0

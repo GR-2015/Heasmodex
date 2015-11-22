@@ -2,9 +2,13 @@
 
 public class LocomotionState : BaseState
 {
-    public override void StateFixedUpdate() {}
+    public override void StateFixedUpdate()
+    {
+    }
 
-    public override void StateLateUpdate() {}
+    public override void StateLateUpdate()
+    {
+    }
 
     public override void StateUpdate()
     {

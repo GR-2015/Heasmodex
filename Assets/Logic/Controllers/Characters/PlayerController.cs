@@ -4,8 +4,6 @@
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : BaseCharacterController
 {
-
-
     protected void Awake()
     {
         base.Awake();

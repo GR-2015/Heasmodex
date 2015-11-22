@@ -1,9 +1,11 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
-internal class StreamingManager: MonoBehaviour
+internal class StreamingManager : MonoBehaviour
 {
-    [SerializeField] private float streamingDistance = 15;
+    [SerializeField]
+    private float streamingDistance = 15;
+
     [SerializeField]
     private readonly List<string> streamersNames = new List<string>();
 
@@ -20,7 +22,7 @@ internal class StreamingManager: MonoBehaviour
         get { return streamingLoging; }
     }
 
-    private readonly List<Streamer> streamersList = new List<Streamer>(); 
+    private readonly List<Streamer> streamersList = new List<Streamer>();
 
     public static StreamingManager Instance
     {
