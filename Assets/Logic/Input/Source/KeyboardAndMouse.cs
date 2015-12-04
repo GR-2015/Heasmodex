@@ -2,7 +2,7 @@
 
 public class KeyboardAndMouse : BaseInputSource
 {
-    private const string PrefabName = "KeyboardAndMouseInputNames";
+    protected override string PrefabName { get { return "KeyboardAndMouseInputNames"; } }
 
     public KeyboardAndMouse(InputValues inputValues)
     {

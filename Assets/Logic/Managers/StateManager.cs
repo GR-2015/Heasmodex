@@ -27,6 +27,7 @@ public class StateManager : MonoBehaviour
     private void Start()
     {
         _statesStack.Push(new LocomotionState());
+        _statesStack.Pop().EnterState();
     }
 
     private void FixedUpdate()

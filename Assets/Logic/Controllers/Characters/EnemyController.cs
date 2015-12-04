@@ -56,10 +56,7 @@ public class EnemyController : BaseCharacterController
         if (CurrentBechavior != null)
         {
             CurrentBechavior.Behavior();
-        }
-        foreach (var bechavior in _bechaviors)
-        {
-            bechavior.OverloadConditions();
+            CurrentBechavior.OverloadConditions();
         }
     }
 }

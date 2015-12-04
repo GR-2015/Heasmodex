@@ -11,9 +11,9 @@ public abstract class BaseState
 
     public virtual void Return() {}
 
-    public virtual void StateUpdate() {}
+    public abstract void StateUpdate();
 
-    public abstract void StateFixedUpdate();
+    public virtual void StateFixedUpdate() {}
 
     public virtual void StateLateUpdate() {}
 }
