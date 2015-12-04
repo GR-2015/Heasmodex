@@ -12,6 +12,8 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     public static readonly Vector3 LeftRotation = new Vector3(0f, -90f, 0f);
 
+    public static readonly string getDamageFunctionName = "GetDamage";
+
     #endregion Consts
 
     #region Components
@@ -60,6 +62,9 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     [SerializeField]
     protected List<Item> equipment = new List<Item>();
+
+    [SerializeField] protected int projectilesCount = 10;
+    protected List<BaseProjectile> characterProjectiles = new List<BaseProjectile>();
 
     #endregion Character equipment
 
@@ -125,6 +130,18 @@ public abstract class BaseCharacterController : MonoBehaviour
                 EquipWeapons(rightHendGrip, Hand.Main);
                 EquipWeapons(leftHendGrip, Hand.Off);
             }
+        }
+
+        for (int i = 0; i < projectilesCount; i++)
+        {
+            GameObject newProjectile = new GameObject();
+
+            newProjectile.SetActive(false);
+            newProjectile.AddComponent<CapsuleCollider>();
+
+            BaseProjectile projectileComponent = newProjectile.AddComponent<BaseProjectile>();
+
+            characterProjectiles.Add(projectileComponent);
         }
     }
 
@@ -204,7 +221,17 @@ public abstract class BaseCharacterController : MonoBehaviour
                 damage += offHandWeapon.Damage;
             }
 
-            hit.collider.SendMessage("GetDamage", damage);
+            hit.collider.SendMessage(getDamageFunctionName, damage);
+        }
+
+        foreach (BaseProjectile projectile in characterProjectiles)
+        {
+            if (projectile.gameObject.active == false)
+            {
+                projectile.LaunchProjectile(this.transform);
+                projectile.gameObject.SetActive(true);
+                break;
+            }
         }
     }
 

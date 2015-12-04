@@ -27,7 +27,7 @@ public class StateManager : MonoBehaviour
     private void Start()
     {
         _statesStack.Push(new LocomotionState());
-        _statesStack.Pop().EnterState();
+        CurrentState.EnterState();
     }
 
     private void FixedUpdate()
@@ -53,7 +53,11 @@ public class StateManager : MonoBehaviour
         }
 
         _statesStack.Push(newState);
-        CurrentState.EnterState();
+
+        if (CurrentState != null)
+        {
+            CurrentState.EnterState();
+        }
     }
 
     public void ExitCurrentState()
