@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class BaseCharacterController : MonoBehaviour
@@ -48,23 +49,14 @@ public abstract class BaseCharacterController : MonoBehaviour
     #region Character statistic
 
     [SerializeField]
-    protected float HP = 100f;
-
-    [SerializeField]
-    protected float MP = 100f;
-
-    [SerializeField]
-    protected float Damage;
+    private CharacterStatistics characterStatistics = new CharacterStatistics();
 
     #endregion Character statistic
 
     #region Character equipment
 
     [SerializeField]
-    protected List<Item> equipment = new List<Item>();
-
-    [SerializeField] protected int projectilesCount = 10;
-    protected List<BaseProjectile> characterProjectiles = new List<BaseProjectile>();
+    private CharactereEquipment charactereEquipment = new CharactereEquipment();
 
     #endregion Character equipment
 
@@ -98,13 +90,7 @@ public abstract class BaseCharacterController : MonoBehaviour
     protected Transform leftHendGrip;
 
     [SerializeField]
-    protected Weapon offHandWeapon;
-
-    [SerializeField]
     protected Vector3 leftHandWieldRotation = Vector3.zero;
-
-    [SerializeField]
-    protected Weapon mainHandWeapon;
 
     [SerializeField]
     protected Transform rightHendGrip;
@@ -132,33 +118,25 @@ public abstract class BaseCharacterController : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < projectilesCount; i++)
-        {
-            GameObject newProjectile = new GameObject();
-
-            newProjectile.SetActive(false);
-            newProjectile.AddComponent<CapsuleCollider>();
-
-            BaseProjectile projectileComponent = newProjectile.AddComponent<BaseProjectile>();
-
-            characterProjectiles.Add(projectileComponent);
-        }
+        //TMP 
+        charactereEquipment.GenerateProjectiles<BaseProjectile>();
     }
 
+    //TMP
     public virtual void EquipWeapons(Transform hend, Hand type)
     {
         switch (type)
         {
             case Hand.Main:
-                mainHandWeapon = hend.GetComponentInChildren<Weapon>();
-                mainHandWeapon.transform.localPosition = mainHandWeapon.MainWieldPositionOffest;
-                mainHandWeapon.transform.localRotation = Quaternion.Euler(rightHandWieldRotation);
+                charactereEquipment.mainHandWeapon = hend.GetComponentInChildren<Weapon>();
+                charactereEquipment.mainHandWeapon.transform.localPosition = charactereEquipment.mainHandWeapon.MainWieldPositionOffest;
+                charactereEquipment.mainHandWeapon.transform.localRotation = Quaternion.Euler(rightHandWieldRotation);
                 break;
 
             case Hand.Off:
-                offHandWeapon = hend.GetComponentInChildren<Weapon>();
-                offHandWeapon.transform.localPosition = (mainHandWeapon as OneHandedMekeeWeapon).OffWieldPositionOffest;
-                offHandWeapon.transform.localRotation = Quaternion.Euler(leftHandWieldRotation);
+                charactereEquipment.offHandWeapon = hend.GetComponentInChildren<Weapon>();
+                charactereEquipment.offHandWeapon.transform.localPosition = (charactereEquipment.mainHandWeapon as OneHandedMekeeWeapon).OffWieldPositionOffest;
+                charactereEquipment.offHandWeapon.transform.localRotation = Quaternion.Euler(leftHandWieldRotation);
                 break;
         }
     }
@@ -209,26 +187,26 @@ public abstract class BaseCharacterController : MonoBehaviour
 
         if (Physics.Raycast(middleHitPoint.position, middleHitPoint.forward, out hit, 3f, EnemyLayerMask))
         {
-            float damage = this.Damage;
+            float damage = this.characterStatistics.Damage;
 
-            if (mainHandWeapon != null)
+            if (charactereEquipment.mainHandWeapon != null)
             {
-                damage += mainHandWeapon.Damage;
+                damage += charactereEquipment.mainHandWeapon.Damage;
             }
 
-            if (offHandWeapon != null)
+            if (charactereEquipment.offHandWeapon != null)
             {
-                damage += offHandWeapon.Damage;
+                damage += charactereEquipment.offHandWeapon.Damage;
             }
 
             hit.collider.SendMessage(getDamageFunctionName, damage);
         }
 
-        foreach (BaseProjectile projectile in characterProjectiles)
+        foreach (BaseProjectile projectile in charactereEquipment.characterProjectiles)
         {
             if (projectile.gameObject.active == false)
             {
-                projectile.LaunchProjectile(this.transform);
+                projectile.LaunchProjectile(this.middleHitPoint);
                 projectile.gameObject.SetActive(true);
                 break;
             }
@@ -237,7 +215,7 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     public virtual void GetDamage(float damage)
     {
-        HP -= damage;
+        this.characterStatistics.HP -= damage;
     }
 }
 
