@@ -48,15 +48,17 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     #region Character statistic
 
-    [SerializeField]
-    private CharacterStatistics characterStatistics = new CharacterStatistics();
+    [SerializeField] protected readonly CharacterStatistics characterStatistics = new CharacterStatistics();
+
+    public CharacterStatistics CharacterStatistics { get { return characterStatistics; } }
 
     #endregion Character statistic
 
     #region Character equipment
 
-    [SerializeField]
-    private CharactereEquipment charactereEquipment = new CharactereEquipment();
+    [SerializeField] protected readonly CharactereEquipment charactereEquipment = new CharactereEquipment();
+
+    public CharactereEquipment CharactereEquipment { get { return charactereEquipment; } }
 
     #endregion Character equipment
 

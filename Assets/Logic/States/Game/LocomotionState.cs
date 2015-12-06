@@ -32,6 +32,11 @@ public class LocomotionState : BaseState
             {
                 inputValues.Owner.MeleeAttack();
             }
+
+            if (Input.GetKeyDown(KeyCode.Escape) == true)
+            {
+                StateManager.Instance.EnterNewState(new EquipmentState(inputValues));
+            }
         }
     }
 }

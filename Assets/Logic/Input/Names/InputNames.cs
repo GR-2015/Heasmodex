@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class InputNames : MonoBehaviour
+public class InputNames : ScriptableObject
 {
     [SerializeField]
     private string _movementXaxis = "MovementXaxis";

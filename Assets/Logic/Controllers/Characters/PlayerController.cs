@@ -2,6 +2,7 @@
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(CharacterController))]
+
 public class PlayerController : BaseCharacterController
 {
     protected void Awake()

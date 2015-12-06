@@ -1,15 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EquipmentView : MonoBehaviour {
+public class EquipmentView : BaseView
+{
+    [SerializeField] protected GameObject EquipmentButton;
+   // [SerializeField] protected 
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    protected override void Start()
+    {
+        GUIController.Instance.RegisterWindow(this, gameObject, GUIWindowType.Equipment);
+        gameObject.SetActive(false);
+    }
+
+    public override void LoadContent(MonoBehaviour Object)
+    {
+        PlayerController player = Object as PlayerController;
+
+        foreach (ItemSlot itemSlot in player.CharactereEquipment.equipment)
+        {
+            
+        }
+    }
 }

@@ -1,15 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BaseView : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+public class BaseView : MonoBehaviour
+{
+    protected virtual void Start() {}
+    public virtual void LoadContent(MonoBehaviour Object) { }
 }
