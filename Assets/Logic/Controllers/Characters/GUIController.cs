@@ -19,6 +19,7 @@ public class GUIController : MonoBehaviour
         if (equipmentWindow.active == false)
         {
             equipmentWindow.SetActive(true);
+            equipmentView.LoadContent(owner);
         }
         else
         {

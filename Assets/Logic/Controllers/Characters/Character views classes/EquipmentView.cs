@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class EquipmentView : BaseView
 {
-    [SerializeField] protected GameObject EquipmentButton;
-   // [SerializeField] protected 
+    [SerializeField] private GameObject EquipmentButton;
+    [SerializeField] private GameObject ContentBox;
+
+    private List<GameObject> butList  = new List<GameObject>(); 
 
     protected override void Start()
     {
@@ -18,7 +22,22 @@ public class EquipmentView : BaseView
 
         foreach (ItemSlot itemSlot in player.CharactereEquipment.equipment)
         {
-            
+            butList.Add(GameObject.Instantiate(EquipmentButton));
+            butList[butList.Count-1].transform.SetParent(ContentBox.transform);
+
+            Text text = butList[butList.Count - 1].GetComponentInChildren<Text>();
+
+            text.text = itemSlot.itemName;
         }
+    }
+
+    private void OnDisable()
+    {
+        foreach (GameObject buttonObject in butList)
+        {
+            GameObject.Destroy(buttonObject);
+        }
+
+        butList.Clear();
     }
 }
