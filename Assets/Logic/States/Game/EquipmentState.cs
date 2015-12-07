@@ -13,6 +13,7 @@ public class EquipmentState : BaseState
     public override void EnterState()
     {
         GUIController.Instance.OpenInventory(playerInputValues.Owner);
+
     }
 
     public override void ExitState()
