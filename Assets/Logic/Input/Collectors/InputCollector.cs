@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
- class InputCollector : MonoBehaviour
+internal class InputCollector : MonoBehaviour
 {
     public static InputCollector Instance { get; private set; }
 

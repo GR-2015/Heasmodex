@@ -1,14 +1,20 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class EquipmentView : BaseView
 {
-    [SerializeField] private GameObject EquipmentButton;
-    [SerializeField] private GameObject ContentBox;
+    public UnityEvent<string> TestUnityEvent;
 
-    private List<GameObject> butList  = new List<GameObject>(); 
+    [SerializeField]
+    private GameObject EquipmentButton;
+
+    [SerializeField]
+    private GameObject ContentBox;
+
+    private List<GameObject> butList = new List<GameObject>();
+    private List<Button> buttonsss = new List<Button>();
 
     protected override void Start()
     {
@@ -23,9 +29,16 @@ public class EquipmentView : BaseView
         foreach (ItemSlot itemSlot in player.CharactereEquipment.equipment)
         {
             butList.Add(GameObject.Instantiate(EquipmentButton));
-            butList[butList.Count-1].transform.SetParent(ContentBox.transform);
-
+            butList[butList.Count - 1].transform.SetParent(ContentBox.transform);
+            buttonsss.Add(butList[butList.Count - 1].GetComponentInChildren<Button>());
             Text text = butList[butList.Count - 1].GetComponentInChildren<Text>();
+
+            InventoryItemButtonHandler handler =
+               butList[butList.Count - 1].GetComponentInChildren<InventoryItemButtonHandler>();
+
+            handler.ItemInfo = itemSlot;
+
+            EquipmentView t = GUIController.Instance.GetView<EquipmentView>() as EquipmentView;
 
             text.text = itemSlot.itemName;
         }

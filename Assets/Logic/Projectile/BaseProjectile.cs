@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
 public class BaseProjectile : MonoBehaviour
@@ -10,13 +9,17 @@ public class BaseProjectile : MonoBehaviour
 
     protected Rigidbody _Rigidbody = null;
 
-    [SerializeField] protected float _range = 10f;
+    [SerializeField]
+    protected float _range = 10f;
 
-    [SerializeField] protected float _damage = 10f;
+    [SerializeField]
+    protected float _damage = 10f;
 
-    [SerializeField] protected float _velocity = 100f;
+    [SerializeField]
+    protected float _velocity = 100f;
 
-    [SerializeField] protected LayerMask _enemyLayerMask;
+    [SerializeField]
+    protected LayerMask _enemyLayerMask;
 
     public LayerMask EnemyLayerMask
     {
@@ -31,25 +34,16 @@ public class BaseProjectile : MonoBehaviour
 
     protected void OnEnable()
     {
-        Debug.Log(":)");
         oldPosition = this.transform.position;
     }
 
-    protected void Start() 
-    {
-	    Debug.Log(":)");
-	}
-
     protected void Update()
     {
-       
-
         if (distanceTraveled >= _range)
         {
             distanceTraveled = 0f;
             this.gameObject.SetActive(false);
         }
-
     }
 
     protected void FixedUpdate()

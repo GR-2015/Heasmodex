@@ -1,8 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 public class GUIController : MonoBehaviour
 {
     public static GUIController Instance;
+
+    private List<BaseView> cachedViews = new List<BaseView>();
 
     [SerializeField]
     private GameObject equipmentWindow;
@@ -29,13 +33,26 @@ public class GUIController : MonoBehaviour
 
     public void RegisterWindow(BaseView view, GameObject windowGameObject, GUIWindowType windowType)
     {
+        BaseView cahedView = null;
+
         switch (windowType)
         {
             case GUIWindowType.Equipment:
-                equipmentView = view as EquipmentView;
+                cahedView = view;
+                equipmentView = cahedView as EquipmentView;
                 equipmentWindow = windowGameObject;
                 break;
         }
+
+        if (cahedView != null)
+        {
+            cachedViews.Add(cahedView);
+        }
+    }
+
+    public BaseView GetView<T>() where T : BaseView
+    {
+        return cachedViews.OfType<T>().FirstOrDefault();
     }
 }
 

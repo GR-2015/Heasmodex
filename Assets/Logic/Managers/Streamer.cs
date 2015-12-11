@@ -1,10 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 [ExecuteInEditMode]
-class Streamer : MonoBehaviour
+internal class Streamer : MonoBehaviour
 {
     #region GUI, Gizmos, Log
 
@@ -14,7 +11,7 @@ class Streamer : MonoBehaviour
     private const string loadingDone = "Streaming is done.";
     private const string unloading = "Unstreanibg object.";
 
-    #endregion
+    #endregion GUI, Gizmos, Log
 
     [SerializeField]
     private bool streamInEditor = true;
@@ -24,11 +21,11 @@ class Streamer : MonoBehaviour
 
     [SerializeField]
     private GameObject mapSegmentObject = null;
-    
+
     [SerializeField]
     private float distanceToPlayer;
 
-    ResourceRequest resourceRequest;
+    private ResourceRequest resourceRequest;
 
     private void Awake()
     {
@@ -58,7 +55,7 @@ class Streamer : MonoBehaviour
     {
         foreach (var player in CharacterManager.Instance.Players)
         {
-            distanceToPlayer =  Mathf.Round(Vector3.Distance(this.transform.position, player.transform.position));
+            distanceToPlayer = Mathf.Round(Vector3.Distance(this.transform.position, player.transform.position));
         }
     }
 
