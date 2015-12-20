@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class BaseCharacterController : MonoBehaviour
 {
@@ -48,7 +46,8 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     #region Character statistic
 
-    [SerializeField] protected CharacterStatistics characterStatistics = new CharacterStatistics();
+    [SerializeField]
+    protected CharacterStatistics characterStatistics = new CharacterStatistics();
 
     public CharacterStatistics CharacterStatistics { get { return characterStatistics; } }
 
@@ -56,7 +55,8 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     #region Character equipment
 
-    [SerializeField] protected CharactereEquipment charactereEquipment = new CharactereEquipment();
+    [SerializeField]
+    protected CharactereEquipment charactereEquipment = new CharactereEquipment();
 
     public CharactereEquipment CharactereEquipment { get { return charactereEquipment; } }
 
@@ -120,7 +120,7 @@ public abstract class BaseCharacterController : MonoBehaviour
             }
         }
 
-        //TMP 
+        //TMP
         charactereEquipment.GenerateProjectiles<BaseProjectile>();
     }
 

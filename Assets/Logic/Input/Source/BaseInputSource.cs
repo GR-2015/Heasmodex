@@ -17,10 +17,10 @@ public abstract class BaseInputSource
             case AxisType.Normal:
                 value = Input.GetAxis(axisName);
                 break;
+
             case AxisType.Raw:
                 value = Input.GetAxisRaw(axisName);
                 break;
-
         }
 
         return value;
@@ -46,4 +46,3 @@ public abstract class BaseInputSource
         return ButtonState.Released;
     }
 }
-

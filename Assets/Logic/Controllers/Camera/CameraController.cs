@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
     private Camera _controlledCamera;
+
     [SerializeField]
-    private Vector3 _cameraOffset= Vector3.zero;
+    private Vector3 _cameraOffset = Vector3.zero;
+
     [SerializeField]
     private float _cameraSnapingSpeed = 600f;
 

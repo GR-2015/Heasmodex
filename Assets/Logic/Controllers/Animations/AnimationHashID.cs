@@ -4,8 +4,6 @@ public class AnimationHashID : MonoBehaviour
 {
     public static AnimationHashID Instance { get; private set; }
 
-
-
     #region Float Parameters Hash IDs
 
     [SerializeField]

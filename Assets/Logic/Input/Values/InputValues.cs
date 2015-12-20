@@ -8,15 +8,14 @@ public class InputValues
 
     public Vector2 MovementVector { get; set; }
 
-    #endregion
+    #endregion Input axes
 
     #region Buttons
 
     public ButtonState JumpButton;
     public ButtonState MeleeAttack;
 
-
-    #endregion
+    #endregion Buttons
 
     public InputValues(PlayerController owner)
     {

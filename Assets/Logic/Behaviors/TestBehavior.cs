@@ -7,7 +7,7 @@ public class TestBehavior : BaseBehavior
         foreach (var item in CharacterManager.Instance.Players)
         {
             float distance = Mathf.Abs(Vector3.Distance(this._controlledEnemy.transform.position, item.transform.position));
-            if (distance  < 5)
+            if (distance < 5)
                 return true;
         }
 
@@ -29,7 +29,5 @@ public class TestBehavior : BaseBehavior
             else
                 overloadPermission = false;
         }
-
     }
-
 }

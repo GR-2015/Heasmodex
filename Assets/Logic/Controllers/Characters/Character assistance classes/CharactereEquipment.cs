@@ -6,19 +6,22 @@ using UnityEngine;
 [Serializable]
 public class CharactereEquipment
 {
-    [Header("Weapons.")]
-
-    [SerializeField] public Weapon mainHandWeapon;
-
-    [SerializeField] public Weapon offHandWeapon;
-
-    [Header("Armor parts.")] 
-    [SerializeField] public Armor breastplate;
-
-    [Header("Backpack.")] 
+    [Header("Wallet")]
     [SerializeField]
     public float money = 100f;
 
+    [Header("Weapons.")]
+    [SerializeField]
+    public Weapon mainHandWeapon;
+
+    [SerializeField]
+    public Weapon offHandWeapon;
+
+    [Header("Armor parts.")]
+    [SerializeField]
+    public Armor breastplate;
+
+    [Header("Backpack.")]
     [SerializeField]
     public List<ItemSlot> equipment = new List<ItemSlot>();
 
@@ -39,7 +42,7 @@ public class CharactereEquipment
 
             BaseProjectile projectileComponent = newProjectile.AddComponent<T>();
 
-            characterProjectiles.Add(projectileComponent);  
+            characterProjectiles.Add(projectileComponent);
         }
     }
 
@@ -63,7 +66,8 @@ public struct ItemSlot
     public string itemName;
     public int itemCount;
 
-    public ItemSlot(string itemName) : this()
+    public ItemSlot(string itemName)
+        : this()
     {
         this.itemName = itemName;
         itemCount = 1;

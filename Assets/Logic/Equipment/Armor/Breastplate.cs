@@ -1,7 +1,3 @@
-﻿using UnityEngine;
-using System.Collections;
-
-public class Breastplate : Armor
+﻿public class Breastplate : Armor
 {
-
 }

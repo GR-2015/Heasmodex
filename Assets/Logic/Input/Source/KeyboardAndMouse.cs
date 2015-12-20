@@ -6,7 +6,7 @@ public class KeyboardAndMouse : BaseInputSource
 
     public KeyboardAndMouse(InputValues inputValues)
     {
-        InputNames = Resources.Load(PrefabName, typeof (InputNames)) as InputNames;
+        InputNames = Resources.Load(PrefabName, typeof(InputNames)) as InputNames;
         this.InupValues = inputValues;
     }
 
