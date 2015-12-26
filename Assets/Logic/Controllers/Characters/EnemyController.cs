@@ -6,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class EnemyController : BaseCharacterController
 {
+    [SerializeField] private EnemyType _type;
+
     private List<BaseBehavior> _bechaviors;
 
     public List<BaseBehavior> Bechaviors
@@ -59,4 +61,17 @@ public class EnemyController : BaseCharacterController
             CurrentBechavior.OverloadConditions();
         }
     }
+
+    protected virtual void OnDisable()
+    {
+        EnemiesSpawnManager.Instance.Hide(this.gameObject,_type);
+    }
+}
+
+public enum EnemyType
+{
+    Normal,
+    Strong,
+    Elite,
+    Boss
 }
