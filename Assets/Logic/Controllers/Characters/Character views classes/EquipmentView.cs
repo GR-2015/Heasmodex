@@ -30,6 +30,9 @@ public class EquipmentView : BaseView
         {
             butList.Add(GameObject.Instantiate(EquipmentButton));
             butList[butList.Count - 1].transform.SetParent(ContentBox.transform);
+            butList[butList.Count - 1].transform.localScale = Vector3.one;
+            butList[butList.Count - 1].transform.position = Vector3.zero;
+
             buttonsss.Add(butList[butList.Count - 1].GetComponentInChildren<Button>());
             Text text = butList[butList.Count - 1].GetComponentInChildren<Text>();
 
