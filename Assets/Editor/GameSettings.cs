@@ -8,7 +8,7 @@ public class GameSettings : EditorWindow
     [MenuItem("Window/Game settings")]
     static void Init()
     {
-        // Get existing open window or if none, make a new one:
+        // Get existing open window or if none, make segmentPregabName new one:
         GameSettings window = (GameSettings)EditorWindow.GetWindow(typeof(GameSettings));
         window.Show();
     }

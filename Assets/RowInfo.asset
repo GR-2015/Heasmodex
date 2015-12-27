@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13247131543809c4f9a6471621568564, type: 3}
+  m_Name: RowInfo
+  m_EditorClassIdentifier: 
+  size: {x: 10, y: 10, z: 1}
+  RowList:
+  - segmentPregabName:
+    - CubePrototype02x02x02
+    - CubePrototype02x02x02 (1)
+    - CubePrototype02x02x02 (3)
+    - CubePrototype02x02x02 (2)
+    - CubePrototype02x02x02 (4)
+    - CubePrototype02x02x02 (63)
+    - CubePrototype02x02x02 (62)
+    - CubePrototype02x02x02 (60)
+    - CubePrototype02x02x02 (61)
+    - CubePrototype02x02x02 (59)
+  - segmentPregabName:
+    - CubePrototype02x02x02 (6)
+    - 
+    - 
+    - 
+    - CubePrototype02x02x02 (28)
+    - CubePrototype02x02x02 (58)
+    - 
+    - 
+    - 
+    - CubePrototype02x02x02 (48)
+  - segmentPregabName:
+    - CubePrototype02x02x02 (8)
+    - 
+    - 
+    - 
+    - CubePrototype02x02x02 (26)
+    - CubePrototype02x02x02 (56)
+    - 
+    - 
+    - 
+    - CubePrototype02x02x02 (50)
+  - segmentPregabName:
+    - CubePrototype02x02x02 (7)
+    - 
+    - 
+    - 
+    - CubePrototype02x02x02 (27)
+    - CubePrototype02x02x02 (57)
+    - 
+    - 
+    - 
+    - CubePrototype02x02x02 (49)
+  - segmentPregabName:
+    - CubePrototype02x02x02 (9)
+    - CubePrototype02x02x02 (25)
+    - CubePrototype02x02x02 (23)
+    - CubePrototype02x02x02 (24)
+    - CubePrototype02x02x02 (22)
+    - CubePrototype02x02x02 (55)
+    - CubePrototype02x02x02 (51)
+    - CubePrototype02x02x02 (53)
+    - CubePrototype02x02x02 (52)
+    - CubePrototype02x02x02 (54)
+  - segmentPregabName:
+    - CubePrototype02x02x02 (17)
+    - CubePrototype02x02x02 (16)
+    - CubePrototype02x02x02 (14)
+    - CubePrototype02x02x02 (15)
+    - CubePrototype02x02x02 (5)
+    - CubePrototype02x02x02 (18)
+    - CubePrototype02x02x02 (19)
+    - CubePrototype02x02x02 (21)
+    - CubePrototype02x02x02 (20)
+    - CubePrototype02x02x02 (36)
+  - segmentPregabName:
+    - CubePrototype02x02x02 (13)
+    - 
+    - 
+    - 
+    - CubePrototype02x02x02 (29)
+    - CubePrototype02x02x02 (37)
+    - 
+    - 
+    - 
+    - CubePrototype02x02x02 (47)
+  - segmentPregabName:
+    - CubePrototype02x02x02 (11)
+    - 
+    - 
+    - 
+    - CubePrototype02x02x02 (31)
+    - CubePrototype02x02x02 (39)
+    - 
+    - 
+    - 
+    - CubePrototype02x02x02 (45)
+  - segmentPregabName:
+    - CubePrototype02x02x02 (12)
+    - 
+    - 
+    - 
+    - CubePrototype02x02x02 (30)
+    - CubePrototype02x02x02 (38)
+    - 
+    - 
+    - 
+    - CubePrototype02x02x02 (46)
+  - segmentPregabName:
+    - CubePrototype02x02x02 (10)
+    - CubePrototype02x02x02 (32)
+    - CubePrototype02x02x02 (34)
+    - CubePrototype02x02x02 (33)
+    - CubePrototype02x02x02 (35)
+    - CubePrototype02x02x02 (40)
+    - CubePrototype02x02x02 (44)
+    - CubePrototype02x02x02 (42)
+    - CubePrototype02x02x02 (43)
+    - CubePrototype02x02x02 (41)

@@ -341,8 +341,9 @@ MonoBehaviour:
   _height: 50
   _widtch: 100
   _debug: 1
-  activeRowIndex: 
-  activeColumnIndex: 
+  _activeRowIndex: 
+  _activeColumnIndex: 
+  mapInfo: {fileID: 11400000, guid: 51b3dda2d2ea18049b58d862085c7a6e, type: 2}
 --- !u!114 &11470258
 MonoBehaviour:
   m_ObjectHideFlags: 1
