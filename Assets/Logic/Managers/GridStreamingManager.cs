@@ -49,10 +49,12 @@ public class GridStreamingManager : MonoBehaviour
         {
             case GridStreamesrType.Column:
                 _activeColumnIndex.Remove(index);
+                Unstream(index, type);
                 break;
 
             case GridStreamesrType.Row:
                 _activeRowIndex.Remove(index);
+                Unstream(index, type);
                 break;
         }
     }
@@ -97,8 +99,42 @@ public class GridStreamingManager : MonoBehaviour
         ResourceRequest newResourceRequest = Resources.LoadAsync(path, typeof(GameObject));
         GameObject newObject = newResourceRequest.asset as GameObject;
         GameObject.Instantiate(newObject);
-        return newObject;
+        return GameObject.Instantiate(newObject);
     }
+
+    private void Unstream(int index, GridStreamesrType type)
+    {
+        switch (type)
+        {
+            case GridStreamesrType.Column:
+
+                foreach (int rowIndex in ActiveRowIndex)
+                {
+                    string name = _mapInfo.RowList[rowIndex].segmentPregabName[index];
+                    UnityEngine.Debug.Log(name);
+
+                    if (MapObjects[rowIndex, index] != null)
+                    {
+                        GameObject.Destroy(MapObjects[rowIndex, index]);
+                    }
+                }
+                break;
+
+            case GridStreamesrType.Row:
+                foreach (int columIndex in ActiveColumnIndex)
+                {
+                    string name = _mapInfo.RowList[index].segmentPregabName[columIndex];
+                    UnityEngine.Debug.Log(name);
+
+                    if (MapObjects[index, columIndex] != null)
+                    {
+                        GameObject.Destroy(MapObjects[index, columIndex]);
+                    }
+                }
+                break;
+        }
+    }
+
 
     private void Awake()
     {
