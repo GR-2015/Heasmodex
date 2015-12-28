@@ -154,11 +154,12 @@ public class GridStreamingManager : MonoBehaviour
             newGridStreamerComponent = newGridStreamer.AddComponent<GridStreamer>();
 
             newPosition = Vector3.zero;
+            newPosition.x = -1;
             newPosition.y = i;
 
             newGridStreamerComponent.DebugLineEnd = newPosition;
             newGridStreamerComponent.DebugLineEnd.x = _widtch;
-            newGridStreamerComponent.MaxDistance = _widtch;
+            newGridStreamerComponent.MaxDistance = _widtch + 1;
             newGridStreamerComponent.Direction = Vector3.right;
             newGridStreamerComponent.Type = GridStreamesrType.Row;
             newGridStreamerComponent.Index = i;
