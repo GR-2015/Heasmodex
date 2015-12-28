@@ -68,7 +68,7 @@ public class GridStreamingManager : MonoBehaviour
                 foreach (int rowIndex in ActiveRowIndex)
                 {
                     string name = _mapInfo.RowList[rowIndex].segmentPregabName[index];
-                    UnityEngine.Debug.Log(name);
+                    //UnityEngine.Debug.Log(name);
 
                     if (MapObjects[rowIndex, index] == null && name != string.Empty)
                     {
@@ -82,7 +82,7 @@ public class GridStreamingManager : MonoBehaviour
                 foreach (int columIndex in ActiveColumnIndex)
                 {
                     string name = _mapInfo.RowList[index].segmentPregabName[columIndex];
-                    UnityEngine.Debug.Log(name);
+                    //UnityEngine.Debug.Log(name);
 
                     if (MapObjects[index, columIndex] == null && name != string.Empty)
                     {
@@ -98,7 +98,6 @@ public class GridStreamingManager : MonoBehaviour
     {
         ResourceRequest newResourceRequest = Resources.LoadAsync(path, typeof(GameObject));
         GameObject newObject = newResourceRequest.asset as GameObject;
-        GameObject.Instantiate(newObject);
         return GameObject.Instantiate(newObject);
     }
 
@@ -110,12 +109,10 @@ public class GridStreamingManager : MonoBehaviour
 
                 foreach (int rowIndex in ActiveRowIndex)
                 {
-                    string name = _mapInfo.RowList[rowIndex].segmentPregabName[index];
-                    UnityEngine.Debug.Log(name);
-
                     if (MapObjects[rowIndex, index] != null)
                     {
                         GameObject.Destroy(MapObjects[rowIndex, index]);
+                        MapObjects[rowIndex, index] = null;
                     }
                 }
                 break;
@@ -123,12 +120,10 @@ public class GridStreamingManager : MonoBehaviour
             case GridStreamesrType.Row:
                 foreach (int columIndex in ActiveColumnIndex)
                 {
-                    string name = _mapInfo.RowList[index].segmentPregabName[columIndex];
-                    UnityEngine.Debug.Log(name);
-
                     if (MapObjects[index, columIndex] != null)
                     {
                         GameObject.Destroy(MapObjects[index, columIndex]);
+                        MapObjects[index, columIndex] = null;
                     }
                 }
                 break;

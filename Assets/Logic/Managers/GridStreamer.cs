@@ -92,7 +92,6 @@ public class GridStreamer : MonoBehaviour
         {
             Debug.DrawLine(this.transform.position, DebugLineEnd, color);
         }
-
     }
 
     private void OnDrawGizmos()
