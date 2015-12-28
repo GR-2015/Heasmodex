@@ -283,10 +283,9 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11464302, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
-      propertyPath: mapInfo
-      value: 
-      objectReference: {fileID: 11400000, guid: e6cd8d4d1617ed34d8451c8fe10c3718,
-        type: 2}
+      propertyPath: streaminLayerMask.m_Bits
+      value: 2147483648
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
   m_IsPrefabParent: 0
@@ -958,7 +957,7 @@ GameObject:
   - 33: {fileID: 219356741}
   - 65: {fileID: 219356740}
   - 23: {fileID: 219356739}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -971,7 +970,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 219356738}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -8257,7 +8256,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22470622, guid: fed6d99e82998ba459ce9964d17c080f, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22470622, guid: fed6d99e82998ba459ce9964d17c080f, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -8281,15 +8280,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22445150, guid: fed6d99e82998ba459ce9964d17c080f, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22445150, guid: fed6d99e82998ba459ce9964d17c080f, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22445150, guid: fed6d99e82998ba459ce9964d17c080f, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11442638, guid: fed6d99e82998ba459ce9964d17c080f, type: 2}
       propertyPath: ContentBox

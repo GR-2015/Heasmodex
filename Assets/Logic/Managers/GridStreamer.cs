@@ -57,7 +57,11 @@ public class GridStreamer : MonoBehaviour
     private GridStreamesrState UpdateStreamerState()
     {
         _isCrossedInPast = _isCrossedNow;
-        _isCrossedNow = Physics.Raycast(this.transform.position, Direction, MaxDistance);
+        _isCrossedNow = Physics.Raycast(
+            this.transform.position, 
+            Direction, 
+            MaxDistance, 
+            GridStreamingManager.StreaminLayerMask);
 
         if (_isCrossedNow && !_isCrossedInPast)
         {

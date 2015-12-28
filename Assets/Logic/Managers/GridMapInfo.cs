@@ -6,7 +6,6 @@ using System.Security.Policy;
 public class GridMapInfo : ScriptableObject
 {
     [SerializeField] public Vector3 size = Vector3.zero;
-    [SerializeField] public string[,,] mapPtefabNames;
 
     [SerializeField] public RowInfo[] RowList;
 }

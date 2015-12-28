@@ -2,14 +2,15 @@
 using UnityEngine;
 using UnityEditor;
 using System.Collections;
+using System.Globalization;
 
 public class MapGenerator : EditorWindow
 {
-    private const string levelElementString = "Level element";
-    private int height = 0;
-    private int width = 0;
-
-    private string[,] testTab;
+    private const string LevelElementString = "Level element";
+    private const string NewMapPath = "Assets/{0}.asset";
+    private const string NewMapName = "NewMap";
+    private int _height = 0;
+    private int _width = 0;
 
     [MenuItem("Window/Map/Map Generator")]
     public static void Init()
@@ -24,54 +25,58 @@ public class MapGenerator : EditorWindow
         GUILayout.BeginHorizontal();
 
         GUILayout.BeginHorizontal();
-        GUILayout.Label("height");
-        height = EditorGUILayout.IntField(height);
+        GUILayout.Label("_height");
+        _height = EditorGUILayout.IntField(_height);
         GUILayout.EndHorizontal();
 
         GUILayout.BeginHorizontal();
-        GUILayout.Label("width");
-        width = EditorGUILayout.IntField(width);
+        GUILayout.Label("_width");
+        _width = EditorGUILayout.IntField(_width);
         GUILayout.EndHorizontal();
 
         GUILayout.EndHorizontal();
 
         if (GUILayout.Button("Test"))
         {
-            testTab = new string[height, width];
-
             GridMapInfo mapInfo = ScriptableObject.CreateInstance<GridMapInfo>();
 
-            mapInfo.mapPtefabNames = new string[height, width, 1];
-            mapInfo.size = new Vector3(height, width, 1);
+            //mapInfo.mapPtefabNames = new string[_height, _width, 1];
+            mapInfo.size = new Vector3(_height, _width, 1);
             
-            mapInfo.RowList = new RowInfo[height];
+            mapInfo.RowList = new RowInfo[_height];
 
             for (int i = 0; i < mapInfo.RowList.Length; i++)
             {
-                mapInfo.RowList[i] = new RowInfo(height);
+                mapInfo.RowList[i] = new RowInfo(_height);
             }
 
-            GameObject[] mapSegmentsList = GameObject.FindGameObjectsWithTag(levelElementString);
+            GameObject[] mapSegmentsList = GameObject.FindGameObjectsWithTag(LevelElementString);
+
+            foreach (GameObject mapSegments in mapSegmentsList)
+            {
+                string[] newName = mapSegments.name.Split(' ');
+                mapSegments.name = newName[0];
+            }
 
             foreach (GameObject o in mapSegmentsList)
             {
                 Debug.Log(o.name + " " + o.transform.position);
-                mapInfo.mapPtefabNames[(int)o.transform.position.y, (int)o.transform.position.x, 0] = o.name;
+                //mapInfo.mapPtefabNames[(int)o.transform.position.y, (int)o.transform.position.x, 0] = o.name;
                 mapInfo.RowList[(int)o.transform.position.y].segmentPregabName[(int)o.transform.position.x] = o.name;
             }
 
-            string debugString = string.Empty;
-            for (int i = 0; i < height; i++)
-            {
-                debugString = string.Empty;
-                for (int j = 0; j < width; j++)
-                {
-                    debugString += mapInfo.mapPtefabNames[i, j, 0] != null ? "x" : "o";
-                }
-                Debug.Log(debugString);
-            }
+            //string debugString = string.Empty;
+            //for (int i = 0; i < _height; i++)
+            //{
+            //    debugString = string.Empty;
+            //    for (int j = 0; j < _width; j++)
+            //    {
+            //        debugString += mapInfo.mapPtefabNames[i, j, 0] != null ? "x" : "o";
+            //    }
+            //    Debug.Log(debugString);
+            //}
 
-            AssetDatabase.CreateAsset(mapInfo, "Assets/RowInfo.asset");
+            AssetDatabase.CreateAsset(mapInfo, string.Format(NewMapPath, NewMapName));
             AssetDatabase.SaveAssets();
 
             EditorUtility.FocusProjectWindow();
