@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13247131543809c4f9a6471621568564, type: 3}
-  m_Name: NewMap
+  m_Name: Lool_mapa
   m_EditorClassIdentifier: 
   Size: {x: 10, y: 20, z: 1}
   RowList:

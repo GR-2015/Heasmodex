@@ -12,8 +12,6 @@ public class GridStreamer : MonoBehaviour
     public int MaxDistance = 100;
     public int Index = 0;
 
-    public bool isLoaded = false;
-
     public GridStreamesrType Type = GridStreamesrType.Column;
     public GridStreamesrState State = GridStreamesrState.Disabled;
 
@@ -22,14 +20,12 @@ public class GridStreamer : MonoBehaviour
     [SerializeField]
     private bool _isCrossedNow = false;
 
-    private void Start()
-    {
-    }
-
     private void Update()
     {
+        // Ustalanie stanu streamera
         State = UpdateStreamerState();
 
+        //  Akcje wywoływane w zaleźnośći od stanu streamera
         switch (State)
         {
             case GridStreamesrState.Activated:
@@ -44,7 +40,6 @@ public class GridStreamer : MonoBehaviour
             case GridStreamesrState.Disabled:
                 DrawDebugLine(Color.yellow);
                 GridStreamingManager.RemoveActiveIndex(Index, Type);
-                isLoaded = false;
                 break;
 
             case GridStreamesrState.Inactive:
@@ -100,12 +95,14 @@ public class GridStreamer : MonoBehaviour
     }
 }
 
+//  Typ streamera wiersza - kolumna.
 public enum GridStreamesrType
 {
     Column,
     Row
 }
 
+//  Stan streamera.
 public enum GridStreamesrState
 {
     Activated,

@@ -2,97 +2,98 @@
 using UnityEngine;
 using UnityEditor;
 using System.Collections;
+using System.Collections.Generic;
 using System.Globalization;
 
 public class MapGenerator : EditorWindow
 {
     private const string LevelElementString = "Level element";
     private const string NewMapPath = "Assets/{0}.asset";
-    private const string NewMapName = "NewMap";
+    private const string NewMapNameDefault = "NewMap";
+
+    private string _newMapName = string.Empty;
+
     private int _height = 0;
     private int _width = 0;
+
+    private List<GameObject> duplicateList = new List<GameObject>();
 
     [MenuItem("Window/Map/Map Generator")]
     public static void Init()
     {
-        // Get existing open window or if none, make segmentPregabName new one:
+        // Get existing open window or if none, make SegmentPregabName new one:
         MapGenerator window = (MapGenerator)EditorWindow.GetWindow(typeof(MapGenerator));
         window.Show();
     }
 
     private void OnGUI()
     {
-        GUILayout.BeginHorizontal();
+        if (_newMapName == string.Empty)
+        {
+            _newMapName = NewMapNameDefault;
+        }
+
+        _newMapName = EditorGUILayout.TextField("New map name: ", _newMapName); 
 
         GUILayout.BeginHorizontal();
-        GUILayout.Label("_height");
+        GUILayout.Label("Height");
         _height = EditorGUILayout.IntField(_height);
         GUILayout.EndHorizontal();
 
         GUILayout.BeginHorizontal();
-        GUILayout.Label("_width");
+        GUILayout.Label("Width");
         _width = EditorGUILayout.IntField(_width);
         GUILayout.EndHorizontal();
 
-        GUILayout.EndHorizontal();
-
-        if (GUILayout.Button("Test"))
+        if (GUILayout.Button("Create map."))
         {
-            GridMapInfo mapInfo = ScriptableObject.CreateInstance<GridMapInfo>();
-
-            //mapInfo.mapPtefabNames = new string[_height, _width, 1];
-            mapInfo.size = new Vector3(_height, _width, 1);
-            
-            mapInfo.RowList = new RowInfo[_height];
-
-            for (int i = 0; i < mapInfo.RowList.Length; i++)
-            {
-                mapInfo.RowList[i] = new RowInfo(_height);
-            }
-
-            GameObject[] mapSegmentsList = GameObject.FindGameObjectsWithTag(LevelElementString);
-
-            foreach (GameObject mapSegments in mapSegmentsList)
-            {
-                string[] newName = mapSegments.name.Split(' ');
-                mapSegments.name = newName[0];
-            }
-
-            foreach (GameObject o in mapSegmentsList)
-            {
-                Debug.Log(o.name + " " + o.transform.position);
-                //mapInfo.mapPtefabNames[(int)o.transform.position.y, (int)o.transform.position.x, 0] = o.name;
-                mapInfo.RowList[(int)o.transform.position.y].segmentPregabName[(int)o.transform.position.x] = o.name;
-            }
-
-            //string debugString = string.Empty;
-            //for (int i = 0; i < _height; i++)
-            //{
-            //    debugString = string.Empty;
-            //    for (int j = 0; j < _width; j++)
-            //    {
-            //        debugString += mapInfo.mapPtefabNames[i, j, 0] != null ? "x" : "o";
-            //    }
-            //    Debug.Log(debugString);
-            //}
-
-            AssetDatabase.CreateAsset(mapInfo, string.Format(NewMapPath, NewMapName));
-            AssetDatabase.SaveAssets();
-
-            EditorUtility.FocusProjectWindow();
-            Selection.activeObject = mapInfo;
-
+            CreateMap();
         }
     }
 
-
-    private string Cheack(Vector3 position)
+    private void CreateMap()
     {
-        position.z -= 2;
-        RaycastHit hit;
-        Physics.Raycast(position, Vector3.forward, out hit, 1.5f);
+        GridMapInfo mapInfo = ScriptableObject.CreateInstance<GridMapInfo>();
 
-        return hit.collider != null ? hit.collider.gameObject.name : String.Empty;
+        duplicateList.Clear();
+        mapInfo.Size = new Vector3(_height, _width, 1);
+        mapInfo.RowList = new RowInfo[_height];
+
+        for (int i = 0; i < mapInfo.RowList.Length; i++)
+        {
+            mapInfo.RowList[i] = new RowInfo(_width);
+        }
+
+        GameObject[] mapSegmentsList = GameObject.FindGameObjectsWithTag(LevelElementString);
+
+        foreach (GameObject o in mapSegmentsList)
+        {
+            string[] newName = o.name.Split(' ');
+            o.name = newName[0];
+
+            Debug.Log(o.name + " " + o.transform.position);
+            Debug.Log((int)o.transform.position.y + " " + (int)o.transform.position.x);
+
+            if (mapInfo.RowList[(int) o.transform.position.y].SegmentPregabName[(int) o.transform.position.x] == string.Empty)
+            {
+                mapInfo.RowList[(int)o.transform.position.y].SegmentPregabName[(int)o.transform.position.x] = o.name;
+            }
+            else
+            {
+                duplicateList.Add(o);
+            }
+        }
+
+        foreach (GameObject o in duplicateList)
+        {
+            Debug.Log(o.name + o.transform.position+  " Duplicate!");
+            GameObject.DestroyImmediate(o);
+        }
+
+        AssetDatabase.CreateAsset(mapInfo, string.Format(NewMapPath, _newMapName));
+        AssetDatabase.SaveAssets();
+
+        EditorUtility.FocusProjectWindow();
+        Selection.activeObject = mapInfo;
     }
-
 }

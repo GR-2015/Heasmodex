@@ -67,7 +67,7 @@ public class GridStreamingManager : MonoBehaviour
 
                 foreach (int rowIndex in ActiveRowIndex)
                 {
-                    string name = _mapInfo.RowList[rowIndex].segmentPregabName[index];
+                    string name = _mapInfo.RowList[rowIndex].SegmentPregabName[index];
                     //UnityEngine.Debug.Log(name);
 
                     if (MapObjects[rowIndex, index] == null && name != string.Empty)
@@ -81,7 +81,7 @@ public class GridStreamingManager : MonoBehaviour
             case GridStreamesrType.Row:
                 foreach (int columIndex in ActiveColumnIndex)
                 {
-                    string name = _mapInfo.RowList[index].segmentPregabName[columIndex];
+                    string name = _mapInfo.RowList[index].SegmentPregabName[columIndex];
                     //UnityEngine.Debug.Log(name);
 
                     if (MapObjects[index, columIndex] == null && name != string.Empty)
@@ -139,53 +139,71 @@ public class GridStreamingManager : MonoBehaviour
 
     private void GridInitialization()
     {
-        _height = (int)_mapInfo.size.x;
-        _widtch = (int)_mapInfo.size.y;
+        //  Ustalanie rozmiarow siatki streamerów
+        _height = (int)_mapInfo.Size.x;
+        _widtch = (int)_mapInfo.Size.y;
 
+        //  Tworzenie tablicy pomocniczej mapy.
+        //  Przetrzymuje informacje o obiektach mapy, które zostaly wczytane           
         MapObjects = new GameObject[_height, _widtch];
  
+        //  Zmienne pomocnicze.
         GameObject newGridStreamer;
         Vector3 newPosition;
         GridStreamer newGridStreamerComponent;
 
+        //  Tworzenie streamerów wierszy.
         for (int i = 0; i < _height; i++)
         {
+            //  Tworzenie nowego obiektu streamera.
             newGridStreamer = new GameObject();
             newGridStreamerComponent = newGridStreamer.AddComponent<GridStreamer>();
 
+            //  Nadawanie pozycji streamerowi
             newPosition = Vector3.zero;
             newPosition.x = -1;
             newPosition.y = i;
 
+            //  Ustawianie paremetrów streamera.
             newGridStreamerComponent.DebugLineEnd = newPosition;
             newGridStreamerComponent.DebugLineEnd.x = _widtch;
             newGridStreamerComponent.MaxDistance = _widtch + 1;
             newGridStreamerComponent.Direction = Vector3.right;
+
+            //  Ustawianie typu i indeksu streamera.
             newGridStreamerComponent.Type = GridStreamesrType.Row;
             newGridStreamerComponent.Index = i;
 
+            //  Instancjonowanie streamera.
             newGridStreamer.gameObject.name = string.Format(GridStreamerName,
                 GridStreamesrType.Row, i);
             newGridStreamer.transform.position = newPosition;
             newGridStreamer.transform.SetParent(this.transform);
         }
 
+        //  Tworzenie streamerów kolum.
         for (int i = 0; i < _widtch; i++)
         {
+            //  Tworzenie nowego obiektu streamera.
             newGridStreamer = new GameObject();
             newGridStreamerComponent = newGridStreamer.AddComponent<GridStreamer>();
 
+            //  Nadawanie pozycji streamerowi.
             newPosition = Vector3.zero;
             newPosition.x = i;
             newPosition.y = _height;
 
+            //  Ustawianie paremetrów streamera.
             newGridStreamerComponent.DebugLineEnd = newPosition;
             newGridStreamerComponent.DebugLineEnd.y = 0f;
             newGridStreamerComponent.MaxDistance = _height;
             newGridStreamerComponent.Direction = Vector3.down;
+
+            //  Ustawianie typu i indeksu streamera.
             newGridStreamerComponent.Type = GridStreamesrType.Column;
             newGridStreamerComponent.Index = i;
 
+            //  Instancjonowanie streamera.
             newGridStreamer.gameObject.name = string.Format(GridStreamerName,
                 GridStreamesrType.Column, i);
             newGridStreamer.transform.position = newPosition;

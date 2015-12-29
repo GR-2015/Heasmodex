@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13247131543809c4f9a6471621568564, type: 3}
-  m_Name: NewMap
+  m_Name: Debuging
   m_EditorClassIdentifier: 
   Size: {x: 10, y: 20, z: 1}
   RowList:
@@ -22,7 +22,7 @@ MonoBehaviour:
     - CubePrototype02x02x02
     - CubePrototype02x02x02
     - CubePrototype02x02x02
-    - CubePrototype02x02x02
+    - CubePrototype02x02x03
     - CubePrototype02x02x02
     - CubePrototype02x02x02
     - CubePrototype02x02x02
@@ -117,6 +117,27 @@ MonoBehaviour:
     - 
     - 
     - 
+    - CubePrototype02x02x03
+  - SegmentPregabName:
+    - CubePrototype02x02x03
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
     - CubePrototype02x02x02
   - SegmentPregabName:
     - CubePrototype02x02x02
@@ -183,26 +204,6 @@ MonoBehaviour:
     - CubePrototype02x02x02
   - SegmentPregabName:
     - CubePrototype02x02x02
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - CubePrototype02x02x02
-  - SegmentPregabName:
     - CubePrototype02x02x02
     - CubePrototype02x02x02
     - CubePrototype02x02x02
@@ -212,8 +213,7 @@ MonoBehaviour:
     - CubePrototype02x02x02
     - CubePrototype02x02x02
     - CubePrototype02x02x02
-    - CubePrototype02x02x02
-    - CubePrototype02x02x02
+    - CubePrototype02x02x03
     - CubePrototype02x02x02
     - CubePrototype02x02x02
     - CubePrototype02x02x02

@@ -5,7 +5,7 @@ using System.Security.Policy;
 
 public class GridMapInfo : ScriptableObject
 {
-    [SerializeField] public Vector3 size = Vector3.zero;
+    [SerializeField] public Vector3 Size = Vector3.zero;
 
     [SerializeField] public RowInfo[] RowList;
 }
@@ -13,11 +13,17 @@ public class GridMapInfo : ScriptableObject
 [System.Serializable]
 public class RowInfo
 {
+    [SerializeField] public string[] SegmentPregabName;
+
     public RowInfo(int tabSize)
     {
-        segmentPregabName = new string[tabSize];
+        SegmentPregabName = new string[tabSize];
+
+        for (int i = 0; i < tabSize; i++)
+        {
+            SegmentPregabName[i] = string.Empty;
+        }
     }
 
-    [SerializeField] public string[] segmentPregabName;
 
 }

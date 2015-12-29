@@ -286,6 +286,11 @@ Prefab:
       propertyPath: streaminLayerMask.m_Bits
       value: 2147483648
       objectReference: {fileID: 0}
+    - target: {fileID: 11464302, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
+      propertyPath: _mapInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: fa2e45ae1d93e414b957901ce2d58e33,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
   m_IsPrefabParent: 0
@@ -8260,23 +8265,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22470622, guid: fed6d99e82998ba459ce9964d17c080f, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 42.555557
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22470622, guid: fed6d99e82998ba459ce9964d17c080f, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 383
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22470622, guid: fed6d99e82998ba459ce9964d17c080f, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22470622, guid: fed6d99e82998ba459ce9964d17c080f, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22470622, guid: fed6d99e82998ba459ce9964d17c080f, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -763.55554
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22445150, guid: fed6d99e82998ba459ce9964d17c080f, type: 2}
       propertyPath: m_AnchorMax.x
