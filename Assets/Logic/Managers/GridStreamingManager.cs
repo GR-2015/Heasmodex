@@ -27,6 +27,9 @@ public class GridStreamingManager : MonoBehaviour
     [SerializeField] private LayerMask streaminLayerMask;
     public LayerMask StreaminLayerMask { get { return streaminLayerMask; } }
 
+    private GameObject _streamers = null;
+    private GameObject _level = null;
+
     public void AddActiveIndex(int index, GridStreamesrType type)
     {
         switch (type)
@@ -61,18 +64,20 @@ public class GridStreamingManager : MonoBehaviour
 
     private void Stream(int index, GridStreamesrType type)
     {
+        GameObject loadedObject = null;
+        string name = String.Empty;
+       
         switch (type)
         {
             case GridStreamesrType.Column:
 
                 foreach (int rowIndex in ActiveRowIndex)
                 {
-                    string name = _mapInfo.RowList[rowIndex].SegmentPregabName[index];
-                    //UnityEngine.Debug.Log(name);
+                    name = _mapInfo.RowList[rowIndex].SegmentPregabName[index];
 
                     if (MapObjects[rowIndex, index] == null && name != string.Empty)
                     {
-                        MapObjects[rowIndex, index] = LoadMapSegmeentAsset(name);
+                        loadedObject = MapObjects[rowIndex, index] = LoadMapSegmeentAsset(name);
                         MapObjects[rowIndex, index].transform.position = new Vector3(index, rowIndex, 0);
                     }
                 }
@@ -81,16 +86,20 @@ public class GridStreamingManager : MonoBehaviour
             case GridStreamesrType.Row:
                 foreach (int columIndex in ActiveColumnIndex)
                 {
-                    string name = _mapInfo.RowList[index].SegmentPregabName[columIndex];
-                    //UnityEngine.Debug.Log(name);
+                    name = _mapInfo.RowList[index].SegmentPregabName[columIndex];
 
                     if (MapObjects[index, columIndex] == null && name != string.Empty)
                     {
-                        MapObjects[index, columIndex] = LoadMapSegmeentAsset(name);
+                        loadedObject = MapObjects[index, columIndex] = LoadMapSegmeentAsset(name);
                         MapObjects[index, columIndex].transform.position = new Vector3(columIndex, index, 0);
                     }
                 }
                 break;
+        }
+
+        if (loadedObject != null)
+        {
+            loadedObject.transform.SetParent(this._level.transform);
         }
     }
 
@@ -98,7 +107,14 @@ public class GridStreamingManager : MonoBehaviour
     {
         ResourceRequest newResourceRequest = Resources.LoadAsync(path, typeof(GameObject));
         GameObject newObject = newResourceRequest.asset as GameObject;
-        return GameObject.Instantiate(newObject);
+        if (newObject != null)
+        {
+            return GameObject.Instantiate(newObject);
+        }
+        else
+        {
+            return GameObject.CreatePrimitive(PrimitiveType.Cube);
+        }
     }
 
     private void Unstream(int index, GridStreamesrType type)
@@ -134,6 +150,13 @@ public class GridStreamingManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        _streamers = new GameObject("Streamers");
+        _level = new GameObject("Level");
+
+        _streamers.transform.SetParent(this.transform);
+        _level.transform.SetParent(this.transform);
+
         GridInitialization();
     }
 
@@ -178,7 +201,7 @@ public class GridStreamingManager : MonoBehaviour
             newGridStreamer.gameObject.name = string.Format(GridStreamerName,
                 GridStreamesrType.Row, i);
             newGridStreamer.transform.position = newPosition;
-            newGridStreamer.transform.SetParent(this.transform);
+            newGridStreamer.transform.SetParent(this._streamers.transform);
         }
 
         //  Tworzenie streamerów kolum.
@@ -207,7 +230,7 @@ public class GridStreamingManager : MonoBehaviour
             newGridStreamer.gameObject.name = string.Format(GridStreamerName,
                 GridStreamesrType.Column, i);
             newGridStreamer.transform.position = newPosition;
-            newGridStreamer.transform.SetParent(this.transform);
+            newGridStreamer.transform.SetParent(this._streamers.transform);
         }
     }
 }
