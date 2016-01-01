@@ -12,6 +12,8 @@ public class GridStreamingManager : MonoBehaviour
     private int _height = 100;
     [SerializeField]
     private int _widtch = 100;
+    [SerializeField]
+    private int _layers = 100;
 
     [SerializeField]
     private float _streamerRowOffset = 20f;
@@ -37,7 +39,7 @@ public class GridStreamingManager : MonoBehaviour
     [SerializeField]
     private GridMapInfo _mapInfo = null;
 
-    private GameObject[,] MapObjects;
+    private GameObject[,,] MapObjects;
 
     [SerializeField]
     private LayerMask _streaminLayerMask = 0;
@@ -91,31 +93,37 @@ public class GridStreamingManager : MonoBehaviour
 
         if (type == GridStreamesrType.Column)
         {
-            foreach (int rowIndex in ActiveRowIndex)
+            foreach (Layer l in _mapInfo.Layers)
             {
-                objectName = _mapInfo.RowList[rowIndex].SegmentPregabName[index];
-
-                if (MapObjects[rowIndex, index] == null && 
-                    objectName != string.Empty)
+                foreach (int rowIndex in ActiveRowIndex)
                 {
-                    loadedObject = MapObjects[rowIndex, index] = LoadMapSegmeentAsset(objectName);
-                    MapObjects[rowIndex, index].transform.position = new Vector3(index, rowIndex, 0);
-                    loadedObject.transform.SetParent(this._level.transform);
+                    objectName = l.RowList[rowIndex].SegmentPregabName[index];
+
+                    if (MapObjects[rowIndex, index, l.Index] == null &&
+                        objectName != string.Empty)
+                    {
+                        loadedObject = MapObjects[rowIndex, index, l.Index] = LoadMapSegmeentAsset(objectName);
+                        MapObjects[rowIndex, index, l.Index].transform.position = new Vector3(index, rowIndex, l.Index);
+                        loadedObject.transform.SetParent(this._level.transform);
+                    }
                 }
             }
         }
         else
         {
-            foreach (int columIndex in ActiveColumnIndex)
+            foreach (Layer l in _mapInfo.Layers)
             {
-                objectName = _mapInfo.RowList[index].SegmentPregabName[columIndex];
-
-                if (MapObjects[index, columIndex] == null && 
-                    objectName != string.Empty)
+                foreach (int columIndex in ActiveColumnIndex)
                 {
-                    loadedObject = MapObjects[index, columIndex] = LoadMapSegmeentAsset(objectName);
-                    MapObjects[index, columIndex].transform.position = new Vector3(columIndex, index, 0);
-                    loadedObject.transform.SetParent(this._level.transform);
+                    objectName = l.RowList[index].SegmentPregabName[columIndex];
+
+                    if (MapObjects[index, columIndex, l.Index] == null &&
+                        objectName != string.Empty)
+                    {
+                        loadedObject = MapObjects[index, columIndex, l.Index] = LoadMapSegmeentAsset(objectName);
+                        MapObjects[index, columIndex, l.Index].transform.position = new Vector3(columIndex, index, l.Index);
+                        loadedObject.transform.SetParent(this._level.transform);
+                    }
                 }
             }
         }
@@ -138,23 +146,30 @@ public class GridStreamingManager : MonoBehaviour
     {
         if (type == GridStreamesrType.Column)
         {
-            foreach (int rowIndex in ActiveRowIndex)
+            foreach (Layer l in _mapInfo.Layers)
             {
-                if (MapObjects[rowIndex, index] != null)
+
+                foreach (int rowIndex in ActiveRowIndex)
                 {
-                    GameObject.Destroy(MapObjects[rowIndex, index]);
-                    MapObjects[rowIndex, index] = null;
+                    if (MapObjects[rowIndex, index, l.Index] != null)
+                    {
+                        GameObject.Destroy(MapObjects[rowIndex, index, l.Index]);
+                        MapObjects[rowIndex, index, l.Index] = null;
+                    }
                 }
             }
         }
         else
         {
-            foreach (int columIndex in ActiveColumnIndex)
+            foreach (Layer l in _mapInfo.Layers)
             {
-                if (MapObjects[index, columIndex] != null)
+                foreach (int columIndex in ActiveColumnIndex)
                 {
-                    GameObject.Destroy(MapObjects[index, columIndex]);
-                    MapObjects[index, columIndex] = null;
+                    if (MapObjects[index, columIndex, l.Index] != null)
+                    {
+                        GameObject.Destroy(MapObjects[index, columIndex, l.Index]);
+                        MapObjects[index, columIndex, l.Index] = null;
+                    }
                 }
             }
         }      
@@ -178,10 +193,11 @@ public class GridStreamingManager : MonoBehaviour
         //  Ustalanie rozmiarow siatki streamerów
         _height = (int)_mapInfo.Size.x;
         _widtch = (int)_mapInfo.Size.y;
+        _layers = (int)_mapInfo.Size.z;
 
         //  Tworzenie tablicy pomocniczej mapy.
         //  Przetrzymuje informacje o obiektach mapy, które zostaly wczytane           
-        MapObjects = new GameObject[_height, _widtch];
+        MapObjects = new GameObject[_height, _widtch, _layers];
 
         //  Zmienne pomocnicze.
         GameObject newGridStreamer;
