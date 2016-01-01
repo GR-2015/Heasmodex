@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class GridStreamer : MonoBehaviour
 {
@@ -15,10 +14,8 @@ public class GridStreamer : MonoBehaviour
     public GridStreamesrType Type = GridStreamesrType.Column;
     public GridStreamesrState State = GridStreamesrState.Disabled;
 
-    [SerializeField]
-    private bool _isCrossedInPast = false;
-    [SerializeField]
-    private bool _isCrossedNow = false;
+    [SerializeField] private bool _isCrossedInPast;
+    [SerializeField] private bool _isCrossedNow;
 
     private void FixedUpdate()
     {

@@ -210,7 +210,7 @@ GameObject:
   - 23: {fileID: 219356739}
   - 114: {fileID: 219356743}
   m_Layer: 31
-  m_Name: Cube
+  m_Name: GridSreamingHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,7 +269,7 @@ Transform:
   m_GameObject: {fileID: 219356738}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
   m_LocalPosition: {x: 18.7, y: 12.04, z: 0}
-  m_LocalScale: {x: 1, y: 15, z: 20}
+  m_LocalScale: {x: 1, y: 10, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -284,7 +284,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42d5820a7e09bd43a10dfe56fc91c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerTransformToFallow: {fileID: 1174710095}
+  _playerTransformToFallow: {fileID: 0}
+  _headOffset: {x: 0, y: 0, z: 0}
 --- !u!1001 &654886949
 Prefab:
   m_ObjectHideFlags: 0
@@ -294,7 +295,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 456032, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 18.71
+      value: 276
       objectReference: {fileID: 0}
     - target: {fileID: 456032, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
       propertyPath: m_LocalPosition.y
@@ -302,7 +303,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 456032, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 456032, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -343,10 +344,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1174710095 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 456032, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
-  m_PrefabInternal: {fileID: 654886949}
 --- !u!1 &1278561476
 GameObject:
   m_ObjectHideFlags: 0
