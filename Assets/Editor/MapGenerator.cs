@@ -66,13 +66,17 @@ public class MapGenerator : EditorWindow
 
         GameObject[] mapSegmentsList = GameObject.FindGameObjectsWithTag(LevelElementString);
 
+        int counter = 0;
+        float x = 0f;
         foreach (GameObject o in mapSegmentsList)
         {
+            x = ((10 * counter)/mapSegmentsList.Length);
+            EditorUtility.DisplayProgressBar("Map grneration", counter+ "/"+ mapSegmentsList.Length, x);
+            
             string[] newName = o.name.Split(' ');
             o.name = newName[0];
 
-            Debug.Log(o.name + " " + o.transform.position);
-            Debug.Log((int)o.transform.position.y + " " + (int)o.transform.position.x);
+            o.transform.position = new Vector3((int)o.transform.position.x, (int)o.transform.position.y, (int)o.transform.position.z);
 
             if (mapInfo.RowList[(int) o.transform.position.y].SegmentPregabName[(int) o.transform.position.x] == string.Empty)
             {
@@ -82,7 +86,10 @@ public class MapGenerator : EditorWindow
             {
                 duplicateList.Add(o);
             }
+            ++counter;
         }
+
+        EditorUtility.ClearProgressBar();
 
         foreach (GameObject o in duplicateList)
         {

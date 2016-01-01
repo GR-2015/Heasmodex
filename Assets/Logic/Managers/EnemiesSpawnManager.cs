@@ -9,7 +9,7 @@ public class EnemiesSpawnManager : MonoBehaviour
     public static EnemiesSpawnManager Instance { get; private set; }
 
     [SerializeField]
-    private string _playerTag;
+    private string _playerTag = string.Empty;
 
     public string PlayerTag { get { return _playerTag; } }
 
