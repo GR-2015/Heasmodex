@@ -60,6 +60,7 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     [Header("Atack parameters")]
     [SerializeField] protected Transform middleHitPoint;
+    [SerializeField] public GameObject TestGameObject;
 
     [Header("Wield settings")]
     [SerializeField] protected Transform leftHendGrip;

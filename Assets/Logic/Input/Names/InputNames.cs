@@ -2,35 +2,23 @@
 
 public class InputNames : ScriptableObject
 {
-    [SerializeField]
-    private string _movementXaxis = "MovementXaxis";
+    [SerializeField] private string _movementXaxis = "MovementXaxis";
+    [SerializeField] private string _movementYaxis = "MovementYaxis";
 
-    [SerializeField]
-    private string _movementYaxis = "MovementYaxis";
+    public string MovementXaxis { get { return _movementXaxis; } }
+    public string MovementYaxis { get { return _movementYaxis; } }
 
-    [SerializeField]
-    private string _jumpButton = "Jump";
+    [SerializeField] private string _mouseX = "Mouse X";
+    [SerializeField] private string _mouseY = "Mouse Y";
 
-    [SerializeField]
-    private string _meleeAttackButton = "MeleeAttack";
+    public string MouseX { get { return _mouseX; } }
+    public string MouseY { get { return _mouseY; } }
 
-    public string MovementXaxis
-    {
-        get { return _movementXaxis; }
-    }
+    [SerializeField] private string _jumpButton = "Jump";
+    
+    public string JumpButton { get { return _jumpButton; } }
 
-    public string MovementYaxis
-    {
-        get { return _movementYaxis; }
-    }
+    [SerializeField] private string _meleeAttackButton = "MeleeAttack";
 
-    public string JumpButton
-    {
-        get { return _jumpButton; }
-    }
-
-    public string MeleeAttackButton
-    {
-        get { return _meleeAttackButton; }
-    }
+    public string MeleeAttackButton { get { return _meleeAttackButton; } }
 }
