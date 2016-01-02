@@ -62,7 +62,7 @@ public class BaseProjectile : MonoBehaviour
     {
         //this.enabled = false;
 
-        //collision.gameObject.SendMessage(BaseCharacterController.getDamageFunctionName, _damage);
+        //collision.gameObject.SendMessage(BaseCharacterController.GetDamageFunctionName, _damage);
     }
 
     public void LaunchProjectile(Transform firingCharacter)

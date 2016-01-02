@@ -5,11 +5,10 @@ public class CharacterManager : MonoBehaviour
 {
     public static CharacterManager Instance { get; private set; }
 
-    private readonly List<PlayerController> _players = new List<PlayerController>();
-    private readonly List<EnemyController> _enemies = new List<EnemyController>();
+    [SerializeField] private List<PlayerController> _players = new List<PlayerController>();
+    [SerializeField] private List<EnemyController> _enemies = new List<EnemyController>();
 
     public List<PlayerController> Players { get { return _players; } }
-
     public List<EnemyController> Enemies { get { return _enemies; } }
 
     private void Awake()

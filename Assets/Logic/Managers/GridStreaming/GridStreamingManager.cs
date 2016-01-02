@@ -181,6 +181,12 @@ public class GridStreamingManager : MonoBehaviour
     private void GridInitialization()
     {
         //  Ustalanie rozmiarow siatki streamerów
+        if (_mapInfo == null)
+        {
+            UnityEngine.Debug.Log("No map info selected!");
+            return;
+        }
+
         _height = (int)_mapInfo.Size.x;
         _widtch = (int)_mapInfo.Size.y;
         _layers = (int)_mapInfo.Size.z;

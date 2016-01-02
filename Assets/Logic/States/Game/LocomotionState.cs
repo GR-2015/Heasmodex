@@ -21,14 +21,17 @@ public class LocomotionState : BaseState
             }
 
             inputValues.Owner.Move(newMovementVector, inputValues.Owner.transform.forward);
-            inputValues.Owner.Rotate(inputValues.MovementVector);
+            inputValues.Owner.Rotate(newMovementVector);
+            //CameraController.Instance.CalculateCursorWorldPosition(inputValues.mousePosition)
 
-            if (inputValues.MeleeAttack == ButtonState.Down)
-            {
-                inputValues.Owner.MeleeAttack();
-            }
+            //if (inputValues.MeleeAttack == ButtonState.Down)
+            //{
+            //    inputValues.Owner.MeleeAttack();
+            //}
 
-            if (Input.GetKeyDown(KeyCode.Escape) == true)
+            inputValues.Owner.AnimationUpdate();
+
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
                 StateManager.Instance.EnterNewState(new EquipmentState(inputValues));
             }

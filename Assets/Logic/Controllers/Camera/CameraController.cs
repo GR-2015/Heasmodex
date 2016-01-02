@@ -12,32 +12,34 @@ public class CameraController : MonoBehaviour
 
     [SerializeField] private Transform _playerTransformToFallow;
 
-    [SerializeField] private bool _debug;
-    private GameObject testGameObject = null;
+    [SerializeField] private bool _debug = false;
+    private GameObject _testGameObject;
     [SerializeField] private PrimitiveType primitiveType = PrimitiveType.Sphere;
     
-    public Vector3 CursorWordPosition { get; private set; }
-
     private void Awake()
     {
+        Instance = this;
+
         _controlledCamera = GetComponent<Camera>();
 
-        if (_debug)
-        {
-            testGameObject = GameObject.CreatePrimitive(primitiveType);
-            testGameObject.name = "Cursor Test Object!";
-        }
+        //if (_debug)
+        //{
+        //    _testGameObject = GameObject.CreatePrimitive(primitiveType);
+        //    _testGameObject.name = "Cursor Test Object: " + primitiveType;
+
+        //    Destroy(_testGameObject.GetComponent<Collider>());
+        //}
     }
 
-    private void Update()
-    {
-        CursorWordPosition = CalculateCursorWorldPosition();
+    //private void Update()
+    //{
+    //    CursorWordPosition = CalculateCursorWorldPosition();
 
-        if (testGameObject != null)
-        {
-            testGameObject.transform.position = CursorWordPosition;
-        }
-    }
+    //    if (_testGameObject != null)
+    //    {
+    //        _testGameObject.transform.position = CursorWordPosition;
+    //    }
+    //}
 
     private void LateUpdate()
     {
@@ -71,9 +73,9 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    private Vector3 CalculateCursorWorldPosition()
+    public Vector3 CalculateCursorWorldPosition(Vector2 mousePosition)
     {
-        Vector3 cursorWorldPosition = Input.mousePosition;
+        Vector3 cursorWorldPosition = mousePosition;
         cursorWorldPosition.z = _cameraOffset.z * -1;
         cursorWorldPosition = _controlledCamera.ScreenToWorldPoint(cursorWorldPosition);
 

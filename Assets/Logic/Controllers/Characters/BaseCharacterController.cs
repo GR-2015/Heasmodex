@@ -8,56 +8,44 @@ public abstract class BaseCharacterController : MonoBehaviour
     /// For use in 2.5 D games.
     /// </summary>
     public static readonly Vector3 RightRotation = new Vector3(0f, 90f, 0f);
-
     public static readonly Vector3 LeftRotation = new Vector3(0f, -90f, 0f);
-
-    public static readonly string getDamageFunctionName = "GetDamage";
+    public static readonly string GetDamageFunctionName = "GetDamage";
 
     #endregion Consts
 
     #region Components
 
     public Animator Animator { get; protected set; }
-
     public Rigidbody Rigidbody { get; protected set; }
-
     public CharacterController CharacterController { get; protected set; }
 
     #endregion Components
 
     #region Input source
 
-    [SerializeField]
-    protected InputSourceType[] inputSource;
-
+    [SerializeField] protected InputSourceType[] inputSource;
     public InputSourceType[] InputSource { get { return inputSource; } }
 
     #endregion Input source
 
     #region Control values
 
-    [HideInInspector]
-    public Vector3 Movement = Vector3.zero;
-
-    [HideInInspector]
-    public Vector3 NewRotation = Vector3.zero;
+    [HideInInspector] public Vector3 Movement = Vector3.zero;
+    [HideInInspector] public Vector3 NewRotation = Vector3.zero;
+    [HideInInspector] public Vector3 CoursorPosition = Vector3.zero;
 
     #endregion Control values
 
     #region Character statistic
 
-    [SerializeField]
-    protected CharacterStatistics characterStatistics = new CharacterStatistics();
-
+    [SerializeField] protected CharacterStatistics characterStatistics = new CharacterStatistics();
     public CharacterStatistics CharacterStatistics { get { return characterStatistics; } }
 
     #endregion Character statistic
 
     #region Character equipment
 
-    [SerializeField]
-    protected CharactereEquipment charactereEquipment = new CharactereEquipment();
-
+    [SerializeField] protected CharactereEquipment charactereEquipment = new CharactereEquipment();
     public CharactereEquipment CharactereEquipment { get { return charactereEquipment; } }
 
     #endregion Character equipment
@@ -65,63 +53,54 @@ public abstract class BaseCharacterController : MonoBehaviour
     #region Character settings
 
     [Header("Movement parameters")]
-    [SerializeField]
-    protected float movementSpeed = 5f;
+    [SerializeField] protected CharacterMovement characterMovement = new CharacterMovement();
+    public CharacterMovement CharacterMovement { get { return characterMovement; } }
 
-    public float MovementSpeed { get { return movementSpeed; } }
-
-    [SerializeField]
-    protected float jumpForce = 50f;
-
-    public float JumpForce { get { return jumpForce; } }
-
-    [SerializeField]
-    protected float rotationSpeed = 60f;
-
-    public float RotationSpeed { get { return rotationSpeed; } }
-
-    [SerializeField]
-    protected LayerMask EnemyLayerMask;
+    [SerializeField] protected LayerMask EnemyLayerMask;
 
     [Header("Atack parameters")]
-    [SerializeField]
-    protected Transform middleHitPoint;
+    [SerializeField] protected Transform middleHitPoint;
 
     [Header("Wield settings")]
-    [SerializeField]
-    protected Transform leftHendGrip;
-
-    [SerializeField]
-    protected Vector3 leftHandWieldRotation = Vector3.zero;
-
-    [SerializeField]
-    protected Transform rightHendGrip;
-
-    [SerializeField]
-    protected Vector3 rightHandWieldRotation = Vector3.zero;
+    [SerializeField] protected Transform leftHendGrip;
+    [SerializeField] protected Vector3 leftHandWieldRotation = Vector3.zero;
+    [SerializeField] protected Transform rightHendGrip;
+    [SerializeField] protected Vector3 rightHandWieldRotation = Vector3.zero;
 
     #endregion Character settings
 
     protected void Awake()
     {
+        // Pobieranie komponentów. 
         Animator = GetComponent<Animator>();
         Rigidbody = GetComponent<Rigidbody>();
-
         CharacterController = GetComponent<CharacterController>();
-        if (Animator != null)
-        {
-            leftHendGrip = Animator.GetBoneTransform(HumanBodyBones.LeftHand);
-            rightHendGrip = Animator.GetBoneTransform(HumanBodyBones.RightHand);
 
-            if (leftHendGrip != null & rightHendGrip != null)
-            {
-                EquipWeapons(rightHendGrip, Hand.Main);
-                EquipWeapons(leftHendGrip, Hand.Off);
-            }
-        }
+        //if (Animator != null)
+        //{
+        //    leftHendGrip = Animator.GetBoneTransform(HumanBodyBones.LeftHand);
+        //    rightHendGrip = Animator.GetBoneTransform(HumanBodyBones.RightHand);
+
+        //    if (leftHendGrip != null & rightHendGrip != null)
+        //    {
+        //        EquipWeapons(rightHendGrip, Hand.Main);
+        //        EquipWeapons(leftHendGrip, Hand.Off);
+        //    }
+        //}
 
         //TMP
-        charactereEquipment.GenerateProjectiles<BaseProjectile>();
+        //charactereEquipment.GenerateProjectiles<BaseProjectile>();
+    }
+
+    protected virtual void OnAnimatorIK(int layerIndex)
+    {
+        if (Animator == null)
+        {
+            return;
+        }
+
+        Animator.SetLookAtWeight(1f, 0.5f);
+        Animator.SetLookAtPosition(CoursorPosition);
     }
 
     //TMP
@@ -145,39 +124,49 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     public virtual void Rotate(Vector3 rotationInput)
     {
-        if (rotationInput.x < 0)
+        CoursorPosition = rotationInput;
+
+        if (rotationInput.x < 0f)
         {
             NewRotation = LeftRotation;
         }
 
-        if (rotationInput.x > 0)
+        if (rotationInput.x > 0f)
         {
             NewRotation = RightRotation;
         }
 
-        transform.rotation = Quaternion.Lerp(Quaternion.Euler(NewRotation), transform.rotation, RotationSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(
+            Quaternion.Euler(NewRotation), 
+            transform.rotation, 
+            characterMovement.RotationSpeed * Time.deltaTime);
     }
 
     public virtual void Move(Vector3 movementInput, Vector3 direction)
     {
-        Movement.x = MovementSpeed * movementInput.x;
+        Movement.x = characterMovement.MovementSpeed * movementInput.x;
 
         Movement.y += Physics.gravity.y * Time.deltaTime;
 
         CharacterController.Move(Movement * Time.deltaTime);
+    }
 
-        if (Animator != null)
+    public void AnimationUpdate()
+    {
+        if (Animator == null)
         {
-            Animator.SetFloat(AnimationHashID.Instance.MovementXaxis, Mathf.Abs(Movement.x));
-            Animator.SetBool(AnimationHashID.Instance.IsGrounded, CharacterController.isGrounded);
+            return;
         }
+
+        Animator.SetFloat(AnimationHashID.Instance.MovementXaxis, Mathf.Abs(Movement.x));
+        Animator.SetBool(AnimationHashID.Instance.IsGrounded, CharacterController.isGrounded); 
     }
 
     public virtual void Jump()
     {
         if (CharacterController.isGrounded)
         {
-            Movement.y = JumpForce;
+            Movement.y = characterMovement.JumpForce;
         }
     }
 
@@ -189,7 +178,7 @@ public abstract class BaseCharacterController : MonoBehaviour
 
         if (Physics.Raycast(middleHitPoint.position, middleHitPoint.forward, out hit, 3f, EnemyLayerMask))
         {
-            float damage = this.characterStatistics.Damage;
+            float damage = characterStatistics.Damage;
 
             if (charactereEquipment.mainHandWeapon != null)
             {
@@ -201,7 +190,7 @@ public abstract class BaseCharacterController : MonoBehaviour
                 damage += charactereEquipment.offHandWeapon.Damage;
             }
 
-            hit.collider.SendMessage(getDamageFunctionName, damage);
+            hit.collider.SendMessage(GetDamageFunctionName, damage);
         }
 
         foreach (BaseProjectile projectile in charactereEquipment.characterProjectiles)
@@ -217,7 +206,7 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     public virtual void GetDamage(float damage)
     {
-        this.characterStatistics.HP -= damage;
+        characterStatistics.HP -= damage;
     }
 }
 

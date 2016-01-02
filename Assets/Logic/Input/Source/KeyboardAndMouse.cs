@@ -7,7 +7,7 @@ public class KeyboardAndMouse : BaseInputSource
     public KeyboardAndMouse(InputValues inputValues)
     {
         InputNames = Resources.Load(PrefabName, typeof(InputNames)) as InputNames;
-        this.InupValues = inputValues;
+        this.InputValues = inputValues;
     }
 
     public override void GetInputValues()
@@ -15,9 +15,11 @@ public class KeyboardAndMouse : BaseInputSource
         var x = GetAxis(InputNames.MovementXaxis, AxisType.Raw);
         var y = GetAxis(InputNames.MovementYaxis, AxisType.Raw);
 
-        InupValues.MovementVector = new Vector2(x, y);
+        InputValues.MovementVector = new Vector2(x, y);
 
-        InupValues.JumpButton = GetButtonState(InputNames.JumpButton);
-        InupValues.MeleeAttack = GetButtonState(InputNames.MeleeAttackButton);
+        InputValues.mousePosition = Input.mousePosition;
+
+        InputValues.JumpButton = GetButtonState(InputNames.JumpButton);
+        InputValues.MeleeAttack = GetButtonState(InputNames.MeleeAttackButton);
     }
 }

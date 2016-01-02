@@ -2,7 +2,7 @@
 
 public abstract class BaseInputSource
 {
-    protected InputValues InupValues;
+    protected InputValues InputValues;
     protected InputNames InputNames;
     protected virtual string PrefabName { get { return null; } }
 
