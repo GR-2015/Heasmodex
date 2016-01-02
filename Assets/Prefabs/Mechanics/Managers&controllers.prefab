@@ -340,11 +340,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _height: 50
   _widtch: 100
+  _layers: 100
+  _streamerRowOffset: 20
+  _streamerColumnOffser: 15
   _debug: 1
   _activeRowIndex: 
   _activeColumnIndex: 
-  _mapInfo: {fileID: 11400000, guid: fa2e45ae1d93e414b957901ce2d58e33, type: 2}
-  streaminLayerMask:
+  _mapInfo: {fileID: 11400000, guid: 5a3e104b6acf5dc4896eb2b351d67bde, type: 2}
+  _streaminLayerMask:
     serializedVersion: 2
     m_Bits: 2147483648
 --- !u!114 &11470258
@@ -370,6 +373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e54ae513705f464dbd1eccad8af1b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _players: []
+  _enemies: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

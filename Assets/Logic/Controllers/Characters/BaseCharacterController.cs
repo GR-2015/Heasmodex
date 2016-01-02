@@ -34,6 +34,9 @@ public abstract class BaseCharacterController : MonoBehaviour
     [HideInInspector] public Vector3 NewRotation = Vector3.zero;
     [HideInInspector] public Vector3 CoursorPosition = Vector3.zero;
 
+    private bool _oldIsGrounded;
+    private bool _currentIsGrounded;
+
     #endregion Control values
 
     #region Character statistic
@@ -60,6 +63,7 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     [Header("Atack parameters")]
     [SerializeField] protected Transform middleHitPoint;
+    [SerializeField] public GameObject TestGameObject;
 
     [Header("Wield settings")]
     [SerializeField] protected Transform leftHendGrip;
@@ -144,9 +148,20 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     public virtual void Move(Vector3 movementInput, Vector3 direction)
     {
+        _oldIsGrounded = _currentIsGrounded;
+        _currentIsGrounded = CharacterController.isGrounded;
+
         Movement.x = characterMovement.MovementSpeed * movementInput.x;
 
-        Movement.y += Physics.gravity.y * Time.deltaTime;
+        if (!_currentIsGrounded)
+        {
+            Movement.y += Physics.gravity.y * Time.deltaTime;
+        }
+
+        if (!_currentIsGrounded && _oldIsGrounded && Movement.y < 0)
+        {
+            Movement.y = 0f;
+        }
 
         CharacterController.Move(Movement * Time.deltaTime);
     }

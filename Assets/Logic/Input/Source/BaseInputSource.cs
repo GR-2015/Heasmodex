@@ -12,16 +12,7 @@ public abstract class BaseInputSource
     {
         float value = 0f;
 
-        switch (type)
-        {
-            case AxisType.Normal:
-                value = Input.GetAxis(axisName);
-                break;
-
-            case AxisType.Raw:
-                value = Input.GetAxisRaw(axisName);
-                break;
-        }
+        value = type == AxisType.Normal ? Input.GetAxis(axisName) : Input.GetAxisRaw(axisName);
 
         return value;
     }

@@ -6,8 +6,9 @@ public class InputValues
 
     #region Input axes
 
-    public Vector2 MovementVector { get; set; }
-    public Vector2 mousePosition { get; set; }
+    public Vector2 MovementAxes { get; set; }
+    public Vector2 MouseAxes { get; set; }
+    public Vector2 MousePosition { get; set; }
 
     #endregion Input axes
 

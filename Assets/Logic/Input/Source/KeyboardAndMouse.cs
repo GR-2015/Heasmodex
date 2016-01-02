@@ -12,12 +12,17 @@ public class KeyboardAndMouse : BaseInputSource
 
     public override void GetInputValues()
     {
-        var x = GetAxis(InputNames.MovementXaxis, AxisType.Raw);
-        var y = GetAxis(InputNames.MovementYaxis, AxisType.Raw);
+        float x = GetAxis(InputNames.MovementXaxis, AxisType.Raw);
+        float y = GetAxis(InputNames.MovementYaxis, AxisType.Raw);
 
-        InputValues.MovementVector = new Vector2(x, y);
+        InputValues.MovementAxes = new Vector2(x, y);
 
-        InputValues.mousePosition = Input.mousePosition;
+        x = GetAxis(InputNames.MouseX);
+        y = GetAxis(InputNames.MouseY);
+
+        InputValues.MouseAxes = new Vector2(x, y);
+
+        InputValues.MousePosition = Input.mousePosition;
 
         InputValues.JumpButton = GetButtonState(InputNames.JumpButton);
         InputValues.MeleeAttack = GetButtonState(InputNames.MeleeAttackButton);
