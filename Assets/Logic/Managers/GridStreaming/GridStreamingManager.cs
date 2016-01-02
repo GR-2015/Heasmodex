@@ -126,7 +126,7 @@ public class GridStreamingManager : MonoBehaviour
 
         if (newObject != null)
         {
-            return GameObject.Instantiate(newObject);
+            return Instantiate(newObject);
         }
         
         return GameObject.CreatePrimitive(PrimitiveType.Cube);
