@@ -343,7 +343,10 @@ MonoBehaviour:
   _debug: 1
   _activeRowIndex: 
   _activeColumnIndex: 
-  _mapInfo: {fileID: 11400000, guid: edf19b91cc346c84cb6b29501f402f42, type: 2}
+  _mapInfo: {fileID: 11400000, guid: fa2e45ae1d93e414b957901ce2d58e33, type: 2}
+  streaminLayerMask:
+    serializedVersion: 2
+    m_Bits: 2147483648
 --- !u!114 &11470258
 MonoBehaviour:
   m_ObjectHideFlags: 1

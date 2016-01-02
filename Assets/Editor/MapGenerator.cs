@@ -15,6 +15,7 @@ public class MapGenerator : EditorWindow
 
     private int _height = 0;
     private int _width = 0;
+    private int _layers = 0;
 
     private List<GameObject> duplicateList = new List<GameObject>();
 
@@ -45,6 +46,12 @@ public class MapGenerator : EditorWindow
         _width = EditorGUILayout.IntField(_width);
         GUILayout.EndHorizontal();
 
+        GUILayout.BeginHorizontal();
+        GUILayout.Label("Layers");
+        _layers = EditorGUILayout.IntField(_layers);
+        GUILayout.EndHorizontal();
+
+
         if (GUILayout.Button("Create map."))
         {
             CreateMap();
@@ -56,33 +63,41 @@ public class MapGenerator : EditorWindow
         GridMapInfo mapInfo = ScriptableObject.CreateInstance<GridMapInfo>();
 
         duplicateList.Clear();
-        mapInfo.Size = new Vector3(_height, _width, 1);
-        mapInfo.RowList = new RowInfo[_height];
+        mapInfo.Size = new Vector3(_height, _width, _layers);
+        mapInfo.Layers = new Layer[_layers];
 
-        for (int i = 0; i < mapInfo.RowList.Length; i++)
+        for (int i = 0; i < mapInfo.Layers.Length; i++)
         {
-            mapInfo.RowList[i] = new RowInfo(_width);
+            mapInfo.Layers[i] = new Layer(_width, _height, i);
         }
 
         GameObject[] mapSegmentsList = GameObject.FindGameObjectsWithTag(LevelElementString);
 
+        int counter = 0;
+        float x = 0f;
         foreach (GameObject o in mapSegmentsList)
         {
+            x = ((10 * counter)/mapSegmentsList.Length);
+            EditorUtility.DisplayProgressBar("Map grneration", counter+ "/"+ mapSegmentsList.Length, x);
+            
             string[] newName = o.name.Split(' ');
             o.name = newName[0];
 
-            Debug.Log(o.name + " " + o.transform.position);
-            Debug.Log((int)o.transform.position.y + " " + (int)o.transform.position.x);
+            o.transform.position = new Vector3((int)o.transform.position.x, (int)o.transform.position.y, (int)o.transform.position.z);
 
-            if (mapInfo.RowList[(int) o.transform.position.y].SegmentPregabName[(int) o.transform.position.x] == string.Empty)
+            if (mapInfo.Layers[(int) o.transform.position.z].RowList[(int)o.transform.position.y].SegmentPregabName[(int) o.transform.position.x] == string.Empty)
             {
-                mapInfo.RowList[(int)o.transform.position.y].SegmentPregabName[(int)o.transform.position.x] = o.name;
+                mapInfo.Layers[(int)o.transform.position.z].RowList[(int)o.transform.position.y].SegmentPregabName[(int)o.transform.position.x] = o.name;
             }
             else
             {
                 duplicateList.Add(o);
             }
+
+            ++counter;
         }
+
+        EditorUtility.ClearProgressBar();
 
         foreach (GameObject o in duplicateList)
         {
