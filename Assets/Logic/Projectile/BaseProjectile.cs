@@ -49,7 +49,7 @@ public class BaseProjectile : Item
 
         gameObject.SetActive(false);
 
-        if (collision.gameObject.layer == EnemyLayerMask)
+        if (LayerHelper.IsLayerMaskLayer(collision.gameObject.layer, EnemyLayerMask))
         {
             collision.gameObject.SendMessage(BaseCharacterController.GetDamageFunctionName, Damage);
         }
@@ -57,10 +57,9 @@ public class BaseProjectile : Item
 
     public void LaunchProjectile(Transform firingCharacter)
     {
-        this.transform.position = firingCharacter.position;
-        this.gameObject.transform.rotation = firingCharacter.rotation;
+        transform.position = firingCharacter.position;
+        gameObject.transform.rotation = firingCharacter.rotation;
 
-        Rigidbody.velocity = transform.forward *Velocity;
-
+        Rigidbody.velocity = transform.forward * Velocity;
     }
 }

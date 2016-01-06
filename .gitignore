@@ -18,3 +18,5 @@ UnityVS
 /obj/Debug/*.pdb
 /*.suo
 /*.sln
+/Assets/Tes.cs
+/Assets/Tes.cs.meta

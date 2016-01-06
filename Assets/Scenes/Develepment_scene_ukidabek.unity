@@ -337,26 +337,6 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: -0.110415146
       objectReference: {fileID: 0}
-    - target: {fileID: 411418, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 411418, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 411418, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 411418, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 11463548, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
-      propertyPath: charactereEquipment.projectilesCount
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
   m_IsPrefabParent: 0
@@ -591,43 +571,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
---- !u!1 &1948094926
+--- !u!1 &1789596174
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1948094931}
-  - 33: {fileID: 1948094930}
-  - 135: {fileID: 1948094929}
-  - 23: {fileID: 1948094928}
-  - 114: {fileID: 1948094927}
-  m_Layer: 0
-  m_Name: Sphere
+  - 4: {fileID: 1789596178}
+  - 33: {fileID: 1789596177}
+  - 136: {fileID: 1789596176}
+  - 23: {fileID: 1789596175}
+  m_Layer: 11
+  m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1948094927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1948094926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3768b964b57bb444b9ef65e47e073043, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  s: 1
---- !u!23 &1948094928
+--- !u!23 &1789596175
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1948094926}
+  m_GameObject: {fileID: 1789596174}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -648,34 +615,35 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!135 &1948094929
-SphereCollider:
+--- !u!136 &1789596176
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1948094926}
+  m_GameObject: {fileID: 1789596174}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
   m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1948094930
+--- !u!33 &1789596177
 MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1948094926}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1948094931
+  m_GameObject: {fileID: 1789596174}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1789596178
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1948094926}
+  m_GameObject: {fileID: 1789596174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.872042, y: -0.42639637, z: -1.5477238}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalPosition: {x: 19.2, y: 3.8438735, z: 0.14696217}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -792,7 +760,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22470622, guid: fed6d99e82998ba459ce9964d17c080f, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -353.77777
+      value: -352.8889
       objectReference: {fileID: 0}
     - target: {fileID: 22445150, guid: fed6d99e82998ba459ce9964d17c080f, type: 2}
       propertyPath: m_AnchorMax.x
