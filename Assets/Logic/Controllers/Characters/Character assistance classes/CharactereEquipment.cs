@@ -7,42 +7,47 @@ using UnityEngine;
 public class CharactereEquipment
 {
     [Header("Wallet")]
-    [SerializeField]
-    public float money = 100f;
+    [SerializeField] public float money = 100f;
 
-    [Header("Weapons.")]
-    [SerializeField]
-    public Weapon mainHandWeapon;
-
-    [SerializeField]
-    public Weapon offHandWeapon;
+    [Header("Weapons.")] 
+    [SerializeField] public GameObject ActiveProjectile = null;
+    [SerializeField] public Weapon mainHandWeapon;
+    [SerializeField] public Weapon offHandWeapon;
 
     [Header("Armor parts.")]
-    [SerializeField]
-    public Armor breastplate;
+    [SerializeField] public Armor breastplate;
 
     [Header("Backpack.")]
-    [SerializeField]
-    public List<ItemSlot> equipment = new List<ItemSlot>();
+    [SerializeField] public List<ItemSlot> equipment = new List<ItemSlot>();
 
-    [SerializeField]
-    public int projectilesCount = 10;
+    [SerializeField] public int projectilesCount = 10;
 
     public List<BaseProjectile> characterProjectiles = new List<BaseProjectile>();
 
     //TMP
-    public void GenerateProjectiles<T>() where T : BaseProjectile
+    public void GenerateProjectiles<T>(
+        LayerMask enemyLayerMask,
+        GameObject ownerGameObject) where T : BaseProjectile
     {
         for (int i = 0; i < projectilesCount; i++)
         {
-            GameObject newProjectile = new GameObject();
+            //GameObject newProjectile = GameObject.CreatePrimitive(PrimitiveType.Sphere);
 
+            //newProjectile.SetActive(false);
+            //newProjectile.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
+            //newProjectile.gameObject.name = "Projectile";
+            
+            //BaseProjectile projectileComponent = newProjectile.AddComponent<T>();
+            //projectileComponent.Velocity = .01f;
+            //characterProjectiles.Add(projectileComponent);
+            GameObject newProjectile = GameObject.Instantiate(ActiveProjectile);
             newProjectile.SetActive(false);
-            newProjectile.AddComponent<CapsuleCollider>();
 
-            BaseProjectile projectileComponent = newProjectile.AddComponent<T>();
+            BaseProjectile newProjectileComponent = newProjectile.GetComponent<BaseProjectile>();
+            newProjectileComponent.EnemyLayerMask = enemyLayerMask;
+            newProjectileComponent.Owner = ownerGameObject;
 
-            characterProjectiles.Add(projectileComponent);
+            characterProjectiles.Add(newProjectileComponent);
         }
     }
 

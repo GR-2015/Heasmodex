@@ -35,10 +35,15 @@ public class LocomotionState : BaseState
                 inputValues.Owner.TestGameObject.transform.rotation.eulerAngles.y,
                 inputValues.Owner.TestGameObject.transform.rotation.eulerAngles.z);
 
-            //if (inputValues.MeleeAttack == ButtonState.Down)
-            //{
-            //    inputValues.Owner.MeleeAttack();
-            //}
+            Debug.DrawRay(
+                inputValues.Owner.TestGameObject.transform.position,
+                inputValues.Owner.TestGameObject.transform.forward,
+                Color.yellow);
+
+            if (inputValues.MeleeAttack == ButtonState.Down)
+            {
+                inputValues.Owner.MeleeAttack();
+            }
 
             inputValues.Owner.AnimationUpdate();
 

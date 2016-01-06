@@ -1410,7 +1410,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 182230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.25, z: 0}
+  m_LocalPosition: {x: -0, y: 1.25, z: 0.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 464768}
@@ -2382,7 +2382,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104424}
-  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
+  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
   m_LocalPosition: {x: 0.000027839329, y: -0.00007688081, z: 0.032533783}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2705,6 +2705,7 @@ MonoBehaviour:
     Damage: 0
   charactereEquipment:
     money: 100
+    ActiveProjectile: {fileID: 130056, guid: 795a3f5001238ca4a861a117370ba425, type: 2}
     mainHandWeapon: {fileID: 0}
     offHandWeapon: {fileID: 0}
     breastplate: {fileID: 0}
@@ -2717,7 +2718,7 @@ MonoBehaviour:
       itemCount: 1
     - itemName: Cube Breastplates
       itemCount: 1
-    projectilesCount: 10
+    projectilesCount: 5
     characterProjectiles: []
   characterMovement:
     movementSpeed: 5

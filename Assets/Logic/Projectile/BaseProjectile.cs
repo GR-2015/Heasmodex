@@ -1,74 +1,66 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class BaseProjectile : MonoBehaviour
+public class BaseProjectile : Item
 {
-    protected Vector3 oldPosition = Vector3.zero;
-    protected float distanceTraveled = 0f;
-    protected Vector3 direction = Vector3.zero;
+    protected Vector3 OldPosition = Vector3.zero;
+    protected float DistanceTraveled = 0f;
+    protected Vector3 Direction = Vector3.zero;
 
-    protected Rigidbody _Rigidbody = null;
+    protected Rigidbody Rigidbody;
 
-    [SerializeField]
-    protected float _range = 10f;
+    [SerializeField] public float Range = 5f;
+    [SerializeField] public float Damage = 10f;
+    [SerializeField] public float Velocity = 100f;
+    [SerializeField] public LayerMask EnemyLayerMask;
+    [SerializeField] public GameObject Owner;
 
-    [SerializeField]
-    protected float _damage = 10f;
-
-    [SerializeField]
-    protected float _velocity = 100f;
-
-    [SerializeField]
-    protected LayerMask _enemyLayerMask;
-
-    public LayerMask EnemyLayerMask
+    protected void OnEnable()
     {
-        get { return _enemyLayerMask; }
-        set { _enemyLayerMask = value; }
+        OldPosition = this.transform.position;
     }
 
     protected void Awake()
     {
-        _Rigidbody = GetComponent<Rigidbody>();
-    }
-
-    protected void OnEnable()
-    {
-        oldPosition = this.transform.position;
+        Rigidbody = GetComponent<Rigidbody>();
     }
 
     protected void Update()
     {
-        if (distanceTraveled >= _range)
+        if (DistanceTraveled >= Range)
         {
-            distanceTraveled = 0f;
+            DistanceTraveled = 0f;
             this.gameObject.SetActive(false);
         }
-    }
 
-    protected void FixedUpdate()
-    {
-        float distance = Vector3.Distance(this.transform.position,
-           oldPosition);
+        DistanceTraveled += Vector3.Distance(
+            transform.position,
+            OldPosition);
 
-        distanceTraveled += distance;
-
-        _Rigidbody.AddForce(direction * _velocity, ForceMode.VelocityChange);
-
-        oldPosition = this.transform.position;
+        OldPosition = transform.position;
     }
 
     protected void OnCollisionEnter(Collision collision)
     {
-        //this.enabled = false;
+        if (collision.gameObject == Owner)
+        {
+            return;
+        }
 
-        //collision.gameObject.SendMessage(BaseCharacterController.GetDamageFunctionName, _damage);
+        gameObject.SetActive(false);
+
+        if (collision.gameObject.layer == EnemyLayerMask)
+        {
+            collision.gameObject.SendMessage(BaseCharacterController.GetDamageFunctionName, Damage);
+        }
     }
 
     public void LaunchProjectile(Transform firingCharacter)
     {
-        this.direction = firingCharacter.forward;
-
         this.transform.position = firingCharacter.position;
+        this.gameObject.transform.rotation = firingCharacter.rotation;
+
+        Rigidbody.velocity = transform.forward *Velocity;
+
     }
 }

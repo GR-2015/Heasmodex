@@ -80,20 +80,19 @@ public abstract class BaseCharacterController : MonoBehaviour
         Rigidbody = GetComponent<Rigidbody>();
         CharacterController = GetComponent<CharacterController>();
 
-        //if (Animator != null)
-        //{
-        //    leftHendGrip = Animator.GetBoneTransform(HumanBodyBones.LeftHand);
-        //    rightHendGrip = Animator.GetBoneTransform(HumanBodyBones.RightHand);
-
-        //    if (leftHendGrip != null & rightHendGrip != null)
-        //    {
-        //        EquipWeapons(rightHendGrip, Hand.Main);
-        //        EquipWeapons(leftHendGrip, Hand.Off);
-        //    }
-        //}
-
-        //TMP
-        //charactereEquipment.GenerateProjectiles<BaseProjectile>();
+        //  Inicjalizacja ekwipunku
+        if (charactereEquipment.ActiveProjectile != null)
+        {
+            BaseProjectile testProjectile = charactereEquipment.ActiveProjectile.GetComponent<BaseProjectile>();
+            if (testProjectile == null)
+            {
+                charactereEquipment.ActiveProjectile = null;
+            }
+            else
+            {
+                charactereEquipment.GenerateProjectiles<BaseProjectile>(EnemyLayerMask, gameObject);
+            }
+        }
     }
 
     protected virtual void OnAnimatorIK(int layerIndex)
@@ -212,8 +211,9 @@ public abstract class BaseCharacterController : MonoBehaviour
         {
             if (projectile.gameObject.active == false)
             {
-                projectile.LaunchProjectile(this.middleHitPoint);
+                projectile.LaunchProjectile(this.TestGameObject.transform);
                 projectile.gameObject.SetActive(true);
+                projectile.EnemyLayerMask = EnemyLayerMask;
                 break;
             }
         }
