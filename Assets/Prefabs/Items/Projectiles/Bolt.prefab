@@ -106,9 +106,9 @@ MonoBehaviour:
   inGameName: Item
   purchasePrice: 0
   sellingPrice: 0
-  Range: 5
-  Damage: 10
-  Velocity: 5
+  Range: 15
+  Damage: 50
+  Velocity: 15
   EnemyLayerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -122,7 +122,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: Velocity
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Constraints
@@ -131,6 +131,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Layer
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Range
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Damage
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

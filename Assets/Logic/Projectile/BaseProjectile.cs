@@ -40,7 +40,7 @@ public class BaseProjectile : Item
         OldPosition = transform.position;
     }
 
-    protected void OnCollisionEnter(Collision collision)
+    protected virtual void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject == Owner)
         {
@@ -55,8 +55,9 @@ public class BaseProjectile : Item
         }
     }
 
-    public void LaunchProjectile(Transform firingCharacter)
+    public virtual void LaunchProjectile(Transform firingCharacter)
     {
+        this.gameObject.SetActive(true);
         transform.position = firingCharacter.position;
         gameObject.transform.rotation = firingCharacter.rotation;
 

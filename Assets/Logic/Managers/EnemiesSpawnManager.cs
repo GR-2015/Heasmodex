@@ -2,32 +2,31 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters;
 using UnityEngine;
+using UnityEditor;
 
 public class EnemiesSpawnManager : MonoBehaviour
 {
 
     public static EnemiesSpawnManager Instance { get; private set; }
 
-    [SerializeField]
-    private string _playerTag = string.Empty;
+    [SerializeField] private LayerMask _playerMask;
+    public LayerMask PlayerMask { get { return _playerMask; } }
 
-    public string PlayerTag { get { return _playerTag; } }
+    [SerializeField] private List<SpawnPoint> _spawnPoints = new List<SpawnPoint>();
 
-    [SerializeField]
-    private List<SpawnPoint> _spawnPoints = new List<SpawnPoint>();
+    [SerializeField] private List<GameObject> _normalEnemyGameObjects = new List<GameObject>();
+    [SerializeField] private int _maxNormalEnemyCount = 20;
+    [SerializeField] private Stack<GameObject> _normalEnemy = new Stack<GameObject>();
 
-    [SerializeField]
-    private List<GameObject> _normalEnemyGameObjects = new List<GameObject>();
-    [SerializeField]
-    private int _maxNormalEnemyCount = 20;
-    [SerializeField]
-    private Stack<GameObject> _normalEnemy = new Stack<GameObject>();
-
+    [SerializeField] private AnimationCurve _chanceCurve;
+    public float Chance { get { return _chanceCurve.Evaluate(currentDistance); } }
+    [SerializeField] private float maxDistance = 100f;
+    [SerializeField] private float currentDistance = 0f;
+    [SerializeField] private Vector3 playerOldPosition;
+    [SerializeField] private Vector3 playerCurrentPosition;
     // TMP
-    [SerializeField]
-    private float maxChance = 20f;
-    [SerializeField]
-    private float minChance = 0f;
+    [SerializeField] private float maxChance = 20f;
+    [SerializeField] private float minChance = 0f;
 
     private void Awake()
     {
@@ -35,15 +34,33 @@ public class EnemiesSpawnManager : MonoBehaviour
         PrepareEnemies();
     }
 
+    private void Start()
+    {
+        //GridStreamingManager.Instance.
+    }
+
+    private void Update()
+    {
+        playerOldPosition = playerCurrentPosition;
+        playerCurrentPosition = CharacterManager.Instance.Players[0].transform.position;
+        playerCurrentPosition.y = (float)System.Math.Round((double)playerCurrentPosition.y, 2);
+
+        float distance = Vector3.Distance(playerCurrentPosition, playerOldPosition);
+        currentDistance += distance;
+
+        if (currentDistance >= maxDistance)
+        {
+            currentDistance = 0f;
+        }
+    }
+
     private void PrepareEnemies()
     {
         int index = 0;
         for (int i = 0; i < _maxNormalEnemyCount; i++)
         {
-            GameObject gameObject = GameObject.Instantiate(_normalEnemyGameObjects[index]) as GameObject;
+            GameObject gameObject = Instantiate(_normalEnemyGameObjects[index]);
             gameObject.SetActive(false);
-
-            _normalEnemy.Push(gameObject);
 
             ++index;
             if (index > _normalEnemyGameObjects.Count - 1)
@@ -53,30 +70,29 @@ public class EnemiesSpawnManager : MonoBehaviour
         }
     }
 
-    public void RegisterSpawnPoint(SpawnPoint point)
-    {
-        _spawnPoints.Add(point);
-        UpdateSprawnPoints();
-    }
 
-    public void UnregisterSpawnPoint(SpawnPoint point)
+    public void Spawn(Vector3 position)
     {
-        _spawnPoints.Remove(point);
-        UpdateSprawnPoints();
-    }
+        float draw = Random.Range(0f, 100f);
 
-    public void Spawn(float draw, Vector3 position)
-    {
-        if (draw >= 10f && draw <= 20f)
+        //Debug.Log("Los: " + draw);
+        //Debug.Log("Szansa: " + Chance);
+
+        if (draw <= Chance)
         {
-            GameObject enemGameObject = _normalEnemy.Pop();
+            //Debug.Log("Pow!");
+            GameObject enemGameObject = _normalEnemy.Peek();
+
             if (enemGameObject == null) return;
+            _normalEnemy.Pop();
 
             enemGameObject.SetActive(true);
 
-            position.x -= 1f;
-
+            position.y += 1f;
+            position.x -= 2.5f;
             enemGameObject.transform.position = position;
+
+            Selection.activeGameObject = enemGameObject;
         }
     }
 
@@ -87,15 +103,7 @@ public class EnemiesSpawnManager : MonoBehaviour
             case EnemyType.Normal:
                 _normalEnemy.Push(enemy);
                 break;
-
         }
     }
 
-    private void UpdateSprawnPoints()
-    {
-        foreach (SpawnPoint point in _spawnPoints)
-        {
-            point.spawnChance = Random.Range(minChance, maxChance);
-        }
-    }
 }

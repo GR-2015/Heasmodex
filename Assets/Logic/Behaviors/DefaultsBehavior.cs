@@ -21,14 +21,14 @@ public class DefaultsBehavior : BaseBehavior
         Vector3 playerPosition = this.ClosestPlayer();
         Vector3 inputValue = Vector3.zero;
 
-        //if (playerPosition.x < this.transform.position.x)
-        //{
-        //    inputValue.x = -1;
-        //}
-        //else
-        //{
-        //    inputValue.x = 1;
-        //}
+        if (playerPosition.x < this.transform.position.x)
+        {
+            inputValue.x = -1;
+        }
+        else
+        {
+            inputValue.x = 1;
+        }
 
         _controlledEnemy.Move(inputValue, Vector3.zero);
     }

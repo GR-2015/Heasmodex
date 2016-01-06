@@ -21,6 +21,11 @@ public class EnemyController : BaseCharacterController
         set;
     }
 
+    protected void OnEnable()
+    {
+        characterStatistics.HP = 100f;
+    }
+
     protected void Awake()
     {
         base.Awake();
@@ -35,7 +40,7 @@ public class EnemyController : BaseCharacterController
 
     protected void Start()
     {
-        CharacterManager.Instance.RegisterEnemy(this);
+        //CharacterManager.Instance.RegisterEnemy(this);
     }
 
     protected void Update()
@@ -60,6 +65,16 @@ public class EnemyController : BaseCharacterController
             CurrentBechavior.Behavior();
             CurrentBechavior.OverloadConditions();
         }
+
+        if (characterStatistics.HP <= 0 )
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
+
+    void OnBecameInvisible()
+    {
+        gameObject.SetActive(false);
     }
 
     protected virtual void OnDisable()

@@ -5,6 +5,7 @@ public static class LayerHelper
 {
     public static bool IsLayerMaskLayer(int layer, LayerMask layerMask)
     {
-        return ((layer << layer) & layerMask.value) == layerMask.value;
+        int value = (1 << layer);
+        return (value & layerMask.value) > 0;
     }
 }

@@ -60,7 +60,7 @@ GameObject:
   m_Layer: 0
   m_Name: GridStreamingManager
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -150,7 +150,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143924}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 49.1, z: 0}
+  m_LocalPosition: {x: 50, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 471190}
@@ -283,11 +283,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d0e771f35f110e4aaf0839c89ccb313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerTag: Player
+  _playerMask:
+    serializedVersion: 2
+    m_Bits: 0
   _spawnPoints: []
   _normalEnemyGameObjects:
   - {fileID: 110708, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
   _maxNormalEnemyCount: 20
+  _chanceCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 10
+    - time: 100
+      value: 100
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  maxDistance: 100
+  currentDistance: 0
+  playerOldPosition: {x: 0, y: 0, z: 0}
+  playerCurrentPosition: {x: 0, y: 0, z: 0}
   maxChance: 20
   minChance: 0
 --- !u!114 &11421168
@@ -346,10 +368,10 @@ MonoBehaviour:
   _debug: 1
   _activeRowIndex: 
   _activeColumnIndex: 
-  _mapInfo: {fileID: 11400000, guid: 5a3e104b6acf5dc4896eb2b351d67bde, type: 2}
+  _mapInfo: {fileID: 11400000, guid: 2f9b6a6034fa03e4da3c9c5b49d0a950, type: 2}
   _streaminLayerMask:
     serializedVersion: 2
-    m_Bits: 2147483648
+    m_Bits: 2147484672
 --- !u!114 &11470258
 MonoBehaviour:
   m_ObjectHideFlags: 1

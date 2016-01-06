@@ -190,30 +190,28 @@ public abstract class BaseCharacterController : MonoBehaviour
 
         RaycastHit hit;
 
-        if (Physics.Raycast(middleHitPoint.position, middleHitPoint.forward, out hit, 3f, EnemyLayerMask))
-        {
-            float damage = characterStatistics.Damage;
+        //if (Physics.Raycast(middleHitPoint.position, middleHitPoint.forward, out hit, 3f, EnemyLayerMask))
+        //{
+        //    float damage = characterStatistics.Damage;
 
-            if (charactereEquipment.mainHandWeapon != null)
-            {
-                damage += charactereEquipment.mainHandWeapon.Damage;
-            }
+        //    if (charactereEquipment.mainHandWeapon != null)
+        //    {
+        //        damage += charactereEquipment.mainHandWeapon.Damage;
+        //    }
 
-            if (charactereEquipment.offHandWeapon != null)
-            {
-                damage += charactereEquipment.offHandWeapon.Damage;
-            }
+        //    if (charactereEquipment.offHandWeapon != null)
+        //    {
+        //        damage += charactereEquipment.offHandWeapon.Damage;
+        //    }
 
-            hit.collider.SendMessage(GetDamageFunctionName, damage);
-        }
+        //    hit.collider.SendMessage(GetDamageFunctionName, damage);
+        //}
 
         foreach (BaseProjectile projectile in charactereEquipment.characterProjectiles)
         {
             if (projectile.gameObject.active == false)
             {
                 projectile.LaunchProjectile(this.TestGameObject.transform);
-                projectile.gameObject.SetActive(true);
-                projectile.EnemyLayerMask = EnemyLayerMask;
                 break;
             }
         }

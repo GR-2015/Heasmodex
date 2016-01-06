@@ -96,29 +96,34 @@ MonoBehaviour:
   inputSource: 
   Movement: {x: 0, y: 0, z: 0}
   NewRotation: {x: 0, y: 0, z: 0}
+  CoursorPosition: {x: 0, y: 0, z: 0}
   characterStatistics:
     HP: 100
     MP: 100
     Damage: 0
   charactereEquipment:
     money: 100
+    ActiveProjectile: {fileID: 0}
     mainHandWeapon: {fileID: 0}
     offHandWeapon: {fileID: 0}
     breastplate: {fileID: 0}
     equipment: []
     projectilesCount: 10
     characterProjectiles: []
-  movementSpeed: 5
-  jumpForce: 50
-  rotationSpeed: 60
+  characterMovement:
+    movementSpeed: 3.75
+    jumpForce: 50
+    rotationSpeed: 60
   EnemyLayerMask:
     serializedVersion: 2
     m_Bits: 0
   middleHitPoint: {fileID: 0}
+  TestGameObject: {fileID: 0}
   leftHendGrip: {fileID: 0}
   leftHandWieldRotation: {x: 0, y: 0, z: 0}
   rightHendGrip: {fileID: 0}
   rightHandWieldRotation: {x: 0, y: 0, z: 0}
+  _type: 0
 --- !u!114 &11457914
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -168,7 +173,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: characterMovement.movementSpeed
+      value: 3.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 110708}
