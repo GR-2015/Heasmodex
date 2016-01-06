@@ -256,6 +256,10 @@ Prefab:
       propertyPath: _chanceCurve.m_Curve.Array.data[5].tangentMode
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
+      propertyPath: _enemyMask.m_Bits
+      value: 2048
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
   m_IsPrefabParent: 0
