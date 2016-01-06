@@ -7,19 +7,12 @@ using UnityEngine;
 public class EnemyController : BaseCharacterController
 {
     [SerializeField] private EnemyType _type;
+    public EnemyType Type { get { return _type; } }
 
     private List<BaseBehavior> _bechaviors;
 
-    public List<BaseBehavior> Bechaviors
-    {
-        get { return _bechaviors; }
-    }
-
-    public BaseBehavior CurrentBechavior
-    {
-        get;
-        set;
-    }
+    public List<BaseBehavior> Bechaviors { get { return _bechaviors; } }
+    public BaseBehavior CurrentBechavior { get; set; }
 
     protected void OnEnable()
     {

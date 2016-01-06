@@ -11,6 +11,7 @@ public class EnemiesSpawnManager : MonoBehaviour
 
     [SerializeField] private LayerMask _playerMask;
     public LayerMask PlayerMask { get { return _playerMask; } }
+    [SerializeField] private LayerMask _enemyMask;
 
     [SerializeField] private List<SpawnPoint> _spawnPoints = new List<SpawnPoint>();
 
@@ -24,6 +25,7 @@ public class EnemiesSpawnManager : MonoBehaviour
     [SerializeField] private float currentDistance = 0f;
     [SerializeField] private Vector3 playerOldPosition;
     [SerializeField] private Vector3 playerCurrentPosition;
+    [SerializeField] private float formPlayerSpawnDistance = 5f;
     // TMP
     [SerializeField] private float maxChance = 20f;
     [SerializeField] private float minChance = 0f;
@@ -75,24 +77,23 @@ public class EnemiesSpawnManager : MonoBehaviour
     {
         float draw = Random.Range(0f, 100f);
 
-        //Debug.Log("Los: " + draw);
-        //Debug.Log("Szansa: " + Chance);
-
         if (draw <= Chance)
         {
-            //Debug.Log("Pow!");
-            GameObject enemGameObject = _normalEnemy.Peek();
+            if (_normalEnemy.Count == 0) return;
 
-            if (enemGameObject == null) return;
-            _normalEnemy.Pop();
-
-            enemGameObject.SetActive(true);
+            GameObject enemGameObject = _normalEnemy.Pop();
 
             position.y += 1f;
-            position.x -= 2.5f;
-            enemGameObject.transform.position = position;
+            position.x += Random.Range(5f, 10f) * (Random.Range(-1, 1) >= 0 ? 1 : -1); ;
 
-            Selection.activeGameObject = enemGameObject;
+            enemGameObject.transform.position = position;
+            enemGameObject.SetActive(true);
+
+            if (!Physics.CheckSphere(position, 1f, _enemyMask) &&
+                !Physics.CheckSphere(position, 1f, _playerMask))
+            {
+                enemGameObject.SetActive(false);
+            }
         }
     }
 

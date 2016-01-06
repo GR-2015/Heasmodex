@@ -16,7 +16,6 @@ public class SpawnPoint : MonoBehaviour
         {
             return;
         }
-
         EnemiesSpawnManager.Spawn(collision.gameObject.transform.position);
     }
 

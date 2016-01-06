@@ -52,4 +52,27 @@ public class CharacterManager : MonoBehaviour
     {
         _enemies.Remove(instance);
     }
+
+    public Vector3 ClosestPlayer(Vector3 position)
+    {
+        Vector3 closestPlayerPosition = Players[0].transform.position;
+        float distanceA = 0f;
+        float distanceB = 0f;
+
+        distanceA = Vector3.Distance(position, closestPlayerPosition);
+
+        for (int i = 1; i < Players.Count; i++)
+        {
+            distanceB = Vector3.Distance(position, Players[i].transform.position);
+
+            if (distanceA > distanceB)
+            {
+                distanceA = distanceB;
+                closestPlayerPosition = Players[i].transform.position;
+            }
+        }
+
+        return closestPlayerPosition;
+    }
+
 }
