@@ -17,10 +17,10 @@ public class GridSreamingHead : MonoBehaviour
     {
         _playerTransformToFallow = CharacterManager.Instance.Players[0].transform;
 
-        if (_playerTransformToFallow.position.x < (transform.lossyScale.z/2))
+        if (_playerTransformToFallow.position.x < (transform.lossyScale.z / 2))
         {
             transform.position = new Vector3(
-                transform.lossyScale.z / 2, 
+                transform.lossyScale.z / 2,
                 _playerTransformToFallow.position.y,
                 _playerTransformToFallow.position.z) + _headOffset;
             return;

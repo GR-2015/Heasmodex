@@ -52,10 +52,25 @@ public class MapGenerator : EditorWindow
         GUILayout.EndHorizontal();
 
 
+        if (GUILayout.Button("Set width form selected."))
+        {
+            _width = (int) (Selection.activeObject as GameObject).transform.position.x + 1;
+        }
+        if (GUILayout.Button("Set height form selected."))
+        {
+            _height = (int)(Selection.activeObject as GameObject).transform.position.y + 1;
+        }
+        if (GUILayout.Button("Set layers form selected."))
+        {
+            _layers = (int)(Selection.activeObject as GameObject).transform.position.z + 1;
+        }
         if (GUILayout.Button("Create map."))
         {
             CreateMap();
         }
+
+
+
     }
 
     private void CreateMap()
@@ -75,26 +90,37 @@ public class MapGenerator : EditorWindow
 
         int counter = 0;
         float x = 0f;
-        foreach (GameObject o in mapSegmentsList)
+
+        try
         {
-            x = ((10 * counter)/mapSegmentsList.Length);
-            EditorUtility.DisplayProgressBar("Map grneration", counter+ "/"+ mapSegmentsList.Length, x);
-            
-            string[] newName = o.name.Split(' ');
-            o.name = newName[0];
-
-            o.transform.position = new Vector3((int)o.transform.position.x, (int)o.transform.position.y, (int)o.transform.position.z);
-
-            if (mapInfo.Layers[(int) o.transform.position.z].RowList[(int)o.transform.position.y].SegmentPregabName[(int) o.transform.position.x] == string.Empty)
+            foreach (GameObject o in mapSegmentsList)
             {
-                mapInfo.Layers[(int)o.transform.position.z].RowList[(int)o.transform.position.y].SegmentPregabName[(int)o.transform.position.x] = o.name;
-            }
-            else
-            {
-                duplicateList.Add(o);
-            }
+                x = ((10 * counter) / mapSegmentsList.Length);
+                EditorUtility.DisplayProgressBar("Map grneration", counter + "/" + mapSegmentsList.Length, x);
 
-            ++counter;
+                //o.transform.parent = null;
+
+                string[] newName = o.name.Split(' ');
+                o.name = newName[0];
+
+                o.transform.position = new Vector3((int)o.transform.position.x, (int)o.transform.position.y, (int)o.transform.position.z);
+
+                if (mapInfo.Layers[(int)o.transform.position.z].RowList[(int)o.transform.position.y].SegmentPregabName[(int)o.transform.position.x] == string.Empty)
+                {
+                    mapInfo.Layers[(int)o.transform.position.z].RowList[(int)o.transform.position.y].SegmentPregabName[(int)o.transform.position.x] = o.name;
+                }
+                else
+                {
+                    duplicateList.Add(o);
+                }
+
+                ++counter;
+            }
+        }
+        catch (Exception)
+        {
+            EditorUtility.ClearProgressBar();
+            Debug.Log("Index");
         }
 
         EditorUtility.ClearProgressBar();

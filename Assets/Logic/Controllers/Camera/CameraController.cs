@@ -45,32 +45,38 @@ public class CameraController : MonoBehaviour
     {
         float edge = 0f;
         _playerTransformToFallow = CharacterManager.Instance.Players[0].transform;
+        
+        Vector3 newPosition = _playerTransformToFallow.position + _cameraOffset;
+        transform.position = Vector3.Lerp(
+                            transform.position,
+                            newPosition,
+                            _cameraSnapingSpeed * Time.deltaTime);
 
-        if (_playerTransformToFallow.position.x < ((float)GridStreamingManager.Instance.Widtch / 2))
-        {
-            Vector3 edgePosition = new Vector3(
-                0, 
-                _playerTransformToFallow.position.y, 
-                0);
-            edge = Vector3.Distance(edgePosition, _playerTransformToFallow.position);
-        }
-        else
-        {
-            Vector3 edgePosition = new Vector3(
-                GridStreamingManager.Instance.Widtch, 
-                _playerTransformToFallow.position.y, 
-                0);
-            edge = Vector3.Distance(edgePosition, _playerTransformToFallow.position);
-        }
+        //if (_playerTransformToFallow.position.x < ((float)GridStreamingManager.Instance.Widtch / 2))
+        //{
+        //    Vector3 edgePosition = new Vector3(
+        //        0, 
+        //        _playerTransformToFallow.position.y, 
+        //        0);
+        //    edge = Vector3.Distance(edgePosition, _playerTransformToFallow.position);
+        //}
+        //else
+        //{
+        //    Vector3 edgePosition = new Vector3(
+        //        GridStreamingManager.Instance.Widtch, 
+        //        _playerTransformToFallow.position.y, 
+        //        0);
+        //    edge = Vector3.Distance(edgePosition, _playerTransformToFallow.position);
+        //}
 
-        if (_toEdgeDistance < edge)
-        {
-            Vector3 newPosition = _playerTransformToFallow.position + _cameraOffset;
-            transform.position = Vector3.Lerp(
-                transform.position,
-                newPosition,
-                _cameraSnapingSpeed*Time.deltaTime);
-        }
+        //if (_toEdgeDistance < edge)
+        //{
+        //    Vector3 newPosition = _playerTransformToFallow.position + _cameraOffset;
+        //    transform.position = Vector3.Lerp(
+        //        transform.position,
+        //        newPosition,
+        //        _cameraSnapingSpeed*Time.deltaTime);
+        //}
     }
 
     public Vector3 CalculateCursorWorldPosition(Vector2 mousePosition)

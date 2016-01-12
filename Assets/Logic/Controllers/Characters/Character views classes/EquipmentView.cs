@@ -7,11 +7,8 @@ public class EquipmentView : BaseView
 {
     public UnityEvent<string> TestUnityEvent;
 
-    [SerializeField]
-    private GameObject EquipmentButton;
-
-    [SerializeField]
-    private GameObject ContentBox;
+    [SerializeField] private GameObject _equipmentButton;
+    [SerializeField] private GameObject _contentBox;
 
     private List<GameObject> butList = new List<GameObject>();
     private List<Button> buttonsss = new List<Button>();
@@ -28,8 +25,8 @@ public class EquipmentView : BaseView
 
         foreach (ItemSlot itemSlot in player.CharactereEquipment.equipment)
         {
-            butList.Add(GameObject.Instantiate(EquipmentButton));
-            butList[butList.Count - 1].transform.SetParent(ContentBox.transform);
+            butList.Add(GameObject.Instantiate(_equipmentButton));
+            butList[butList.Count - 1].transform.SetParent(_contentBox.transform);
             butList[butList.Count - 1].transform.localScale = Vector3.one;
             butList[butList.Count - 1].transform.position = Vector3.zero;
 
