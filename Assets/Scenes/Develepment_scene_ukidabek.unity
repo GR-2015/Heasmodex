@@ -265,6 +265,22 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: d2506851fa3e8a944a86cd1a50e58992,
         type: 2}
+    - target: {fileID: 11464302, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
+      propertyPath: _streamerRowOffset
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11464302, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
+      propertyPath: _streamerColumnOffset
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 187868, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
+      propertyPath: spawnBloack
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
   m_IsPrefabParent: 0
@@ -401,7 +417,7 @@ Transform:
   m_GameObject: {fileID: 219356738}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
   m_LocalPosition: {x: 18.7, y: 7.11, z: 0}
-  m_LocalScale: {x: 1, y: 10, z: 30}
+  m_LocalScale: {x: 1, y: 13, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -417,7 +433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerTransformToFallow: {fileID: 0}
-  _headOffset: {x: 0, y: 3, z: 0}
+  _headOffset: {x: 0, y: 0, z: 0}
 --- !u!1001 &654886949
 Prefab:
   m_ObjectHideFlags: 0
@@ -427,7 +443,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 456032, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 14.82
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 456032, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
       propertyPath: m_LocalPosition.y

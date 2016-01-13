@@ -17,6 +17,11 @@ public class GridStreamer : MonoBehaviour
     [SerializeField] private bool _isCrossedInPast;
     [SerializeField] private bool _isCrossedNow;
 
+    private void Start()
+    {
+        enabled = false;
+    }
+
     private void FixedUpdate()
     {
         // Ustalanie stanu streamera
@@ -44,9 +49,11 @@ public class GridStreamer : MonoBehaviour
 
             case GridStreamesrState.Inactive:
                 DrawDebugLine(Color.red);
+                enabled = false;
                 break;
         }        
     }
+
 
     private GridStreamesrState UpdateStreamerState()
     {
@@ -72,11 +79,6 @@ public class GridStreamer : MonoBehaviour
             return GridStreamesrState.Disabled;
         }
 
-        if (!_isCrossedNow && !_isCrossedInPast)
-        {
-            return GridStreamesrState.Inactive;
-        }
-
         return GridStreamesrState.Inactive;
     }
 
@@ -92,7 +94,9 @@ public class GridStreamer : MonoBehaviour
     {
         Gizmos.DrawIcon(this.transform.position, GizmoName, true);
     }
+
 }
+
 
 //  Typ streamera wiersza - kolumna.
 public enum GridStreamesrType

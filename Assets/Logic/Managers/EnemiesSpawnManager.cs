@@ -26,19 +26,13 @@ public class EnemiesSpawnManager : MonoBehaviour
     [SerializeField] private Vector3 playerOldPosition;
     [SerializeField] private Vector3 playerCurrentPosition;
     [SerializeField] private float formPlayerSpawnDistance = 5f;
-    // TMP
-    [SerializeField] private float maxChance = 20f;
-    [SerializeField] private float minChance = 0f;
+
+    [SerializeField] private bool spawnBloack = false;
 
     private void Awake()
     {
         Instance = this;
         PrepareEnemies();
-    }
-
-    private void Start()
-    {
-        //GridStreamingManager.Instance.
     }
 
     private void Update()
@@ -75,6 +69,11 @@ public class EnemiesSpawnManager : MonoBehaviour
 
     public void Spawn(Vector3 position)
     {
+        if (spawnBloack)
+        {
+            return;
+        }
+
         float draw = Random.Range(0f, 100f);
 
         if (draw <= Chance)

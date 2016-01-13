@@ -8,9 +8,15 @@ public class GridSreamingHead : MonoBehaviour
     [SerializeField] private Transform _playerTransformToFallow;
     [SerializeField] private Vector3 _headOffset = Vector3.zero;
 
+
     void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        transform.parent = null;
     }
 
     void Update()
