@@ -63,6 +63,11 @@ public class CharactereEquipment
             equipment.Add(new ItemSlot(newItem.name));
         }
     }
+
+    public void AddMoney(float moneyAmount)
+    {
+        money += moneyAmount;
+    }
 }
 
 [Serializable]
