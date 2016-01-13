@@ -207,6 +207,12 @@ public class GridStreamingManager : MonoBehaviour
             amountX = (int)_streamerColumnOffsetValue * 2;
         }
 
+        List<GridStreamer> activeStreames = ColumnGridStreamers.GetRange(minx, amountX);
+        foreach (GridStreamer columnStreamer in activeStreames)
+        {
+            columnStreamer.enabled = true;
+        }
+
         int miny = (int)playeTransform.position.y - (int)_streamerRowOffsetValue;
         miny = miny < 0 ? 0 : miny;
 
@@ -218,13 +224,6 @@ public class GridStreamingManager : MonoBehaviour
         else
         {
             amountY = (int)_streamerRowOffsetValue * 2;
-        }
-
-
-        List<GridStreamer> activeStreames = ColumnGridStreamers.GetRange(minx, amountX);
-        foreach (GridStreamer columnStreamer in activeStreames)
-        {
-            columnStreamer.enabled = true;
         }
 
         activeStreames = RowGridStreamers.GetRange(miny, amountY);

@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13247131543809c4f9a6471621568564, type: 3}
   m_Name: NewMap
   m_EditorClassIdentifier: 
-  Size: {x: 25, y: 112, z: 6}
+  Size: {x: 28, y: 112, z: 6}
   Layers:
   - Index: 0
     RowList:
@@ -1788,7 +1788,120 @@ MonoBehaviour:
       - 
       - 
       - 
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
       - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked_new
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -2133,119 +2246,6 @@ MonoBehaviour:
       - 
       - 
       - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - Building_cube_sandstone_tweaked_new
-    - SegmentPregabName:
-      - Building_cube_sandstone_tweaked
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
       - Building_cube_sandstone_tweaked_new
       - 
       - 
@@ -2389,90 +2389,90 @@ MonoBehaviour:
       - 
       - Building_cube_sandstone_tweaked_new
     - SegmentPregabName:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -2502,6 +2502,7 @@ MonoBehaviour:
       - 
       - 
     - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -2529,6 +2530,8 @@ MonoBehaviour:
       - 
       - 
       - 
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -2582,10 +2585,7 @@ MonoBehaviour:
       - 
       - 
       - 
-      - 
-      - 
-      - 
-      - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
       - 
@@ -2615,6 +2615,7 @@ MonoBehaviour:
       - 
       - 
     - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -2642,6 +2643,7 @@ MonoBehaviour:
       - 
       - 
       - 
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -2696,9 +2698,7 @@ MonoBehaviour:
       - 
       - 
       - 
-      - 
-      - 
-      - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
       - 
@@ -2728,6 +2728,7 @@ MonoBehaviour:
       - 
       - 
     - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -2810,8 +2811,346 @@ MonoBehaviour:
       - 
       - 
       - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked_new
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked_new
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
       - 
@@ -4615,7 +4954,120 @@ MonoBehaviour:
       - 
       - 
       - 
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
       - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked_new
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -4960,119 +5412,6 @@ MonoBehaviour:
       - 
       - 
       - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - Building_cube_sandstone_tweaked_new
-    - SegmentPregabName:
-      - Building_cube_sandstone_tweaked
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
       - Building_cube_sandstone_tweaked_new
       - 
       - 
@@ -5216,90 +5555,90 @@ MonoBehaviour:
       - 
       - Building_cube_sandstone_tweaked_new
     - SegmentPregabName:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -5329,6 +5668,7 @@ MonoBehaviour:
       - 
       - 
     - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -5356,6 +5696,8 @@ MonoBehaviour:
       - 
       - 
       - 
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -5409,10 +5751,7 @@ MonoBehaviour:
       - 
       - 
       - 
-      - 
-      - 
-      - 
-      - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
       - 
@@ -5442,6 +5781,7 @@ MonoBehaviour:
       - 
       - 
     - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -5469,6 +5809,7 @@ MonoBehaviour:
       - 
       - 
       - 
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -5523,9 +5864,7 @@ MonoBehaviour:
       - 
       - 
       - 
-      - 
-      - 
-      - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
       - 
@@ -5555,6 +5894,7 @@ MonoBehaviour:
       - 
       - 
     - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -5637,8 +5977,346 @@ MonoBehaviour:
       - 
       - 
       - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked_new
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked_new
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
       - 
@@ -8043,90 +8721,90 @@ MonoBehaviour:
       - 
       - Building_cube_sandstone_tweaked_new
     - SegmentPregabName:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -8156,6 +8834,7 @@ MonoBehaviour:
       - 
       - 
     - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -8238,8 +8917,7 @@ MonoBehaviour:
       - 
       - 
       - 
-      - 
-      - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
       - 
@@ -8269,6 +8947,7 @@ MonoBehaviour:
       - 
       - 
     - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -8351,8 +9030,7 @@ MonoBehaviour:
       - 
       - 
       - 
-      - 
-      - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
       - 
@@ -8382,6 +9060,7 @@ MonoBehaviour:
       - 
       - 
     - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -8464,8 +9143,346 @@ MonoBehaviour:
       - 
       - 
       - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked_new
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked_new
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
       - 
@@ -10870,90 +11887,90 @@ MonoBehaviour:
       - 
       - Building_cube_sandstone_tweaked_new
     - SegmentPregabName:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -10983,6 +12000,7 @@ MonoBehaviour:
       - 
       - 
     - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -11065,8 +12083,7 @@ MonoBehaviour:
       - 
       - 
       - 
-      - 
-      - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
       - 
@@ -11096,6 +12113,7 @@ MonoBehaviour:
       - 
       - 
     - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -11178,8 +12196,7 @@ MonoBehaviour:
       - 
       - 
       - 
-      - 
-      - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
       - 
@@ -11209,6 +12226,7 @@ MonoBehaviour:
       - 
       - 
     - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -11291,8 +12309,346 @@ MonoBehaviour:
       - 
       - 
       - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked_new
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked_new
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
       - 
@@ -13697,90 +15053,90 @@ MonoBehaviour:
       - 
       - Building_cube_sandstone_tweaked_new
     - SegmentPregabName:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -13810,6 +15166,7 @@ MonoBehaviour:
       - 
       - 
     - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -13892,8 +15249,7 @@ MonoBehaviour:
       - 
       - 
       - 
-      - 
-      - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
       - 
@@ -13923,90 +15279,90 @@ MonoBehaviour:
       - 
       - 
     - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
       - 
       - 
+      - Flame_pref
       - 
       - 
       - 
       - 
       - 
       - 
+      - Flame_pref
       - 
       - 
       - 
       - 
       - 
       - 
+      - Flame_pref
       - 
       - 
       - 
       - 
       - 
       - 
+      - Flame_pref
       - 
       - 
       - 
       - 
       - 
       - 
+      - Flame_pref
       - 
       - 
       - 
       - 
       - 
       - 
+      - Flame_pref
       - 
       - 
       - 
       - 
       - 
       - 
+      - Flame_pref
       - 
       - 
       - 
       - 
       - 
       - 
+      - Flame_pref
       - 
       - 
       - 
       - 
       - 
       - 
+      - Flame_pref
       - 
       - 
       - 
       - 
       - 
       - 
+      - Flame_pref
       - 
       - 
       - 
       - 
       - 
       - 
+      - Flame_pref
       - 
       - 
       - 
       - 
       - 
       - 
+      - Flame_pref
       - 
       - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
       - 
@@ -14036,6 +15392,7 @@ MonoBehaviour:
       - 
       - 
     - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -14118,8 +15475,346 @@ MonoBehaviour:
       - 
       - 
       - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked_new
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked_new
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
       - 
@@ -16524,90 +18219,90 @@ MonoBehaviour:
       - Building_cube_sandstone_tweaked_new
       - Building_cube_sandstone_tweaked_new
     - SegmentPregabName:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
       - 
       - 
       - 
@@ -16637,90 +18332,90 @@ MonoBehaviour:
       - 
       - 
     - SegmentPregabName:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
       - 
@@ -16750,90 +18445,90 @@ MonoBehaviour:
       - 
       - 
     - SegmentPregabName:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
       - 
@@ -16863,6 +18558,107 @@ MonoBehaviour:
       - 
       - 
     - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked_new
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
       - 
       - 
       - 
@@ -16874,79 +18670,317 @@ MonoBehaviour:
       - 
       - 
       - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked_new
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+    - SegmentPregabName:
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
+      - Building_cube_sandstone_tweaked_new
       - 
       - 
       - 
