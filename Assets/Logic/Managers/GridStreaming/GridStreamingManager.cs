@@ -42,6 +42,7 @@ public class GridStreamingManager : MonoBehaviour
     [SerializeField] private GridMapInfo _mapInfo = null;
 
     private GameObject[,,] _mapObjects;
+    private List<GameObject> asseList = new List<GameObject>();
 
     [SerializeField] private LayerMask _streaminLayerMask = 0;
     public LayerMask StreaminLayerMask { get { return _streaminLayerMask; } }
@@ -128,11 +129,18 @@ public class GridStreamingManager : MonoBehaviour
 
     private GameObject LoadMapSegmeentAsset(string path)
     {
-        GameObject newObject = Resources.Load(path, typeof(GameObject)) as GameObject;
+        //GameObject newObject = Resources.Load(path, typeof(GameObject)) as GameObject;
 
-        if (newObject != null)
+        //if (newObject != null)
+        //{
+        //    return Instantiate(newObject);
+        //}
+        foreach (GameObject asset in asseList)
         {
-            return Instantiate(newObject);
+            if (asset.name.Equals(path))
+            {
+                return GameObject.Instantiate(asset);
+            }
         }
         
         return GameObject.CreatePrimitive(PrimitiveType.Cube);
@@ -142,27 +150,28 @@ public class GridStreamingManager : MonoBehaviour
     {
         if (type == GridStreamesrType.Column)
         {
+            //ColumnGridStreamers[index].Test();
             foreach (Layer layer in _mapInfo.Layers)
             {
-
                 foreach (int rowIndex in ActiveRowIndex)
                 {
                     if (_mapObjects[rowIndex, index, layer.Index] != null)
                     {
-                        GameObject.Destroy(_mapObjects[rowIndex, index, layer.Index]);
+                        GameObject.DestroyImmediate(_mapObjects[rowIndex, index, layer.Index]);
                     }
                 }
             }
         }
         else
         {
+            //RowGridStreamers[index].Test();
             foreach (Layer layer in _mapInfo.Layers)
             {
                 foreach (int columIndex in ActiveColumnIndex)
                 {
                     if (_mapObjects[index, columIndex, layer.Index] != null)
                     {
-                        GameObject.Destroy(_mapObjects[index, columIndex, layer.Index]);
+                        GameObject.DestroyImmediate(_mapObjects[index, columIndex, layer.Index]);
                     }
                 }
             }
@@ -179,6 +188,11 @@ public class GridStreamingManager : MonoBehaviour
         _streamers.transform.SetParent(this.transform);
         _level.transform.SetParent(this.transform);
 
+        foreach (string assetName in _mapInfo.assetNamesList)
+        {
+            asseList.Add(Resources.Load(assetName, typeof(GameObject)) as GameObject);
+        }
+
         GridInitialization();
     }
 
@@ -186,15 +200,27 @@ public class GridStreamingManager : MonoBehaviour
     {
         _streamerColumnOffsetValue = (GridSreamingHead.Instance.transform.lossyScale.z / 2f) + _streamerColumnOffset;
         _streamerRowOffsetValue = (GridSreamingHead.Instance.transform.lossyScale.y / 2f) + _streamerRowOffset;
+
+        //foreach (GridStreamer streamer in ColumnGridStreamers)
+        //{
+        //    streamer.enabled = false;
+        //}
+
+        //foreach (GridStreamer streamer in RowGridStreamers)
+        //{
+        //    streamer.enabled = false;
+        //}
+
+        //StreamersLimiting();
     }
 
-    private void Update()
+    private void StreamersLimiting()
     {
-        Transform playeTransform = CharacterManager.Instance.Players[0].transform;
+        Transform gridSreamingHeadTransform = GridSreamingHead.Instance.transform;
 
         int amountX, amountY;
 
-        int minx = (int)playeTransform.position.x - (int)_streamerColumnOffsetValue;
+        int minx = (int)gridSreamingHeadTransform.position.x - (int)_streamerColumnOffsetValue;
         minx = minx < 0 ? 0 : minx;
 
         if ((int)_streamerColumnOffsetValue * 2 + minx > ColumnGridStreamers.Count - 1)
@@ -204,7 +230,7 @@ public class GridStreamingManager : MonoBehaviour
         }
         else
         {
-            amountX = (int)_streamerColumnOffsetValue * 2;
+            amountX = (int)_streamerColumnOffsetValue * 2 + 2;
         }
 
         List<GridStreamer> activeStreames = ColumnGridStreamers.GetRange(minx, amountX);
@@ -213,7 +239,7 @@ public class GridStreamingManager : MonoBehaviour
             columnStreamer.enabled = true;
         }
 
-        int miny = (int)playeTransform.position.y - (int)_streamerRowOffsetValue;
+        int miny = (int)gridSreamingHeadTransform.position.y - (int)_streamerRowOffsetValue;
         miny = miny < 0 ? 0 : miny;
 
         if ((int)_streamerRowOffsetValue * 2 + miny > RowGridStreamers.Count - 1)
@@ -227,10 +253,17 @@ public class GridStreamingManager : MonoBehaviour
         }
 
         activeStreames = RowGridStreamers.GetRange(miny, amountY);
+
         foreach (GridStreamer rowStreamer in activeStreames)
         {
             rowStreamer.enabled = true;
         }
+
+    }
+
+    private void Update()
+    {
+        StreamersLimiting();
     }
 
     private void GridInitialization()

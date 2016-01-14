@@ -17,9 +17,10 @@ public class GridStreamer : MonoBehaviour
     [SerializeField] private bool _isCrossedInPast;
     [SerializeField] private bool _isCrossedNow;
 
+    public bool IsMarkedToDisabled = false;
+
     private void Start()
     {
-        enabled = false;
     }
 
     private void FixedUpdate()
@@ -49,9 +50,13 @@ public class GridStreamer : MonoBehaviour
 
             case GridStreamesrState.Inactive:
                 DrawDebugLine(Color.red);
-                enabled = false;
                 break;
-        }        
+        }
+
+        if (IsMarkedToDisabled)
+        {
+            enabled = false;
+        }
     }
 
 
@@ -94,7 +99,6 @@ public class GridStreamer : MonoBehaviour
     {
         Gizmos.DrawIcon(this.transform.position, GizmoName, true);
     }
-
 }
 
 

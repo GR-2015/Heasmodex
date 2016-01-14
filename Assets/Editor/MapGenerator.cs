@@ -103,6 +103,11 @@ public class MapGenerator : EditorWindow
                 string[] newName = o.name.Split(' ');
                 o.name = newName[0];
 
+                if (!mapInfo.assetNamesList.Contains(o.name))
+                {
+                    mapInfo.assetNamesList.Add(o.name);
+                }
+
                 o.transform.position = new Vector3((int)o.transform.position.x, (int)o.transform.position.y, (int)o.transform.position.z);
 
                 if (mapInfo.Layers[(int)o.transform.position.z].RowList[(int)o.transform.position.y].SegmentPregabName[(int)o.transform.position.x] == string.Empty)

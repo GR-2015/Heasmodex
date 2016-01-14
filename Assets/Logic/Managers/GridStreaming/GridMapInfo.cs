@@ -7,6 +7,7 @@ public class GridMapInfo : ScriptableObject
 {
     [SerializeField] public Vector3 Size = Vector3.zero;
     [SerializeField] public Layer[] Layers;
+    [SerializeField] public List<string> assetNamesList = new List<string>();
 }
 
 [System.Serializable]
