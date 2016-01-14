@@ -25,12 +25,13 @@ public class GridStreamer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Ustalanie stanu streamera
-        State = UpdateStreamerState();
     }
 
     private void Update()
     {
+        // Ustalanie stanu streamera
+        State = UpdateStreamerState();
+
         //  Akcje wywoływane w zaleźnośći od stanu streamera
         switch (State)
         {
