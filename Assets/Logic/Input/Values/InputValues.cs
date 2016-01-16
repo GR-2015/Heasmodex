@@ -2,7 +2,7 @@
 
 public class InputValues
 {
-    public PlayerController Owner { get; private set; }
+    public BaseCharacterController Owner { get; private set; }
 
     #region Input axes
 
@@ -14,14 +14,15 @@ public class InputValues
 
     #region Buttons
 
-    public ButtonState JumpButton;
-    public ButtonState MeleeAttack;
+    public ButtonState JumpButton = ButtonState.Released;
+    public ButtonState MeleeAttack = ButtonState.Released;
 
     #endregion Buttons
 
-    public InputValues(PlayerController owner)
+    public InputValues(BaseCharacterController owner)
     {
         Owner = owner;
+        Owner.InputValues = this;
     }
 }
 

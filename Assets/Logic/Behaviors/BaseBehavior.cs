@@ -4,13 +4,11 @@ public abstract class BaseBehavior : MonoBehaviour
 {
     protected EnemyController _controlledEnemy;
 
-    [SerializeField]
-    private int priority = 1;
+    [SerializeField] private int priority = 1;
 
     public int Priority { get { return priority; } }
 
-    [SerializeField]
-    protected bool overloadPermission = false;
+    [SerializeField] protected bool overloadPermission = false;
 
     public bool OverloadPermission { get { return overloadPermission; } }
 

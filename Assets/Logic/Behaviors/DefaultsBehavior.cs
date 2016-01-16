@@ -19,18 +19,18 @@ public class DefaultsBehavior : BaseBehavior
     public override void Behavior()
     {
         Vector3 playerPosition = this.ClosestPlayer();
-        Vector3 inputValue = Vector3.zero;
+        Vector3 movementAxes = Vector3.zero;
 
         if (playerPosition.x < this.transform.position.x)
         {
-            inputValue.x = -1;
+            movementAxes.x = -1;
         }
         else
         {
-            inputValue.x = 1;
+            movementAxes.x = 1;
         }
-
-        _controlledEnemy.Move(inputValue, Vector3.zero);
+        _controlledEnemy.InputValues.MovementAxes = movementAxes;
+        //_controlledEnemy.Move(inputValue, Vector3.zero);
     }
 
     public override void OverloadConditions()

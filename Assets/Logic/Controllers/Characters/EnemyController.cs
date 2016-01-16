@@ -24,6 +24,7 @@ public class EnemyController : BaseCharacterController
         base.Awake();
 
         _bechaviors = GetComponents<BaseBehavior>().ToList();
+        this.inputSource.Add(InputSourceType.AI);
 
         if (_bechaviors.Count > 0)
         {
@@ -33,7 +34,7 @@ public class EnemyController : BaseCharacterController
 
     protected void Start()
     {
-        //CharacterManager.Instance.RegisterEnemy(this);
+        CharacterManager.Instance.RegisterEnemy(this);
     }
 
     protected void Update()
@@ -72,7 +73,7 @@ public class EnemyController : BaseCharacterController
 
     protected virtual void OnDisable()
     {
-        EnemiesSpawnManager.Instance.Hide(this.gameObject,_type);
+        EnemiesSpawnManager.Instance.Hide(this.gameObject, _type);
     }
 }
 

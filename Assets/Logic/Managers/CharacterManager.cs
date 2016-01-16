@@ -16,16 +16,13 @@ public class CharacterManager : MonoBehaviour
         Instance = this;
     }
 
-    public int RegisterPlayer(PlayerController instance)
+    private void CharacterInitialization(BaseCharacterController character)
     {
-        _players.Add(instance);
+        var inputValues = new InputValues(character);
 
-        int index = _players.Count - 1;
-
-        var inputValues = new InputValues(instance);
         InputCollector.Instance.AddInputValues(inputValues);
 
-        foreach (var InputSourc in instance.InputSource)
+        foreach (var InputSourc in character.InputSource)
         {
             switch (InputSourc)
             {
@@ -35,6 +32,14 @@ public class CharacterManager : MonoBehaviour
             }
         }
 
+    }
+
+    public int RegisterPlayer(PlayerController instance)
+    {
+        CharacterInitialization(instance);
+
+        _players.Add(instance);
+        int index = _players.Count - 1;
         return index;
     }
 
@@ -45,6 +50,8 @@ public class CharacterManager : MonoBehaviour
 
     public void RegisterEnemy(EnemyController instance)
     {
+        CharacterInitialization(instance);
+
         _enemies.Add(instance);
     }
 

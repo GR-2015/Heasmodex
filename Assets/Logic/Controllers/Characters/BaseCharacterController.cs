@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public abstract class BaseCharacterController : MonoBehaviour
 {
@@ -21,10 +22,11 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     #endregion Components
 
-    #region Input source
+    #region Input source & values
 
-    [SerializeField] protected InputSourceType[] inputSource;
-    public InputSourceType[] InputSource { get { return inputSource; } }
+    [SerializeField] protected List<InputSourceType> inputSource;
+    public List<InputSourceType> InputSource { get { return inputSource; } }
+    public InputValues InputValues { get; set; }
 
     #endregion Input source
 
@@ -186,9 +188,11 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     public virtual void MeleeAttack()
     {
-        Animator.SetTrigger(AnimationHashID.Instance.MeleeAttackTriggerName);
-
-        RaycastHit hit;
+        if (Animator != null)
+        {
+            Animator.SetTrigger(AnimationHashID.Instance.MeleeAttackTriggerName);
+        }
+        //RaycastHit hit;
 
         //if (Physics.Raycast(middleHitPoint.position, middleHitPoint.forward, out hit, 3f, EnemyLayerMask))
         //{
@@ -226,7 +230,8 @@ public abstract class BaseCharacterController : MonoBehaviour
 public enum InputSourceType
 {
     KeyboardAndMouse,
-    GamePad
+    GamePad,
+    AI
 }
 
 public enum Hand

@@ -22,6 +22,61 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &170988
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 453142}
+  m_Layer: 11
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &193846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 407308}
+  m_Layer: 11
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &407308
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193846}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 453142}
+  m_Father: {fileID: 470166}
+  m_RootOrder: 0
+--- !u!4 &453142
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 407308}
+  m_RootOrder: 0
 --- !u!4 &470166
 Transform:
   m_ObjectHideFlags: 1
@@ -29,9 +84,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.111112, y: -5.03, z: 0}
+  m_LocalPosition: {x: 10, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 407308}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!23 &2334928
@@ -103,7 +159,7 @@ MonoBehaviour:
     Damage: 0
   charactereEquipment:
     money: 100
-    ActiveProjectile: {fileID: 0}
+    ActiveProjectile: {fileID: 130056, guid: 795a3f5001238ca4a861a117370ba425, type: 2}
     mainHandWeapon: {fileID: 0}
     offHandWeapon: {fileID: 0}
     breastplate: {fileID: 0}
@@ -116,9 +172,9 @@ MonoBehaviour:
     rotationSpeed: 60
   EnemyLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   middleHitPoint: {fileID: 0}
-  TestGameObject: {fileID: 0}
+  TestGameObject: {fileID: 193846}
   leftHendGrip: {fileID: 0}
   leftHandWieldRotation: {x: 0, y: 0, z: 0}
   rightHendGrip: {fileID: 0}
@@ -178,6 +234,18 @@ Prefab:
       propertyPath: characterMovement.movementSpeed
       value: 3.75
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: EnemyLayerMask.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: middleHitPoint
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: charactereEquipment.ActiveProjectile
+      value: 
+      objectReference: {fileID: 130056, guid: 795a3f5001238ca4a861a117370ba425, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 110708}

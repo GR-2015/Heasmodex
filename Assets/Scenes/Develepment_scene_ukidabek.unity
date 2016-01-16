@@ -8,25 +8,25 @@ SceneSettings:
   m_PVSPortalsArray: []
   m_OcclusionBakeSettings:
     smallestOccluder: 5
-    smallestHole: .111111112
+    smallestHole: 0.11111111
     backfaceThreshold: 100
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
   m_Fog: 0
-  m_FogColor: {r: .111111112, g: .111111112, b: .111111112, a: 1}
+  m_FogColor: {r: 0.11111111, g: 0.11111111, b: 0.11111111, a: 1}
   m_FogMode: 3
-  m_FogDensity: .00011111112
+  m_FogDensity: 0.00011111112
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: .111111112, g: .111111112, b: .111111112, a: 1}
-  m_AmbientEquatorColor: {r: .111111112, g: .111111112, b: .111111112, a: 1}
-  m_AmbientGroundColor: {r: .0111111114, g: .0111111114, b: .0111111114, a: 1}
+  m_AmbientSkyColor: {r: 0.11111111, g: 0.11111111, b: 0.11111111, a: 1}
+  m_AmbientEquatorColor: {r: 0.11111111, g: 0.11111111, b: 0.11111111, a: 1}
+  m_AmbientGroundColor: {r: 0.011111111, g: 0.011111111, b: 0.011111111, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SkyboxMaterial: {fileID: 0}
-  m_HaloStrength: .111111112
+  m_HaloStrength: 0.11111111
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
@@ -40,7 +40,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 5
+  serializedVersion: 6
   m_GIWorkflowMode: 0
   m_LightmapsMode: 1
   m_GISettings:
@@ -66,7 +66,7 @@ LightmapSettings:
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
     m_ReflectionCompression: 2
-  m_LightmapSnapshot: {fileID: 0}
+  m_LightingDataAsset: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &4
 NavMeshSettings:
@@ -74,15 +74,15 @@ NavMeshSettings:
   m_ObjectHideFlags: 0
   m_BuildSettings:
     serializedVersion: 2
-    agentRadius: .111111112
+    agentRadius: 0.11111111
     agentHeight: 2
     agentSlope: 45
-    agentClimb: .111111112
+    agentClimb: 0.11111111
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     accuratePlacement: 0
     minRegionArea: 2
-    cellSize: .111111112
+    cellSize: 0.11111111
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1001 &82058859
@@ -324,7 +324,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -354,8 +354,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 219356738}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: 18.7000008, y: 7.11000013, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: 18.7, y: 7.11, z: 0}
   m_LocalScale: {x: 1, y: 14, z: 30}
   m_Children: []
   m_Father: {fileID: 0}
@@ -410,7 +410,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 456032, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 482958, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -439,6 +439,10 @@ Prefab:
     - target: {fileID: 440984, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
       propertyPath: m_LocalPosition.y
       value: -1.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 146872, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
+      propertyPath: m_Name
+      value: TestAming
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
@@ -489,7 +493,7 @@ MonoBehaviour:
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
-  m_RepeatDelay: .111111112
+  m_RepeatDelay: 0.11111111
   m_ForceModuleActive: 0
 --- !u!114 &1278561479
 MonoBehaviour:

@@ -9,6 +9,9 @@ public class LocomotionState : BaseState
     {
         foreach (var inputValues in InputCollector.Instance.InputValues)
         {
+            if(!inputValues.Owner.gameObject.active)
+                continue;
+            
             float x = inputValues.MovementAxes.x;
 
             Vector3 newMovementVector = Vector3.zero;
@@ -23,11 +26,10 @@ public class LocomotionState : BaseState
             inputValues.Owner.Move(newMovementVector, inputValues.Owner.transform.forward);
             inputValues.Owner.Rotate(newMovementVector);
 
-
             inputValues.Owner.CoursorPosition =
                 inputValues.Owner.TestGameObject.transform.GetChild(0).transform.position;
 
-            xAngle -= inputValues.MouseAxes.y * 5;
+            xAngle -= inputValues.MouseAxes.y*5;
             xAngle = Mathf.Clamp(xAngle, -90, 90);
 
             inputValues.Owner.TestGameObject.transform.rotation = Quaternion.Euler(
