@@ -14,14 +14,17 @@ public class GridMapInfo : ScriptableObject
 public struct RowInfo
 {
     [SerializeField] public string[] SegmentPregabName;
+    [SerializeField] public int[] SegmentPregabIndex;
 
     public RowInfo(int tabSize)
     {
         SegmentPregabName = new string[tabSize];
+        SegmentPregabIndex = new int[tabSize];
 
         for (int i = 0; i < tabSize; i++)
         {
             SegmentPregabName[i] = string.Empty;
+            SegmentPregabIndex[i] = -1;
         }
     }
 }

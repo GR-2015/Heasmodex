@@ -98,9 +98,9 @@ public class GridStreamingManager : MonoBehaviour
                     objectName = layer.RowList[rowIndex].SegmentPregabName[index];
 
                     if (_mapObjects[rowIndex, index, layer.Index] == null &&
-                        objectName != string.Empty)
+                        layer.RowList[rowIndex].SegmentPregabIndex[index] >= 0)
                     {
-                        loadedObject = _mapObjects[rowIndex, index, layer.Index] = LoadMapSegmeentAsset(objectName);
+                        loadedObject = _mapObjects[rowIndex, index, layer.Index] = LoadMapSegmeentAsset(layer.RowList[rowIndex].SegmentPregabIndex[index]);
                         _mapObjects[rowIndex, index, layer.Index].transform.position = new Vector3(index, rowIndex, layer.Index);
                         loadedObject.transform.SetParent(this._level.transform);
                     }
@@ -116,9 +116,9 @@ public class GridStreamingManager : MonoBehaviour
                     objectName = layer.RowList[index].SegmentPregabName[columIndex];
 
                     if (_mapObjects[index, columIndex, layer.Index] == null &&
-                        objectName != string.Empty)
+                        layer.RowList[index].SegmentPregabIndex[columIndex] >= 0)
                     {
-                        loadedObject = _mapObjects[index, columIndex, layer.Index] = LoadMapSegmeentAsset(objectName);
+                        loadedObject = _mapObjects[index, columIndex, layer.Index] = LoadMapSegmeentAsset(layer.RowList[index].SegmentPregabIndex[columIndex]);
                         _mapObjects[index, columIndex, layer.Index].transform.position = new Vector3(columIndex, index, layer.Index);
                         loadedObject.transform.SetParent(this._level.transform);
                     }
@@ -129,7 +129,7 @@ public class GridStreamingManager : MonoBehaviour
 
     private GameObject LoadMapSegmeentAsset(string path)
     {
-        //GameObject newObject = Resources.Load(path, typeof(GameObject)) as GameObject;
+        //GameObject newObject = Resources.Load(index, typeof(GameObject)) as GameObject;
 
         //if (newObject != null)
         //{
@@ -145,6 +145,17 @@ public class GridStreamingManager : MonoBehaviour
         
         return GameObject.CreatePrimitive(PrimitiveType.Cube);
     }
+
+    private GameObject LoadMapSegmeentAsset(int index)
+    {
+        //GameObject newObject = GameObject.Instantiate(asseList[index]);
+        //if (newObject != null)
+        //{
+        //    return Instantiate(newObject);
+        //}
+        return GameObject.Instantiate(asseList[index]);
+    }
+
 
     private void Unstream(int index, GridStreamesrType type)
     {

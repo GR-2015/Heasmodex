@@ -68,9 +68,6 @@ public class MapGenerator : EditorWindow
         {
             CreateMap();
         }
-
-
-
     }
 
     private void CreateMap()
@@ -95,17 +92,28 @@ public class MapGenerator : EditorWindow
         {
             foreach (GameObject o in mapSegmentsList)
             {
-                x = ((10 * counter) / mapSegmentsList.Length);
+                x = ((counter) / (float)mapSegmentsList.Length);
                 EditorUtility.DisplayProgressBar("Map grneration", counter + "/" + mapSegmentsList.Length, x);
 
                 //o.transform.parent = null;
 
                 string[] newName = o.name.Split(' ');
                 o.name = newName[0];
+                int index = 0;
 
                 if (!mapInfo.assetNamesList.Contains(o.name))
                 {
                     mapInfo.assetNamesList.Add(o.name);
+                    index = mapInfo.assetNamesList.Count - 1;
+                }
+                else
+                {
+                    index = 0;
+                    foreach (string name in mapInfo.assetNamesList)
+                    {
+                        if (o.name.Equals(name)) break;
+                        ++index;
+                    }
                 }
 
                 o.transform.position = new Vector3((int)o.transform.position.x, (int)o.transform.position.y, (int)o.transform.position.z);
@@ -113,6 +121,7 @@ public class MapGenerator : EditorWindow
                 if (mapInfo.Layers[(int)o.transform.position.z].RowList[(int)o.transform.position.y].SegmentPregabName[(int)o.transform.position.x] == string.Empty)
                 {
                     mapInfo.Layers[(int)o.transform.position.z].RowList[(int)o.transform.position.y].SegmentPregabName[(int)o.transform.position.x] = o.name;
+                    mapInfo.Layers[(int)o.transform.position.z].RowList[(int)o.transform.position.y].SegmentPregabIndex[(int)o.transform.position.x] = index;
                 }
                 else
                 {
