@@ -24,7 +24,7 @@ public class AnimationHashID : MonoBehaviour
     #region Triggers Hash IDs
 
     [SerializeField]
-    private string _maleAttackTriggerName = "MeleeAttack";
+    private string _maleAttackTriggerName = "Attack";
 
     #endregion Triggers Hash IDs
 

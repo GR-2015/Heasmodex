@@ -3,8 +3,9 @@
 public class LocomotionState : BaseState
 {
     public override void StateFixedUpdate() {}
+
     public override void StateLateUpdate() {}
-    private float xAngle = 0f;
+
     public override void StateUpdate()
     {
         foreach (var inputValues in InputCollector.Instance.InputValues)
@@ -29,22 +30,17 @@ public class LocomotionState : BaseState
             inputValues.Owner.CoursorPosition =
                 inputValues.Owner.TestGameObject.transform.GetChild(0).transform.position;
 
-            xAngle -= inputValues.MouseAxes.y*5;
-            xAngle = Mathf.Clamp(xAngle, -90, 90);
+            inputValues.Owner.HindsightXAngle -= inputValues.MouseAxes.y*5;
+            inputValues.Owner.HindsightXAngle = Mathf.Clamp(inputValues.Owner.HindsightXAngle, -90, 90);
 
             inputValues.Owner.TestGameObject.transform.rotation = Quaternion.Euler(
-                xAngle,
+                inputValues.Owner.HindsightXAngle,
                 inputValues.Owner.TestGameObject.transform.rotation.eulerAngles.y,
                 inputValues.Owner.TestGameObject.transform.rotation.eulerAngles.z);
 
-            Debug.DrawRay(
-                inputValues.Owner.TestGameObject.transform.position,
-                inputValues.Owner.TestGameObject.transform.forward,
-                Color.yellow);
-
-            if (inputValues.MeleeAttack == ButtonState.Down)
+            if (inputValues.Attack == ButtonState.Down)
             {
-                inputValues.Owner.MeleeAttack();
+                inputValues.Owner.Attack();
             }
 
             inputValues.Owner.AnimationUpdate();

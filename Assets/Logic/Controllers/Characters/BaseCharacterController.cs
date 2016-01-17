@@ -66,6 +66,7 @@ public abstract class BaseCharacterController : MonoBehaviour
     [Header("Atack parameters")]
     [SerializeField] protected Transform middleHitPoint;
     [SerializeField] public GameObject TestGameObject;
+    [SerializeField] public float HindsightXAngle = 0f;
 
     [Header("Wield settings")]
     [SerializeField] protected Transform leftHendGrip;
@@ -74,6 +75,8 @@ public abstract class BaseCharacterController : MonoBehaviour
     [SerializeField] protected Vector3 rightHandWieldRotation = Vector3.zero;
 
     #endregion Character settings
+
+    protected float nextAttack = 0f;
 
     protected void Awake()
     {
@@ -95,6 +98,25 @@ public abstract class BaseCharacterController : MonoBehaviour
                 charactereEquipment.GenerateProjectiles<BaseProjectile>(EnemyLayerMask, gameObject);
             }
         }
+    }
+
+    protected virtual void Update()
+    {
+        nextAttack -= Time.deltaTime;
+        if (nextAttack < 0)
+        {
+            nextAttack = 0f;
+        }
+
+        if (IfAtillAlive() == false)
+        {
+            HandleDeath();
+        }    
+    }
+
+    protected virtual void OnTriggerEnter(Collider other)
+    {
+
     }
 
     protected virtual void OnAnimatorIK(int layerIndex)
@@ -121,7 +143,7 @@ public abstract class BaseCharacterController : MonoBehaviour
 
             case Hand.Off:
                 charactereEquipment.offHandWeapon = hend.GetComponentInChildren<Weapon>();
-                charactereEquipment.offHandWeapon.transform.localPosition = (charactereEquipment.mainHandWeapon as OneHandedMekeeWeapon).OffWieldPositionOffest;
+                charactereEquipment.offHandWeapon.transform.localPosition = ((OneHandedMekeeWeapon) charactereEquipment.mainHandWeapon).OffWieldPositionOffest;
                 charactereEquipment.offHandWeapon.transform.localRotation = Quaternion.Euler(leftHandWieldRotation);
                 break;
         }
@@ -178,6 +200,13 @@ public abstract class BaseCharacterController : MonoBehaviour
         Animator.SetBool(AnimationHashID.Instance.IsGrounded, CharacterController.isGrounded); 
     }
 
+    protected virtual bool IfAtillAlive()
+    {
+        return !(characterStatistics.HP <= 0f);
+    }
+
+    protected abstract void HandleDeath();
+
     public virtual void Jump()
     {
         if (CharacterController.isGrounded)
@@ -186,8 +215,13 @@ public abstract class BaseCharacterController : MonoBehaviour
         }
     }
 
-    public virtual void MeleeAttack()
+    public virtual void Attack()
     {
+        if (nextAttack > 0f)
+        {
+            return;
+        }
+
         if (Animator != null)
         {
             Animator.SetTrigger(AnimationHashID.Instance.MeleeAttackTriggerName);
@@ -219,6 +253,8 @@ public abstract class BaseCharacterController : MonoBehaviour
                 break;
             }
         }
+
+        nextAttack = characterStatistics.AttackSpeed;
     }
 
     public virtual void GetDamage(float damage)

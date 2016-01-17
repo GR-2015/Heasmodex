@@ -18,7 +18,7 @@ public class InputNames : ScriptableObject
     
     public string JumpButton { get { return _jumpButton; } }
 
-    [SerializeField] private string _meleeAttackButton = "MeleeAttack";
+    [SerializeField] private string _meleeAttackButton = "Attack";
 
     public string MeleeAttackButton { get { return _meleeAttackButton; } }
 }

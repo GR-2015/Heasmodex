@@ -39,6 +39,7 @@ public class EnemyController : BaseCharacterController
 
     protected void Update()
     {
+        base.Update();
         foreach (var bechavior in _bechaviors)
         {
             if (bechavior.EntryConditions() == true)
@@ -59,11 +60,11 @@ public class EnemyController : BaseCharacterController
             CurrentBechavior.Behavior();
             CurrentBechavior.OverloadConditions();
         }
+    }
 
-        if (characterStatistics.HP <= 0 )
-        {
-            this.gameObject.SetActive(false);
-        }
+    protected override void HandleDeath()
+    {
+       gameObject.SetActive(false);
     }
 
     void OnBecameInvisible()

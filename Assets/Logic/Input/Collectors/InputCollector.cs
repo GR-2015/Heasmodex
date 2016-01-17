@@ -35,4 +35,73 @@ internal class InputCollector : MonoBehaviour
             inputSource.GetInputValues();
         }
     }
+
+    public static ButtonState SimulateButtonPress(bool condition, ButtonState currentButtonState)
+    {
+        if (condition)
+        {
+            if (currentButtonState == ButtonState.Released)
+            {
+                return ButtonState.Down;
+            }
+
+            if (currentButtonState == ButtonState.Down)
+            {
+                return ButtonState.Pressed;
+            }
+
+            if (currentButtonState == ButtonState.Pressed)
+            {
+                return ButtonState.Released;
+            }
+
+            return currentButtonState;
+        }
+        else
+        {
+            if (currentButtonState == ButtonState.Pressed)
+            {
+                return ButtonState.Up;
+            }
+
+            if (currentButtonState == ButtonState.Up)
+            {
+                return ButtonState.Released;
+            }
+
+            return currentButtonState;
+        }
+    }
+
+    public static ButtonState SimulateButtonHold(bool condition, ButtonState currentButtonState)
+    {
+        if (condition)
+        {
+            if (currentButtonState == ButtonState.Released)
+            {
+                return ButtonState.Down;
+            }
+
+            if (currentButtonState == ButtonState.Down)
+            {
+                return ButtonState.Pressed;
+            }
+
+            return currentButtonState;
+        }
+        else
+        {
+            if (currentButtonState == ButtonState.Pressed)
+            {
+                return ButtonState.Up;
+            }
+
+            if (currentButtonState == ButtonState.Up)
+            {
+                return ButtonState.Released;
+            }
+
+            return currentButtonState;
+        }
+    }
 }

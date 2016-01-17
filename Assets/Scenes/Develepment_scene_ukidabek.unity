@@ -138,43 +138,43 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[0].inSlope
-      value: .233292431
+      value: 0.23329243
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[0].outSlope
-      value: .233292431
+      value: 0.23329243
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[1].time
-      value: 83.7349472
+      value: 83.73495
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[1].value
-      value: 19.7584419
+      value: 19.758442
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[1].inSlope
-      value: .145532265
+      value: 0.14553227
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[1].outSlope
-      value: .145532265
+      value: 0.14553227
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[2].time
-      value: 273.372253
+      value: 273.37225
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[2].value
-      value: 30.7141876
+      value: 30.714188
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[2].inSlope
-      value: .000997503637
+      value: 0.0009975036
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[2].outSlope
-      value: .000997503637
+      value: 0.0009975036
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: maxDistance
@@ -190,7 +190,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[0].value
-      value: .223713651
+      value: 0.22371365
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[2].tangentMode
@@ -198,19 +198,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[3].time
-      value: 613.259216
+      value: 613.2592
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[3].value
-      value: 49.0766602
+      value: 49.07666
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[3].inSlope
-      value: .0383059829
+      value: 0.038305983
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[3].outSlope
-      value: .0115688834
+      value: 0.011568883
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[3].tangentMode
@@ -218,19 +218,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[4].time
-      value: 881.410461
+      value: 881.41046
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[4].value
-      value: 64.2272263
+      value: 64.22723
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[4].inSlope
-      value: .180019289
+      value: 0.18001929
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[4].outSlope
-      value: .180019289
+      value: 0.18001929
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[4].tangentMode
@@ -242,15 +242,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[5].value
-      value: 100.223717
+      value: 100.22372
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[5].inSlope
-      value: .303538501
+      value: 0.3035385
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[5].outSlope
-      value: .303538501
+      value: 0.3035385
       objectReference: {fileID: 0}
     - target: {fileID: 11418262, guid: 09ca9d96fc61cfe458b58aa7ed46e493, type: 2}
       propertyPath: _chanceCurve.m_Curve.Array.data[5].tangentMode
@@ -444,8 +444,100 @@ Prefab:
       propertyPath: m_Name
       value: TestAming
       objectReference: {fileID: 0}
+    - target: {fileID: 11463548, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
+      propertyPath: charactereEquipment.ActiveProjectile
+      value: 
+      objectReference: {fileID: 11444958, guid: 795a3f5001238ca4a861a117370ba425,
+        type: 2}
+    - target: {fileID: 5439460, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1033153949
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 470166, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 8.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 470166, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 470166, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 470166, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 470166, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 470166, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 470166, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 470166, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13606176, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
+      propertyPath: m_Radius
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11409710, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
+      propertyPath: characterMovement.rotationSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 490376, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 476636, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 476636, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 490376, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11409710, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
+      propertyPath: characterMovement.movementSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 193846, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -1089502233064743932, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 407308, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407308, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1278561476
 GameObject:
@@ -605,7 +697,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1001 &2018948661
 Prefab:
   m_ObjectHideFlags: 0

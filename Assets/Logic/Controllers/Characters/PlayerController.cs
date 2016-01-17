@@ -16,4 +16,9 @@ public class PlayerController : BaseCharacterController
 
         this.name = index.ToString();
     }
+
+    protected override void HandleDeath()
+    {
+        StateManager.Instance.EnterNewState(new DeathState());
+    }
 }

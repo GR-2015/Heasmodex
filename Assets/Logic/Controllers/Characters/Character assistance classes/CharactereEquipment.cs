@@ -9,8 +9,9 @@ public class CharactereEquipment
     [Header("Wallet")]
     [SerializeField] public float money = 100f;
 
-    [Header("Weapons.")] 
-    [SerializeField] public GameObject ActiveProjectile = null;
+    [Header("Weapons.")]
+    [SerializeField] public BaseProjectile ActiveProjectile = null;
+
     [SerializeField] public Weapon mainHandWeapon;
     [SerializeField] public Weapon offHandWeapon;
 
@@ -40,7 +41,7 @@ public class CharactereEquipment
             //BaseProjectile projectileComponent = newProjectile.AddComponent<T>();
             //projectileComponent.Velocity = .01f;
             //characterProjectiles.Add(projectileComponent);
-            GameObject newProjectile = GameObject.Instantiate(ActiveProjectile);
+            GameObject newProjectile = GameObject.Instantiate(ActiveProjectile.gameObject);
             newProjectile.SetActive(false);
 
             BaseProjectile newProjectileComponent = newProjectile.GetComponent<BaseProjectile>();

@@ -6,16 +6,16 @@ public class InputValues
 
     #region Input axes
 
-    public Vector2 MovementAxes { get; set; }
-    public Vector2 MouseAxes { get; set; }
-    public Vector2 MousePosition { get; set; }
+    public Vector2 MovementAxes = Vector2.zero;
+    public Vector2 MouseAxes = Vector2.zero;
+    public Vector2 MousePosition = Vector2.zero;
 
     #endregion Input axes
 
     #region Buttons
 
     public ButtonState JumpButton = ButtonState.Released;
-    public ButtonState MeleeAttack = ButtonState.Released;
+    public ButtonState Attack = ButtonState.Released;
 
     #endregion Buttons
 

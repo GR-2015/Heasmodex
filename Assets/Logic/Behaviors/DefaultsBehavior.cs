@@ -2,15 +2,14 @@
 
 public class DefaultsBehavior : BaseBehavior
 {
+    private float _distance;
+
     public override bool EntryConditions()
     {
-        foreach (var item in CharacterManager.Instance.Players)
+        _distance = Mathf.Abs(Vector3.Distance(this._controlledEnemy.transform.position, ClosestPlayer()));
+        if (_distance < 10)
         {
-            float distance = Mathf.Abs(Vector3.Distance(this._controlledEnemy.transform.position, item.transform.position));
-            if (distance < 10)
-            {
-                return true;
-            }
+            return true;
         }
 
         return false;
@@ -30,7 +29,10 @@ public class DefaultsBehavior : BaseBehavior
             movementAxes.x = 1;
         }
         _controlledEnemy.InputValues.MovementAxes = movementAxes;
-        //_controlledEnemy.Move(inputValue, Vector3.zero);
+
+        bool fireCondition = _controlledEnemy.CharactereEquipment.ActiveProjectile.Range >= _distance;
+        
+        _controlledEnemy.InputValues.Attack = InputCollector.SimulateButtonPress(fireCondition, _controlledEnemy.InputValues.Attack);
     }
 
     public override void OverloadConditions()

@@ -7,5 +7,5 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Develepment_scene_ukidabek.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Prefab_dev_scene.unity
