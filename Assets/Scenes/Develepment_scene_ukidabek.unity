@@ -453,6 +453,18 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11463548, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
+      propertyPath: EnemyWeaponLayerMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 11463548, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
+      propertyPath: CharacterWeaponLayerMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 11463548, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
+      propertyPath: CharacterWeaponLayerMask
+      value: PlayerWeapon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb5d83a6cb8ad304ba3584e19e6d2b8b, type: 2}
   m_IsPrefabParent: 0
@@ -495,46 +507,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 13606176, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
-      propertyPath: m_Radius
-      value: 0.7
-      objectReference: {fileID: 0}
     - target: {fileID: 11409710, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
-      propertyPath: characterMovement.rotationSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 490376, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 476636, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 476636, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 490376, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 11409710, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
-      propertyPath: characterMovement.movementSpeed
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 193846, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -1089502233064743932, guid: 0000000000000000d000000000000000,
-        type: 0}
-    - target: {fileID: 407308, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 407308, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.9
+      propertyPath: CharacterWeaponLayerMask
+      value: EnemyWeapon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2d351c4970d4b894d8a8ba649baf0ac0, type: 2}

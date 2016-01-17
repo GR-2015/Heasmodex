@@ -61,10 +61,11 @@ public abstract class BaseCharacterController : MonoBehaviour
     [SerializeField] protected CharacterMovement characterMovement = new CharacterMovement();
     public CharacterMovement CharacterMovement { get { return characterMovement; } }
 
-    [SerializeField] protected LayerMask EnemyLayerMask;
-
     [Header("Atack parameters")]
     [SerializeField] protected Transform middleHitPoint;
+    [SerializeField] protected LayerMask EnemyLayerMask;
+    [SerializeField] protected string CharacterWeaponLayerMask;
+    [SerializeField] protected LayerMask EnemyWeaponLayerMask;
     [SerializeField] public GameObject TestGameObject;
     [SerializeField] public float HindsightXAngle = 0f;
 
@@ -95,7 +96,10 @@ public abstract class BaseCharacterController : MonoBehaviour
             }
             else
             {
-                charactereEquipment.GenerateProjectiles<BaseProjectile>(EnemyLayerMask, gameObject);
+                charactereEquipment.GenerateProjectiles<BaseProjectile>(
+                    EnemyLayerMask, 
+                    CharacterWeaponLayerMask,
+                    gameObject);
             }
         }
     }
@@ -116,7 +120,13 @@ public abstract class BaseCharacterController : MonoBehaviour
 
     protected virtual void OnTriggerEnter(Collider other)
     {
+        if (LayerHelper.IsLayerMaskLayer(other.gameObject.layer, EnemyWeaponLayerMask))
+        {
+            other.gameObject.SetActive(false);
+            BaseProjectile projectile = other.gameObject.GetComponent<BaseProjectile>();
 
+            GetDamage(projectile.Damage);
+        }
     }
 
     protected virtual void OnAnimatorIK(int layerIndex)

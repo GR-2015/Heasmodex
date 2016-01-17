@@ -28,6 +28,7 @@ public class CharactereEquipment
     //TMP
     public void GenerateProjectiles<T>(
         LayerMask enemyLayerMask,
+        string characterWeaponLayerMask,
         GameObject ownerGameObject) where T : BaseProjectile
     {
         for (int i = 0; i < projectilesCount; i++)
@@ -42,12 +43,13 @@ public class CharactereEquipment
             //projectileComponent.Velocity = .01f;
             //characterProjectiles.Add(projectileComponent);
             GameObject newProjectile = GameObject.Instantiate(ActiveProjectile.gameObject);
+            newProjectile.layer = LayerMask.NameToLayer(characterWeaponLayerMask);
             newProjectile.SetActive(false);
 
             BaseProjectile newProjectileComponent = newProjectile.GetComponent<BaseProjectile>();
             newProjectileComponent.EnemyLayerMask = enemyLayerMask;
             newProjectileComponent.Owner = ownerGameObject;
-
+          
             characterProjectiles.Add(newProjectileComponent);
         }
     }

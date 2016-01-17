@@ -633,7 +633,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 431328}
   m_Layer: 10
-  m_Name: GameObject
+  m_Name: TestAming
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1410,7 +1410,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 182230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 1.25, z: 0.4}
+  m_LocalPosition: {x: -0, y: 1.45, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 464768}
@@ -1762,7 +1762,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109208}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 456032}
@@ -2035,7 +2035,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193104}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 11.3, y: 5.63, z: 0}
+  m_LocalPosition: {x: 2, y: 2, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 440984}
@@ -2644,7 +2644,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
@@ -2679,6 +2679,9 @@ MonoBehaviour:
   inGameName: Item
   purchasePrice: 0
   sellingPrice: 0
+  PLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   mainWieldPositionOffest: {x: 0.091, y: 0.025, z: -0.376}
   damage: 10
   attackSpeed: 1
@@ -2703,9 +2706,10 @@ MonoBehaviour:
     HP: 100
     MP: 100
     Damage: 0
+    AttackSpeed: 1
   charactereEquipment:
     money: 100
-    ActiveProjectile: {fileID: 130056, guid: 795a3f5001238ca4a861a117370ba425, type: 2}
+    ActiveProjectile: {fileID: 11444958, guid: 795a3f5001238ca4a861a117370ba425, type: 2}
     mainHandWeapon: {fileID: 0}
     offHandWeapon: {fileID: 0}
     breastplate: {fileID: 0}
@@ -2724,11 +2728,16 @@ MonoBehaviour:
     movementSpeed: 5
     jumpForce: 15
     rotationSpeed: 10
+  middleHitPoint: {fileID: 431328}
   EnemyLayerMask:
     serializedVersion: 2
     m_Bits: 2048
-  middleHitPoint: {fileID: 431328}
+  CharacterWeaponLayerMask: PlayerWeapon
+  EnemyWeaponLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
   TestGameObject: {fileID: 182230}
+  HindsightXAngle: 0
   leftHendGrip: {fileID: 0}
   leftHandWieldRotation: {x: 277.5115, y: 328.1766, z: 354.5313}
   rightHendGrip: {fileID: 0}
@@ -2747,6 +2756,9 @@ MonoBehaviour:
   inGameName: Item
   purchasePrice: 0
   sellingPrice: 0
+  PLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   mainWieldPositionOffest: {x: 0.091, y: 0.025, z: -0.376}
   damage: 10
   attackSpeed: 1
