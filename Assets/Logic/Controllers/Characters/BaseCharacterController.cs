@@ -138,6 +138,9 @@ public abstract class BaseCharacterController : MonoBehaviour
 
         Animator.SetLookAtWeight(1f, 0.5f);
         Animator.SetLookAtPosition(CoursorPosition);
+
+        Animator.SetIKPositionWeight(AvatarIKGoal.RightHand, 1f);
+        Animator.SetIKPosition(AvatarIKGoal.RightHand, CoursorPosition);
     }
 
     //TMP

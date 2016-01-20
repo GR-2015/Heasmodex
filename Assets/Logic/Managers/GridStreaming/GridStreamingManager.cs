@@ -129,12 +129,6 @@ public class GridStreamingManager : MonoBehaviour
 
     private GameObject LoadMapSegmeentAsset(string path)
     {
-        //GameObject newObject = Resources.Load(index, typeof(GameObject)) as GameObject;
-
-        //if (newObject != null)
-        //{
-        //    return Instantiate(newObject);
-        //}
         foreach (GameObject asset in asseList)
         {
             if (asset.name.Equals(path))
@@ -148,11 +142,6 @@ public class GridStreamingManager : MonoBehaviour
 
     private GameObject LoadMapSegmeentAsset(int index)
     {
-        //GameObject newObject = GameObject.Instantiate(asseList[index]);
-        //if (newObject != null)
-        //{
-        //    return Instantiate(newObject);
-        //}
         return GameObject.Instantiate(asseList[index]);
     }
 
