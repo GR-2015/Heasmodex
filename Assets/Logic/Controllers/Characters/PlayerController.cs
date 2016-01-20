@@ -19,6 +19,7 @@ public class PlayerController : BaseCharacterController
 
     protected override void HandleDeath()
     {
+        Animator.SetTrigger("Test");
         StateManager.Instance.EnterNewState(new DeathState());
     }
 }
