@@ -26,5 +26,6 @@ public class KeyboardAndMouse : BaseInputSource
 
         InputValues.JumpButton = GetButtonState(InputNames.JumpButton);
         InputValues.Attack = GetButtonState(InputNames.MeleeAttackButton);
+        InputValues.Pause = GetButtonState(InputNames.PauseButton);
     }
 }

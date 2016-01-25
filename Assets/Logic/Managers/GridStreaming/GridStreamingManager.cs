@@ -129,12 +129,6 @@ public class GridStreamingManager : MonoBehaviour
 
     private GameObject LoadMapSegmeentAsset(string path)
     {
-        //GameObject newObject = Resources.Load(index, typeof(GameObject)) as GameObject;
-
-        //if (newObject != null)
-        //{
-        //    return Instantiate(newObject);
-        //}
         foreach (GameObject asset in asseList)
         {
             if (asset.name.Equals(path))
@@ -148,11 +142,6 @@ public class GridStreamingManager : MonoBehaviour
 
     private GameObject LoadMapSegmeentAsset(int index)
     {
-        //GameObject newObject = GameObject.Instantiate(asseList[index]);
-        //if (newObject != null)
-        //{
-        //    return Instantiate(newObject);
-        //}
         return GameObject.Instantiate(asseList[index]);
     }
 
@@ -161,7 +150,6 @@ public class GridStreamingManager : MonoBehaviour
     {
         if (type == GridStreamesrType.Column)
         {
-            //ColumnGridStreamers[index].Test();
             foreach (Layer layer in _mapInfo.Layers)
             {
                 foreach (int rowIndex in ActiveRowIndex)
@@ -175,7 +163,6 @@ public class GridStreamingManager : MonoBehaviour
         }
         else
         {
-            //RowGridStreamers[index].Test();
             foreach (Layer layer in _mapInfo.Layers)
             {
                 foreach (int columIndex in ActiveColumnIndex)
@@ -211,18 +198,6 @@ public class GridStreamingManager : MonoBehaviour
     {
         _streamerColumnOffsetValue = (GridSreamingHead.Instance.transform.lossyScale.z / 2f) + _streamerColumnOffset;
         _streamerRowOffsetValue = (GridSreamingHead.Instance.transform.lossyScale.y / 2f) + _streamerRowOffset;
-
-        //foreach (GridStreamer streamer in ColumnGridStreamers)
-        //{
-        //    streamer.enabled = false;
-        //}
-
-        //foreach (GridStreamer streamer in RowGridStreamers)
-        //{
-        //    streamer.enabled = false;
-        //}
-
-        //StreamersLimiting();
     }
 
     private void StreamersLimiting()

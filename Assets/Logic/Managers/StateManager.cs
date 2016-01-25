@@ -3,11 +3,7 @@ using UnityEngine;
 
 public class StateManager : MonoBehaviour
 {
-    public static StateManager Instance
-    {
-        get;
-        private set;
-    }
+    public static StateManager Instance { get; private set; }
 
     private readonly Stack<BaseState> _statesStack = new Stack<BaseState>();
 

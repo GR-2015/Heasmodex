@@ -21,7 +21,7 @@ public class EquipmentState : BaseState
 
     public override void StateUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) == true)
+        if (playerInputValues.Pause == ButtonState.Down)
         {
             StateManager.Instance.ExitCurrentState();
         }
