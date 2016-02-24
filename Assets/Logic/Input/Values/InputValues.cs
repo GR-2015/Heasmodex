@@ -16,6 +16,7 @@ public class InputValues
 
     public ButtonState JumpButton = ButtonState.Released;
     public ButtonState Attack = ButtonState.Released;
+    public ButtonState Pause = ButtonState.Released;
 
     #endregion Buttons
 

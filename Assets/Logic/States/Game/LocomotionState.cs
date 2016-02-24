@@ -45,7 +45,7 @@ public class LocomotionState : BaseState
 
             inputValues.Owner.AnimationUpdate();
 
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (inputValues.Pause == ButtonState.Down)
             {
                 StateManager.Instance.EnterNewState(new EquipmentState(inputValues));
             }

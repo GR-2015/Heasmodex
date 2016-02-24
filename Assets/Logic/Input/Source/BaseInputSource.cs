@@ -4,6 +4,7 @@ public abstract class BaseInputSource
 {
     protected InputValues InputValues;
     protected InputNames InputNames;
+
     protected virtual string PrefabName { get { return null; } }
 
     public abstract void GetInputValues();

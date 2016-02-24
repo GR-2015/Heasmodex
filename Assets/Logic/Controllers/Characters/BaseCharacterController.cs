@@ -236,24 +236,6 @@ public abstract class BaseCharacterController : MonoBehaviour
         {
             Animator.SetTrigger(AnimationHashID.Instance.MeleeAttackTriggerName);
         }
-        //RaycastHit hit;
-
-        //if (Physics.Raycast(middleHitPoint.position, middleHitPoint.forward, out hit, 3f, EnemyLayerMask))
-        //{
-        //    float damage = characterStatistics.Damage;
-
-        //    if (charactereEquipment.mainHandWeapon != null)
-        //    {
-        //        damage += charactereEquipment.mainHandWeapon.Damage;
-        //    }
-
-        //    if (charactereEquipment.offHandWeapon != null)
-        //    {
-        //        damage += charactereEquipment.offHandWeapon.Damage;
-        //    }
-
-        //    hit.collider.SendMessage(GetDamageFunctionName, damage);
-        //}
 
         foreach (BaseProjectile projectile in charactereEquipment.characterProjectiles)
         {

@@ -15,10 +15,14 @@ public class InputNames : ScriptableObject
     public string MouseY { get { return _mouseY; } }
 
     [SerializeField] private string _jumpButton = "Jump";
-    
+ 
     public string JumpButton { get { return _jumpButton; } }
 
     [SerializeField] private string _meleeAttackButton = "Attack";
-
+ 
     public string MeleeAttackButton { get { return _meleeAttackButton; } }
+
+    [SerializeField] private string _pauseButton = "Cancel";
+
+    public string PauseButton { get { return _pauseButton; } }
 }
